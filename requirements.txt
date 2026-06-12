@@ -1,0 +1,9 @@
+streamlit
+langchain
+langchain-groq
+langgraph
+pypdf2
+python-dotenv
+Pillow
+pytesseract
+pdf2image

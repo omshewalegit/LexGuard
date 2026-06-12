@@ -1,0 +1,959 @@
+# import streamlit as st
+# from utils.pdf_reader import extract_text_from_pdf
+# from agents.pipeline import run_pipeline
+
+# st.set_page_config(
+#     page_title="LexGuard",
+#     page_icon="⚖",
+#     layout="wide",
+#     initial_sidebar_state="collapsed"
+# )
+
+# st.markdown("""
+# <style>
+#     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+#     * { font-family: 'Inter', sans-serif; }
+
+#     .stApp {
+#         background-color: #050508;
+#         color: #e2e8f0;
+#     }
+
+    
+#  /* ── NAV BAR ── */
+# .navbar {
+#     display: flex;
+#     align-items: center;
+#     justify-content: space-between;
+#     padding: 1.2rem 2rem;
+#     border-bottom: 1px solid #0f172a;
+#     background: #07070d;
+#     margin-bottom: 3rem;
+#     position: sticky;
+#     top: 0;
+#     z-index: 999;
+#     margin-top: -1rem;
+# }
+# .nav-logo {
+#     font-size: 1.1rem;
+#     font-weight: 700;
+#     color: #f1f5f9;
+#     letter-spacing: 0.05em;
+# }
+# .nav-logo span {
+#     color: #6366f1;
+# }
+# .nav-badge {
+#     font-size: 0.7rem;
+#     color: #475569;
+#     border: 1px solid #1e293b;
+#     padding: 0.25rem 0.75rem;
+#     border-radius: 999px;
+#     letter-spacing: 0.08em;
+#     text-transform: uppercase;
+# }
+
+#     /* ── HERO ── */
+#     .hero {
+#         max-width: 680px;
+#         margin: 0 auto 3.5rem auto;
+#         text-align: center;
+#         padding: 0 1rem;
+#     }
+#     .hero-tag {
+#         display: inline-block;
+#         font-size: 0.72rem;
+#         font-weight: 500;
+#         letter-spacing: 0.12em;
+#         text-transform: uppercase;
+#         color: #6366f1;
+#         background: #0f0f1a;
+#         border: 1px solid #1e1b4b;
+#         padding: 0.3rem 1rem;
+#         border-radius: 999px;
+#         margin-bottom: 1.5rem;
+#     }
+#     .hero h1 {
+#         font-size: 2.8rem;
+#         font-weight: 700;
+#         color: #f8fafc;
+#         line-height: 1.2;
+#         margin-bottom: 1rem;
+#         letter-spacing: -0.02em;
+#     }
+#     .hero h1 span {
+#         color: #6366f1;
+#     }
+#     .hero p {
+#         font-size: 1rem;
+#         color: #64748b;
+#         line-height: 1.7;
+#     }
+
+#     /* ── UPLOAD CARD ── */
+#     .upload-card {
+#         max-width: 580px;
+#         margin: 0 auto 2rem auto;
+#         background: #0c0c14;
+#         border: 1px solid #1e293b;
+#         border-radius: 12px;
+#         padding: 2rem;
+#     }
+#     .upload-label {
+#         font-size: 0.8rem;
+#         font-weight: 500;
+#         color: #475569;
+#         text-transform: uppercase;
+#         letter-spacing: 0.1em;
+#         margin-bottom: 0.8rem;
+#     }
+
+#     /* ── PIPELINE STEPS ── */
+#     .pipeline-wrap {
+#         max-width: 580px;
+#         margin: 0 auto 2.5rem auto;
+#     }
+#     .step {
+#         display: flex;
+#         align-items: center;
+#         gap: 0.9rem;
+#         padding: 0.75rem 1rem;
+#         border-radius: 8px;
+#         margin-bottom: 0.4rem;
+#         font-size: 0.88rem;
+#         color: #94a3b8;
+#         background: #0a0a12;
+#         border: 1px solid #0f172a;
+#     }
+#     .step.done {
+#         color: #e2e8f0;
+#         border-color: #1e293b;
+#     }
+#     .step-dot {
+#         width: 8px;
+#         height: 8px;
+#         border-radius: 50%;
+#         background: #1e293b;
+#         flex-shrink: 0;
+#     }
+#     .step.done .step-dot { background: #6366f1; }
+#     .step-num {
+#         font-size: 0.7rem;
+#         color: #334155;
+#         min-width: 1.5rem;
+#     }
+
+#     /* ── REPORT HEADER ── */
+#     .report-header {
+#         max-width: 860px;
+#         margin: 0 auto 2rem auto;
+#         padding: 1.8rem 2rem;
+#         background: #0c0c14;
+#         border: 1px solid #1e293b;
+#         border-radius: 12px;
+#         display: flex;
+#         justify-content: space-between;
+#         align-items: center;
+#     }
+#     .report-title {
+#         font-size: 0.75rem;
+#         color: #475569;
+#         text-transform: uppercase;
+#         letter-spacing: 0.1em;
+#         margin-bottom: 0.4rem;
+#     }
+#     .report-doctype {
+#         font-size: 1.1rem;
+#         font-weight: 600;
+#         color: #f1f5f9;
+#     }
+
+#     /* ── SCORE BLOCK ── */
+#     .score-block {
+#         text-align: right;
+#     }
+#     .score-number {
+#         font-size: 2.8rem;
+#         font-weight: 700;
+#         line-height: 1;
+#         letter-spacing: -0.03em;
+#     }
+#     .score-label {
+#         font-size: 0.72rem;
+#         color: #475569;
+#         text-transform: uppercase;
+#         letter-spacing: 0.1em;
+#         margin-top: 0.2rem;
+#     }
+
+#     /* ── STAT ROW ── */
+#     .stat-row {
+#         max-width: 860px;
+#         margin: 0 auto 2rem auto;
+#         display: flex;
+#         gap: 1rem;
+#     }
+#     .stat-box {
+#         flex: 1;
+#         background: #0c0c14;
+#         border: 1px solid #1e293b;
+#         border-radius: 10px;
+#         padding: 1.2rem 1.5rem;
+#     }
+#     .stat-val {
+#         font-size: 1.8rem;
+#         font-weight: 700;
+#         color: #f1f5f9;
+#         letter-spacing: -0.02em;
+#     }
+#     .stat-lbl {
+#         font-size: 0.72rem;
+#         color: #475569;
+#         text-transform: uppercase;
+#         letter-spacing: 0.09em;
+#         margin-top: 0.25rem;
+#     }
+
+#     /* ── VERDICT ── */
+#     .verdict {
+#         max-width: 860px;
+#         margin: 0 auto 2.5rem auto;
+#         padding: 1.4rem 2rem;
+#         border-radius: 10px;
+#         border-left: 3px solid;
+#     }
+#     .verdict.red   { background:#0f0505; border-color:#ef4444; }
+#     .verdict.amber { background:#0d0900; border-color:#f59e0b; }
+#     .verdict.green { background:#030f08; border-color:#22c55e; }
+#     .verdict-label {
+#         font-size: 0.7rem;
+#         font-weight: 600;
+#         text-transform: uppercase;
+#         letter-spacing: 0.12em;
+#         margin-bottom: 0.4rem;
+#     }
+#     .verdict.red   .verdict-label { color:#ef4444; }
+#     .verdict.amber .verdict-label { color:#f59e0b; }
+#     .verdict.green .verdict-label { color:#22c55e; }
+#     .verdict-text {
+#         font-size: 1rem;
+#         font-weight: 600;
+#         color: #f1f5f9;
+#         margin-bottom: 0.3rem;
+#     }
+#     .verdict-sub {
+#         font-size: 0.875rem;
+#         color: #64748b;
+#     }
+
+#     /* ── SECTION LABEL ── */
+#     .section-label {
+#         max-width: 860px;
+#         margin: 0 auto 1rem auto;
+#         font-size: 0.72rem;
+#         font-weight: 600;
+#         text-transform: uppercase;
+#         letter-spacing: 0.12em;
+#         color: #475569;
+#         padding-bottom: 0.6rem;
+#         border-bottom: 1px solid #0f172a;
+#     }
+
+#     /* ── CLAUSE CARD ── */
+#     .clause-card {
+#         max-width: 860px;
+#         margin: 0 auto 0.75rem auto;
+#         background: #0c0c14;
+#         border: 1px solid #1e293b;
+#         border-radius: 10px;
+#         padding: 1.4rem 1.6rem;
+#     }
+#     .clause-top {
+#         display: flex;
+#         align-items: center;
+#         justify-content: space-between;
+#         margin-bottom: 0.9rem;
+#     }
+#     .clause-name {
+#         font-size: 0.92rem;
+#         font-weight: 600;
+#         color: #f1f5f9;
+#     }
+#     .badge {
+#         font-size: 0.68rem;
+#         font-weight: 600;
+#         text-transform: uppercase;
+#         letter-spacing: 0.08em;
+#         padding: 0.25rem 0.7rem;
+#         border-radius: 4px;
+#     }
+#     .badge-high   { background:#1a0505; color:#ef4444; border:1px solid #7f1d1d; }
+#     .badge-medium { background:#100900; color:#f59e0b; border:1px solid #78350f; }
+#     .badge-low    { background:#0d0700; color:#f97316; border:1px solid #7c2d12; }
+#     .badge-safe   { background:#030f06; color:#22c55e; border:1px solid #14532d; }
+#     .clause-original {
+#         font-size: 0.82rem;
+#         color: #334155;
+#         font-style: italic;
+#         border-left: 2px solid #1e293b;
+#         padding-left: 0.9rem;
+#         margin-bottom: 0.9rem;
+#         line-height: 1.6;
+#     }
+#     .clause-explanation {
+#         font-size: 0.88rem;
+#         color: #94a3b8;
+#         line-height: 1.7;
+#         margin-bottom: 0.7rem;
+#     }
+#     .clause-reason {
+#         font-size: 0.8rem;
+#         color: #475569;
+#         padding-top: 0.7rem;
+#         border-top: 1px solid #0f172a;
+#     }
+#     .conf-pill {
+#         font-size: 0.68rem;
+#         color: #475569;
+#         border: 1px solid #1e293b;
+#         padding: 0.2rem 0.6rem;
+#         border-radius: 999px;
+#         margin-left: 0.6rem;
+#         font-weight: 400;
+#     }
+
+#     /* ── DOWNLOAD BTN ── */
+#     .stDownloadButton > button {
+#         background: #6366f1 !important;
+#         color: white !important;
+#         border: none !important;
+#         border-radius: 8px !important;
+#         font-size: 0.85rem !important;
+#         font-weight: 500 !important;
+#         padding: 0.6rem 1.5rem !important;
+#         letter-spacing: 0.02em !important;
+#     }
+#     .stButton > button {
+#         background: #6366f1 !important;
+#         color: white !important;
+#         border: none !important;
+#         border-radius: 8px !important;
+#         font-size: 0.85rem !important;
+#         font-weight: 500 !important;
+#         letter-spacing: 0.02em !important;
+#     }
+
+#     /* ── HIDE DEFAULTS ── */
+#    #MainMenu, footer, .stDeployButton,
+# header[data-testid="stHeader"] { display: none !important; }
+# .block-container { padding-top: 0 !important; }
+# hr { border-color: #0f172a; }
+
+# [data-testid="stFileUploader"] {
+#     background: #07070d;
+#     border: 1px dashed #1e293b;
+#     border-radius: 8px;
+#     padding: 0.5rem;
+# }
+# </style>
+# """, unsafe_allow_html=True)
+
+
+# # ── NAVBAR ────────────────────────────────────────────────────
+# st.markdown("""
+# <div class="navbar">
+#     <div class="nav-logo">Lex<span>Guard</span></div>
+#     <div class="nav-badge">AI Legal Analyzer — Beta</div>
+# </div>
+# """, unsafe_allow_html=True)
+
+
+# # ── HERO ──────────────────────────────────────────────────────
+# st.markdown("""
+# <div class="hero">
+#     <div class="hero-tag">Powered by LLaMA 3.3 · 70B</div>
+#     <h1>Know your risks<br>before you <span>sign</span></h1>
+#     <p>Upload any legal document — offer letter, rent agreement,
+# NDA, or freelance contract. Get a plain-language risk report
+# in 30 seconds. Know exactly what you're signing.</p>
+# </div>
+# """, unsafe_allow_html=True)
+
+
+# # ── UPLOAD ────────────────────────────────────────────────────
+# # ── UPLOAD ────────────────────────────────────────────────────
+# _, col, _ = st.columns([1, 2, 1])
+# with col:
+#     uploaded_file = st.file_uploader(
+#         "Upload PDF",
+#         type=["pdf"],
+#         label_visibility="collapsed",
+#         help="Maximum file size: 10MB | Maximum 50 pages"  
+#     )
+#     if uploaded_file:
+#         st.caption(f"Ready to analyze: **{uploaded_file.name}**")
+#         analyze = st.button("Run Analysis", use_container_width=True)
+#     else:
+#      st.markdown("""
+#     <style>
+#     [data-testid="stFileUploaderDropzoneInstructions"] div small {
+#         display: none;
+#     }
+#     </style>
+#     <div style='text-align:center;color:#334155;font-size:0.8rem;padding:0.5rem 0;'>
+#         PDF · Max 10MB · 50 Pages · Any Legal Document
+#     </div>""", unsafe_allow_html=True)
+#      analyze = False
+
+
+# # ── PIPELINE ─────────────────────────────────────────────────
+# if uploaded_file and analyze:
+
+#     result = extract_text_from_pdf(uploaded_file)
+#     text, error, file_hash = result if len(result) == 3 else (*result, None)
+#     if error:
+#         st.error(error)
+#         st.stop()
+
+#     steps = [
+#         "Extracting document text",
+#         "Detecting document type",
+#         "Analyzing clauses for risk",
+#         "Simplifying legal language",
+#         "Compiling report"
+#     ]
+
+#     pipe_placeholder = st.empty()
+
+#     def render_steps(done_count):
+#         html = '<div class="pipeline-wrap">'
+#         for i, s in enumerate(steps):
+#             cls = "step done" if i < done_count else "step"
+#             dot_color = "#6366f1" if i < done_count else "#1e293b"
+#             html += f"""
+#             <div class="{cls}">
+#                 <div class="step-dot"></div>
+#                 <span class="step-num">0{i+1}</span>
+#                 <span>{s}</span>
+#             </div>"""
+#         html += '</div>'
+#         return html
+
+#     pipe_placeholder.markdown(render_steps(1), unsafe_allow_html=True)
+
+#     with st.spinner(""):
+#         final_state = run_pipeline(text)
+
+#     pipe_placeholder.markdown(render_steps(5), unsafe_allow_html=True)
+
+#     if final_state.get("error"):
+#         st.error(final_state["error"])
+#         st.stop()
+
+#     report  = final_state["report"]
+#     verdict = report["verdict"]
+#     score   = report["risk_score"]
+#     doc     = report["doc_type"]
+
+#     score_color = "#ef4444" if score >= 7 else "#f59e0b" if score >= 4 else "#22c55e"
+
+#     st.markdown("<br>", unsafe_allow_html=True)
+
+#     # ── REPORT HEADER ─────────────────────────────────────────
+#     st.markdown(f"""
+#     <div class="report-header">
+#         <div>
+#             <div class="report-title">Document analyzed</div>
+#             <div class="report-doctype">{doc}</div>
+#         </div>
+#         <div class="score-block">
+#             <div class="score-number" style="color:{score_color}">{score}</div>
+#             <div class="score-label">Risk Score / 10</div>
+#         </div>
+#     </div>
+#     """, unsafe_allow_html=True)
+
+#     # ── STAT ROW ──────────────────────────────────────────────
+#     st.markdown(f"""
+#     <div class="stat-row">
+#         <div class="stat-box">
+#             <div class="stat-val" style="color:#ef4444">{len(report['high_risks'])}</div>
+#             <div class="stat-lbl">High Risk</div>
+#         </div>
+#         <div class="stat-box">
+#             <div class="stat-val" style="color:#f59e0b">{len(report['medium_risks'])}</div>
+#             <div class="stat-lbl">Medium Risk</div>
+#         </div>
+#         <div class="stat-box">
+#             <div class="stat-val" style="color:#f97316">{len(report['low_risks'])}</div>
+#             <div class="stat-lbl">Low Risk</div>
+#         </div>
+#         <div class="stat-box">
+#             <div class="stat-val" style="color:#22c55e">{len(report['safe_clauses'])}</div>
+#             <div class="stat-lbl">Safe</div>
+#         </div>
+#     </div>
+#     """, unsafe_allow_html=True)
+
+#     # ── VERDICT ───────────────────────────────────────────────
+#     vc = verdict["color"]
+#     vc_class = "red" if vc == "red" else "amber" if vc == "orange" else "green"
+#     st.markdown(f"""
+#     <div class="verdict {vc_class}">
+#         <div class="verdict-label">Assessment</div>
+#         <div class="verdict-text">{verdict['verdict']}</div>
+#         <div class="verdict-sub">{verdict['advice']}</div>
+#     </div>
+#     """, unsafe_allow_html=True)
+
+#     # ── CLAUSE RENDERER ───────────────────────────────────────
+#     def render_clauses(clauses, badge_class, badge_label):
+#         for c in clauses:
+#             original = c.get("original_text", "")
+#             original_snippet = f'<div class="clause-original">{original[:220]}{"..." if len(original) > 220 else ""}</div>' if original else ""
+#             st.markdown(f"""
+#             <div class="clause-card">
+#                 <div class="clause-top">
+#                     <span class="clause-name">
+#                         {c.get('clause_type','Unknown')}
+#                         <span class="conf-pill">{c.get('confidence',0)}% confidence</span>
+#                     </span>
+#                     <span class="badge {badge_class}">{badge_label}</span>
+#                 </div>
+#                 {original_snippet}
+#                 <div class="clause-explanation">{c.get('simple_explanation','')}</div>
+#                 <div class="clause-reason">{c.get('reason','')}</div>
+#             </div>
+#             """, unsafe_allow_html=True)
+
+#     if report["high_risks"]:
+#         st.markdown('<div class="section-label">High Risk</div>', unsafe_allow_html=True)
+#         render_clauses(report["high_risks"], "badge-high", "High")
+
+#     if report["medium_risks"]:
+#         st.markdown('<div class="section-label">Medium Risk</div>', unsafe_allow_html=True)
+#         render_clauses(report["medium_risks"], "badge-medium", "Medium")
+
+#     if report["low_risks"]:
+#         st.markdown('<div class="section-label">Low Risk</div>', unsafe_allow_html=True)
+#         render_clauses(report["low_risks"], "badge-low", "Low")
+
+#     if report["safe_clauses"]:
+#         st.markdown('<div class="section-label">Safe Clauses</div>', unsafe_allow_html=True)
+#         render_clauses(report["safe_clauses"], "badge-safe", "Safe")
+
+#     st.markdown("<br>", unsafe_allow_html=True)
+
+#     # ── DOWNLOAD ──────────────────────────────────────────────
+#     report_text = f"""LEXGUARD RISK REPORT
+# {'='*60}
+# Document  : {doc}
+# Score     : {score} / 10
+# Verdict   : {verdict['verdict']}
+# {'='*60}
+
+# HIGH RISK ({len(report['high_risks'])} clauses)
+# {'-'*60}
+# """
+#     for i, r in enumerate(report["high_risks"], 1):
+#         report_text += f"\n{i}. {r.get('clause_type')} — {r.get('confidence')}% confidence\n"
+#         report_text += f"   {r.get('original_text','')[:150]}\n"
+#         report_text += f"   > {r.get('simple_explanation','')}\n"
+
+#     report_text += f"\nMEDIUM RISK ({len(report['medium_risks'])} clauses)\n{'-'*60}\n"
+#     for i, r in enumerate(report["medium_risks"], 1):
+#         report_text += f"\n{i}. {r.get('clause_type')} — {r.get('confidence')}% confidence\n"
+#         report_text += f"   > {r.get('simple_explanation','')}\n"
+
+#     report_text += f"\nSAFE ({len(report['safe_clauses'])} clauses)\n{'-'*60}\n"
+#     for r in report["safe_clauses"]:
+#         report_text += f"- {r.get('clause_type')}\n"
+
+#     report_text += f"\n{'='*60}\nDisclaimer: Informational only. Not legal advice.\n{'='*60}\n"
+
+#     _, dc, _ = st.columns([1, 2, 1])
+#     with dc:
+#         st.download_button(
+#             "Download Report",
+#             data=report_text,
+#             file_name=f"lexguard_{doc.lower().replace(' ','_')}.txt",
+#             mime="text/plain",
+#             use_container_width=True
+#         )
+
+#     st.markdown("""
+#     <div style='text-align:center;color:#1e293b;font-size:0.75rem;
+#     margin-top:3rem;padding-bottom:2rem;'>
+#         LexGuard — Informational use only. Not a substitute for legal advice.
+#     </div>
+#     """, unsafe_allow_html=True)
+
+
+import streamlit as st
+from utils.pdf_reader import extract_text_from_pdf
+from agents.pipeline import run_pipeline
+
+st.set_page_config(
+    page_title="LexGuard",
+    page_icon="⚖",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+st.markdown("""
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+    .stApp { background-color: #050508; color: #e2e8f0; }
+
+    /* ── NAV BAR ── */
+    .navbar {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 1.2rem 2rem; border-bottom: 1px solid #0f172a;
+        background: #07070d; margin-bottom: 3rem;
+        position: sticky; top: 0; z-index: 999; margin-top: -1rem;
+    }
+    .nav-logo { font-size: 1.1rem; font-weight: 700; color: #f1f5f9; letter-spacing: 0.05em; }
+    .nav-logo span { color: #6366f1; }
+    .nav-badge {
+        font-size: 0.7rem; color: #475569; border: 1px solid #1e293b;
+        padding: 0.25rem 0.75rem; border-radius: 999px;
+        letter-spacing: 0.08em; text-transform: uppercase;
+    }
+
+    /* ── HERO ── */
+    .hero { max-width: 680px; margin: 0 auto 3.5rem auto; text-align: center; padding: 0 1rem; }
+    .hero-tag {
+        display: inline-block; font-size: 0.72rem; font-weight: 500;
+        letter-spacing: 0.12em; text-transform: uppercase; color: #6366f1;
+        background: #0f0f1a; border: 1px solid #1e1b4b;
+        padding: 0.3rem 1rem; border-radius: 999px; margin-bottom: 1.5rem;
+    }
+    .hero h1 { font-size: 2.8rem; font-weight: 700; color: #f8fafc; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.02em; }
+    .hero h1 span { color: #6366f1; }
+    .hero p { font-size: 1rem; color: #64748b; line-height: 1.7; }
+
+    /* ── UPLOAD CARD ── */
+    .upload-card { max-width: 580px; margin: 0 auto 2rem auto; background: #0c0c14; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; }
+
+    /* ── PIPELINE STEPS ── */
+    .pipeline-wrap { max-width: 580px; margin: 0 auto 2.5rem auto; }
+    .step {
+        display: flex; align-items: center; gap: 0.9rem;
+        padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 0.4rem;
+        font-size: 0.88rem; color: #94a3b8; background: #0a0a12; border: 1px solid #0f172a;
+    }
+    .step.done { color: #e2e8f0; border-color: #1e293b; }
+    .step-dot { width: 8px; height: 8px; border-radius: 50%; background: #1e293b; flex-shrink: 0; }
+    .step.done .step-dot { background: #6366f1; }
+    .step-num { font-size: 0.7rem; color: #334155; min-width: 1.5rem; }
+
+    /* ── REPORT HEADER ── */
+    .report-header {
+        max-width: 860px; margin: 0 auto 2rem auto; padding: 1.8rem 2rem;
+        background: #0c0c14; border: 1px solid #1e293b; border-radius: 12px;
+        display: flex; justify-content: space-between; align-items: center;
+    }
+    .report-title { font-size: 0.75rem; color: #475569; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+    .report-doctype { font-size: 1.1rem; font-weight: 600; color: #f1f5f9; }
+    .report-meta { font-size: 0.75rem; color: #334155; margin-top: 0.3rem; }
+
+    /* ── SCORE BLOCK ── */
+    .score-block { text-align: right; }
+    .score-number { font-size: 2.8rem; font-weight: 700; line-height: 1; letter-spacing: -0.03em; }
+    .score-label { font-size: 0.72rem; color: #475569; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.2rem; }
+
+    /* ── STAT ROW ── */
+    .stat-row { max-width: 860px; margin: 0 auto 2rem auto; display: flex; gap: 1rem; }
+    .stat-box { flex: 1; background: #0c0c14; border: 1px solid #1e293b; border-radius: 10px; padding: 1.2rem 1.5rem; }
+    .stat-val { font-size: 1.8rem; font-weight: 700; color: #f1f5f9; letter-spacing: -0.02em; }
+    .stat-lbl { font-size: 0.72rem; color: #475569; text-transform: uppercase; letter-spacing: 0.09em; margin-top: 0.25rem; }
+
+    /* ── VERDICT ── */
+    .verdict { max-width: 860px; margin: 0 auto 2.5rem auto; padding: 1.4rem 2rem; border-radius: 10px; border-left: 3px solid; }
+    .verdict.red   { background:#0f0505; border-color:#ef4444; }
+    .verdict.amber { background:#0d0900; border-color:#f59e0b; }
+    .verdict.green { background:#030f08; border-color:#22c55e; }
+    .verdict-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.4rem; }
+    .verdict.red   .verdict-label { color:#ef4444; }
+    .verdict.amber .verdict-label { color:#f59e0b; }
+    .verdict.green .verdict-label { color:#22c55e; }
+    .verdict-text { font-size: 1rem; font-weight: 600; color: #f1f5f9; margin-bottom: 0.3rem; }
+    .verdict-sub  { font-size: 0.875rem; color: #64748b; }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+        max-width: 860px; margin: 0 auto 1rem auto;
+        font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+        letter-spacing: 0.12em; color: #475569;
+        padding-bottom: 0.6rem; border-bottom: 1px solid #0f172a;
+    }
+
+    /* ── CLAUSE CARD ── */
+    .clause-card { max-width: 860px; margin: 0 auto 0.75rem auto; background: #0c0c14; border: 1px solid #1e293b; border-radius: 10px; padding: 1.4rem 1.6rem; }
+    .clause-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.9rem; }
+    .clause-name { font-size: 0.92rem; font-weight: 600; color: #f1f5f9; }
+    .badge { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.25rem 0.7rem; border-radius: 4px; }
+    .badge-high   { background:#1a0505; color:#ef4444; border:1px solid #7f1d1d; }
+    .badge-medium { background:#100900; color:#f59e0b; border:1px solid #78350f; }
+    .badge-low    { background:#0d0700; color:#f97316; border:1px solid #7c2d12; }
+    .badge-safe   { background:#030f06; color:#22c55e; border:1px solid #14532d; }
+    .clause-original { font-size: 0.82rem; color: #334155; font-style: italic; border-left: 2px solid #1e293b; padding-left: 0.9rem; margin-bottom: 0.9rem; line-height: 1.6; }
+    .clause-explanation { font-size: 0.88rem; color: #94a3b8; line-height: 1.7; margin-bottom: 0.7rem; }
+    .clause-tip {
+        font-size: 0.82rem; color: #6366f1; background: #0f0f1a;
+        border: 1px solid #1e1b4b; border-radius: 6px;
+        padding: 0.6rem 0.9rem; margin-bottom: 0.7rem; line-height: 1.6;
+    }
+    .clause-tip-label { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #4f46e5; margin-bottom: 0.3rem; }
+    .clause-reason { font-size: 0.8rem; color: #475569; padding-top: 0.7rem; border-top: 1px solid #0f172a; }
+    .conf-pill { font-size: 0.68rem; color: #475569; border: 1px solid #1e293b; padding: 0.2rem 0.6rem; border-radius: 999px; margin-left: 0.6rem; font-weight: 400; }
+
+    /* ── BUTTONS ── */
+    .stDownloadButton > button, .stButton > button {
+        background: #6366f1 !important; color: white !important; border: none !important;
+        border-radius: 8px !important; font-size: 0.85rem !important;
+        font-weight: 500 !important; padding: 0.6rem 1.5rem !important; letter-spacing: 0.02em !important;
+    }
+
+    /* ── HIDE DEFAULTS ── */
+    #MainMenu, footer, .stDeployButton, header[data-testid="stHeader"] { display: none !important; }
+    .block-container { padding-top: 0 !important; }
+    hr { border-color: #0f172a; }
+    [data-testid="stFileUploader"] { background: #07070d; border: 1px dashed #1e293b; border-radius: 8px; padding: 0.5rem; }
+</style>
+""", unsafe_allow_html=True)
+
+
+# ── Cache wrapper ─────────────────────────────────────────────
+@st.cache_data(show_spinner=False)
+def run_pipeline_cached(text: str, file_hash: str) -> dict:
+    """Cache results by file hash — same file won't re-analyze."""
+    return run_pipeline(text)
+
+
+# ── NAVBAR ────────────────────────────────────────────────────
+st.markdown("""
+<div class="navbar">
+    <div class="nav-logo">Lex<span>Guard</span></div>
+    <div class="nav-badge">AI Legal Analyzer — Beta</div>
+</div>
+""", unsafe_allow_html=True)
+
+
+# ── HERO ──────────────────────────────────────────────────────
+st.markdown("""
+<div class="hero">
+    <div class="hero-tag">Powered by LLaMA 3.3 · 70B</div>
+    <h1>Know your risks<br>before you <span>sign</span></h1>
+    <p>Upload any legal document — offer letter, rent agreement,
+    NDA, or freelance contract. Get a plain-language risk report
+    in 30 seconds. Know exactly what you're signing.</p>
+</div>
+""", unsafe_allow_html=True)
+
+
+# ── UPLOAD ────────────────────────────────────────────────────
+_, col, _ = st.columns([1, 2, 1])
+with col:
+    uploaded_file = st.file_uploader(
+        "Upload PDF",
+        type=["pdf"],
+        label_visibility="collapsed",
+        help="Maximum file size: 10MB | Maximum 50 pages"
+    )
+    if uploaded_file:
+        st.caption(f"Ready to analyze: **{uploaded_file.name}**")
+        analyze = st.button("Run Analysis", use_container_width=True)
+    else:
+        st.markdown("""
+        <style>
+        [data-testid="stFileUploaderDropzoneInstructions"] div small { display: none; }
+        </style>
+        <div style='text-align:center;color:#334155;font-size:0.8rem;padding:0.5rem 0;'>
+            PDF · Max 10MB · 50 Pages · Any Legal Document
+        </div>""", unsafe_allow_html=True)
+        analyze = False
+
+
+# ── PIPELINE ─────────────────────────────────────────────────
+if uploaded_file and analyze:
+
+    text, error, file_hash = extract_text_from_pdf(uploaded_file)
+    if error:
+        st.error(error)
+        st.stop()
+
+    steps = [
+        "Extracting document text",
+        "Detecting document type",
+        "Analyzing clauses for risk",
+        "Simplifying legal language",
+        "Compiling report"
+    ]
+
+    pipe_placeholder = st.empty()
+
+    def render_steps(done_count: int) -> str:
+        html = '<div class="pipeline-wrap">'
+        for i, s in enumerate(steps):
+            cls = "step done" if i < done_count else "step"
+            html += f"""
+            <div class="{cls}">
+                <div class="step-dot"></div>
+                <span class="step-num">0{i+1}</span>
+                <span>{s}</span>
+            </div>"""
+        html += '</div>'
+        return html
+
+    pipe_placeholder.markdown(render_steps(1), unsafe_allow_html=True)
+
+    with st.spinner(""):
+        # Use cache — same file won't be re-analyzed
+        final_state = run_pipeline_cached(text, file_hash or "no_hash")
+
+    pipe_placeholder.markdown(render_steps(5), unsafe_allow_html=True)
+
+    if final_state.get("error"):
+        st.error(final_state["error"])
+        st.stop()
+
+    report  = final_state["report"]
+    verdict = report["verdict"]
+    score   = report["risk_score"]
+    doc     = report["doc_type"]
+
+    score_color = "#ef4444" if score >= 7 else "#f59e0b" if score >= 4 else "#22c55e"
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # ── REPORT HEADER ─────────────────────────────────────────
+    st.markdown(f"""
+    <div class="report-header">
+        <div>
+            <div class="report-title">Document analyzed</div>
+            <div class="report-doctype">{doc}</div>
+            <div class="report-meta">{report['analyzed_at']}</div>
+        </div>
+        <div class="score-block">
+            <div class="score-number" style="color:{score_color}">{score}</div>
+            <div class="score-label">Risk Score / 10</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── STAT ROW ──────────────────────────────────────────────
+    st.markdown(f"""
+    <div class="stat-row">
+        <div class="stat-box"><div class="stat-val" style="color:#ef4444">{len(report['high_risks'])}</div><div class="stat-lbl">High Risk</div></div>
+        <div class="stat-box"><div class="stat-val" style="color:#f59e0b">{len(report['medium_risks'])}</div><div class="stat-lbl">Medium Risk</div></div>
+        <div class="stat-box"><div class="stat-val" style="color:#f97316">{len(report['low_risks'])}</div><div class="stat-lbl">Low Risk</div></div>
+        <div class="stat-box"><div class="stat-val" style="color:#22c55e">{len(report['safe_clauses'])}</div><div class="stat-lbl">Safe</div></div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── VERDICT ───────────────────────────────────────────────
+    vc_class = "red" if verdict["color"] == "red" else "amber" if verdict["color"] == "orange" else "green"
+    st.markdown(f"""
+    <div class="verdict {vc_class}">
+        <div class="verdict-label">Assessment</div>
+        <div class="verdict-text">{verdict['verdict']}</div>
+        <div class="verdict-sub">{verdict['advice']}</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── CLAUSE RENDERER ───────────────────────────────────────
+    def render_clauses(clauses: list, badge_class: str, badge_label: str):
+        for c in clauses:
+            original = c.get("original_text", "")
+            original_html = (
+                f'<div class="clause-original">{original[:220]}{"..." if len(original) > 220 else ""}</div>'
+                if original else ""
+            )
+
+            tip = c.get("negotiation_tip", "")
+            tip_html = (
+                f'<div class="clause-tip"><div class="clause-tip-label">Negotiation Tip</div>{tip}</div>'
+                if tip and tip.strip() and badge_label != "Safe" else ""
+            )
+
+            st.markdown(f"""
+            <div class="clause-card">
+                <div class="clause-top">
+                    <span class="clause-name">
+                        {c.get('clause_type', 'Unknown')}
+                        <span class="conf-pill">{c.get('confidence', 0)}% confidence</span>
+                    </span>
+                    <span class="badge {badge_class}">{badge_label}</span>
+                </div>
+                {original_html}
+                <div class="clause-explanation">{c.get('simple_explanation', '')}</div>
+                {tip_html}
+                <div class="clause-reason">{c.get('reason', '')}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    if report["high_risks"]:
+        st.markdown('<div class="section-label">High Risk</div>', unsafe_allow_html=True)
+        render_clauses(report["high_risks"], "badge-high", "High")
+
+    if report["medium_risks"]:
+        st.markdown('<div class="section-label">Medium Risk</div>', unsafe_allow_html=True)
+        render_clauses(report["medium_risks"], "badge-medium", "Medium")
+
+    if report["low_risks"]:
+        st.markdown('<div class="section-label">Low Risk</div>', unsafe_allow_html=True)
+        render_clauses(report["low_risks"], "badge-low", "Low")
+
+    if report["safe_clauses"]:
+        st.markdown('<div class="section-label">Safe Clauses</div>', unsafe_allow_html=True)
+        render_clauses(report["safe_clauses"], "badge-safe", "Safe")
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # ── DOWNLOAD ──────────────────────────────────────────────
+    report_text = f"""LEXGUARD RISK REPORT
+{'='*60}
+Document  : {doc}
+Score     : {score} / 10
+Verdict   : {verdict['verdict']}
+Analyzed  : {report['analyzed_at']}
+{'='*60}
+
+HIGH RISK ({len(report['high_risks'])} clauses)
+{'-'*60}"""
+    for i, r in enumerate(report["high_risks"], 1):
+        report_text += f"\n{i}. {r.get('clause_type')} — {r.get('confidence')}% confidence\n"
+        report_text += f"   Original : {r.get('original_text', '')[:150]}\n"
+        report_text += f"   Meaning  : {r.get('simple_explanation', '')}\n"
+        report_text += f"   Tip      : {r.get('negotiation_tip', '')}\n"
+
+    report_text += f"\nMEDIUM RISK ({len(report['medium_risks'])} clauses)\n{'-'*60}\n"
+    for i, r in enumerate(report["medium_risks"], 1):
+        report_text += f"\n{i}. {r.get('clause_type')} — {r.get('confidence')}% confidence\n"
+        report_text += f"   Meaning  : {r.get('simple_explanation', '')}\n"
+        report_text += f"   Tip      : {r.get('negotiation_tip', '')}\n"
+
+    report_text += f"\nSAFE ({len(report['safe_clauses'])} clauses)\n{'-'*60}\n"
+    for r in report["safe_clauses"]:
+        report_text += f"- {r.get('clause_type')}\n"
+
+    report_text += f"\n{'='*60}\nDisclaimer: Informational only. Not legal advice.\n{'='*60}\n"
+
+    _, dc, _ = st.columns([1, 2, 1])
+    with dc:
+        st.download_button(
+            "Download Report",
+            data=report_text,
+            file_name=f"lexguard_{doc.lower().replace(' ', '_')}.txt",
+            mime="text/plain",
+            use_container_width=True
+        )
+
+    st.markdown("""
+    <div style='text-align:center;color:#1e293b;font-size:0.75rem;margin-top:3rem;padding-bottom:2rem;'>
+        LexGuard — Informational use only. Not a substitute for legal advice.
+    </div>
+    """, unsafe_allow_html=True)
