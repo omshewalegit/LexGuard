@@ -59,33 +59,44 @@ def test_score_capped_at_ten():
     assert calculate_risk_score(risks) <= 10.0
 
 
-# ── get_verdict ───────────────────────────────────────────────
-def test_verdict_red_for_high_score():
-    assert get_verdict(8.0)["color"] == "red"
+# ── get_verdict (5-tier system) ──────────────────────────────
+def test_verdict_red_critical():
+    verdict = get_verdict(9.0)
+    assert verdict["color"] == "red"
+    assert verdict["severity"] == "critical"
 
 
-def test_verdict_red_at_boundary():
-    assert get_verdict(7.0)["color"] == "red"
+def test_verdict_red_high():
+    verdict = get_verdict(7.0)
+    assert verdict["color"] == "red"
+    assert verdict["severity"] == "high"
 
 
-def test_verdict_orange_for_mid_score():
-    assert get_verdict(5.0)["color"] == "orange"
+def test_verdict_orange_moderate():
+    verdict = get_verdict(5.0)
+    assert verdict["color"] == "orange"
+    assert verdict["severity"] == "moderate"
 
 
-def test_verdict_orange_at_boundary():
-    assert get_verdict(4.0)["color"] == "orange"
+def test_verdict_green_low():
+    verdict = get_verdict(3.0)
+    assert verdict["color"] == "green"
+    assert verdict["severity"] == "low"
 
 
-def test_verdict_green_for_low_score():
-    assert get_verdict(2.0)["color"] == "green"
+def test_verdict_green_safe():
+    verdict = get_verdict(1.0)
+    assert verdict["color"] == "green"
+    assert verdict["severity"] == "safe"
 
 
 def test_verdict_has_required_keys():
-    """Verdict dict must have verdict, color, advice"""
+    """Verdict dict must have verdict, color, advice, severity"""
     verdict = get_verdict(5.0)
-    assert "verdict" in verdict
-    assert "color"   in verdict
-    assert "advice"  in verdict
+    assert "verdict"  in verdict
+    assert "color"    in verdict
+    assert "advice"   in verdict
+    assert "severity" in verdict
 
 
 # ── generate_report ───────────────────────────────────────────
@@ -93,7 +104,7 @@ def test_report_has_all_keys():
     """Report must contain every required key"""
     report = generate_report("OFFER_LETTER", SAMPLE_RISKS)
     required = [
-        "doc_type", "risk_score", "verdict",
+        "doc_type", "risk_score", "verdict", "coverage",
         "high_risks", "medium_risks", "low_risks",
         "safe_clauses", "total_flags", "analyzed_at"
     ]
@@ -127,3 +138,11 @@ def test_report_empty_risks():
     report = generate_report("NDA", [])
     assert report["risk_score"] == 0.0
     assert report["total_flags"] == 0
+
+
+def test_report_coverage_present():
+    """Report must include coverage metrics"""
+    report = generate_report("OFFER_LETTER", SAMPLE_RISKS, total_chunks=5)
+    assert "coverage" in report
+    assert report["coverage"]["sections_analyzed"] == 5
+    assert report["coverage"]["total_clauses_found"] == 3

@@ -17,6 +17,7 @@ def get_logger(name: str) -> logging.Logger:
         return logger
 
     logger.setLevel(logging.INFO)
+    logger.propagate = False  # Prevent duplicate logs from root logger
 
     # Format
     formatter = logging.Formatter(
