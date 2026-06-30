@@ -742,7 +742,7 @@ if uploaded_file and analyze:
     top_priorities = report.get("top_priorities", [])
     if top_priorities:
         st.markdown(
-            '<div class="section-label">🎯 Top Priorities — Negotiate These First</div>',
+            '<div class="section-label">Top Priorities — Negotiate These First</div>',
             unsafe_allow_html=True
         )
         priorities_html = '<div class="priorities-wrap">'

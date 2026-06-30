@@ -176,7 +176,7 @@ if not GROQ_KEYS:
         "Add GROQ_API_KEY_1 (and optionally _2, _3) to your .env file."
     )
 
-MODEL_SMART = "llama-3.3-70b-versatile"
+MODEL_SMART = "openai/gpt-oss-120b"
 MODEL_FAST  = "llama-3.1-8b-instant"
 
 # How long a rate-limited key is skipped before being retried

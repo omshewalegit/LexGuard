@@ -1,0 +1,195 @@
+2026-06-22 03:35:10 | INFO     | pdf_reader | OCR available
+2026-06-22 03:35:47 | INFO     | pdf_reader | Direct extraction: 5389 chars from 3 pages
+2026-06-22 03:35:47 | INFO     | pipeline | Pipeline started
+2026-06-22 03:35:47 | INFO     | pipeline | Validation passed | chars=5389
+2026-06-22 03:35:47 | INFO     | orchestrator | Detecting document type + locale | chars=5389
+2026-06-22 03:35:47 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 03:35:49 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 03:35:50 | INFO     | orchestrator | Doc type: RENT_AGREEMENT | Locale: Maharashtra, India | took 2.9s
+2026-06-22 03:35:50 | INFO     | text_chunker | Chunked document: 5389 chars → 5 chunks (avg 1077 chars/chunk)
+2026-06-22 03:35:50 | INFO     | pipeline | Doc type: RENT_AGREEMENT | Locale: Maharashtra, India | Chunks: 5
+2026-06-22 03:35:50 | INFO     | clause_extractor | Extracting clauses | chunks=5 | doc_type=RENT_AGREEMENT
+2026-06-22 03:35:50 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-22 03:35:50 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 03:35:52 | INFO     | clause_extractor | Extraction batch 2: 2 chunk(s)
+2026-06-22 03:35:52 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 03:36:13 | WARNING  | clause_extractor | Extraction batch 2: LLM call exceeded 20.0s on attempt 1
+2026-06-22 03:36:31 | INFO     | clause_extractor | Extraction: 2 batch(es) resolved in 40.7s (deadline=45.0s, skipped=0)
+2026-06-22 03:36:31 | INFO     | clause_extractor | Extracted 27 verified clauses | skipped_batches=0/2
+2026-06-22 03:36:31 | INFO     | pipeline | Clauses extracted: 27 | skipped_batches=0
+2026-06-22 03:36:31 | INFO     | risk_analyzer | Assessing 27 clauses | doc_type=RENT_AGREEMENT
+2026-06-22 03:36:31 | INFO     | risk_analyzer | Assessing batch 1 (8 clauses)
+2026-06-22 03:36:31 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 03:36:33 | INFO     | risk_analyzer | Assessing batch 2 (8 clauses)
+2026-06-22 03:36:33 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 03:36:34 | INFO     | risk_analyzer | Assessing batch 3 (8 clauses)
+2026-06-22 03:36:34 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 03:36:35 | INFO     | risk_analyzer | Assessing batch 4 (3 clauses)
+2026-06-22 03:36:35 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 03:36:52 | WARNING  | risk_analyzer | Batch 2: LLM call exceeded 18.0s on attempt 1 — retrying
+2026-06-22 03:36:57 | INFO     | risk_analyzer | All 4 batches resolved in 26.1s (deadline=30.0s, skipped_batches=0)
+2026-06-22 03:36:57 | INFO     | risk_analyzer | Assessment complete: 27 clauses | HIGH=5 | MEDIUM=15 | LOW=3 | SAFE=4 | NEEDS_MANUAL_REVIEW=0
+2026-06-22 03:36:57 | INFO     | pipeline | Risks assessed: 27
+2026-06-22 03:36:57 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-22 03:36:57 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 03:36:58 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-22 03:36:58 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 03:36:59 | INFO     | simplifier | Simplify batch 3: 7 clause(s)
+2026-06-22 03:36:59 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 03:37:00 | INFO     | simplifier | Simplify batch 1: accepted=10 rejected=0 on attempt 1
+2026-06-22 03:37:01 | INFO     | simplifier | Simplify batch 3: accepted=7 rejected=0 on attempt 1
+2026-06-22 03:37:01 | INFO     | simplifier | Simplify batch 2: accepted=10 rejected=0 on attempt 1
+2026-06-22 03:37:01 | INFO     | simplifier | Simplified 27 clause(s) across 3 batch(es) in 4.4s (deadline=40.0s) | fell_back_to_reason=0
+2026-06-22 03:37:01 | INFO     | reporter | Report generated | doc=RENT_AGREEMENT | score=5.3 | high=5 | medium=15 | low=3 | safe=4 | unanalyzed=0 | coverage=27 clauses from 5 sections
+2026-06-22 03:37:01 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-22 21:58:49 | INFO     | pdf_reader | OCR available
+2026-06-22 22:00:15 | INFO     | pdf_reader | Direct extraction: 16241 chars from 8 pages
+2026-06-22 22:00:15 | INFO     | pipeline | Pipeline started
+2026-06-22 22:00:15 | INFO     | pipeline | Validation passed | chars=16241
+2026-06-22 22:00:15 | INFO     | orchestrator | Detecting document type + locale | chars=16241
+2026-06-22 22:00:15 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 22:00:16 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 22:00:18 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 3.1s
+2026-06-22 22:00:18 | INFO     | text_chunker | Chunked document: 16241 chars → 10 chunks (avg 1624 chars/chunk)
+2026-06-22 22:00:18 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-22 22:00:18 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-22 22:00:18 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-22 22:00:18 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 22:00:19 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-22 22:00:19 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:00:20 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-22 22:00:20 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:00:21 | INFO     | clause_extractor | Extraction batch 4: 1 chunk(s)
+2026-06-22 22:00:21 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:00:42 | WARNING  | clause_extractor | Extraction batch 4: LLM call exceeded 20.0s on attempt 1
+2026-06-22 22:01:03 | ERROR    | clause_extractor | Extraction batch 4: did not finish within the 45.0s deadline — its section(s) were not analyzed
+2026-06-22 22:01:03 | INFO     | clause_extractor | Extraction: 4 batch(es) resolved in 45.0s (deadline=45.0s, skipped=1)
+2026-06-22 22:01:03 | INFO     | clause_extractor | Extracted 36 verified clauses | skipped_batches=1/4
+2026-06-22 22:01:03 | INFO     | pipeline | Clauses extracted: 36 | skipped_batches=1
+2026-06-22 22:01:03 | INFO     | risk_analyzer | Assessing 36 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-22 22:01:03 | INFO     | risk_analyzer | Assessing batch 1 (8 clauses)
+2026-06-22 22:01:03 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:01:05 | INFO     | risk_analyzer | Assessing batch 2 (8 clauses)
+2026-06-22 22:01:05 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 22:01:06 | INFO     | risk_analyzer | Assessing batch 3 (8 clauses)
+2026-06-22 22:01:06 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 22:01:07 | INFO     | risk_analyzer | Assessing batch 4 (8 clauses)
+2026-06-22 22:01:07 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 22:01:08 | INFO     | risk_analyzer | Assessing batch 5 (4 clauses)
+2026-06-22 22:01:08 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 22:01:15 | INFO     | risk_analyzer | All 5 batches resolved in 12.0s (deadline=30.0s, skipped_batches=0)
+2026-06-22 22:01:15 | INFO     | risk_analyzer | Assessment complete: 36 clauses | HIGH=1 | MEDIUM=19 | LOW=7 | SAFE=9 | NEEDS_MANUAL_REVIEW=0
+2026-06-22 22:01:15 | INFO     | pipeline | Risks assessed: 36
+2026-06-22 22:01:15 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-22 22:01:15 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:01:16 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-22 22:01:16 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 22:01:17 | INFO     | simplifier | Simplify batch 3: 10 clause(s)
+2026-06-22 22:01:17 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 22:01:18 | INFO     | simplifier | Simplify batch 4: 6 clause(s)
+2026-06-22 22:01:18 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 22:01:21 | INFO     | simplifier | Simplify batch 4: accepted=6 rejected=0 on attempt 1
+2026-06-22 22:01:21 | INFO     | simplifier | Simplify batch 3: accepted=10 rejected=0 on attempt 1
+2026-06-22 22:01:36 | WARNING  | simplifier | Simplify batch 1: LLM call exceeded 20.0s on attempt 1
+2026-06-22 22:01:37 | WARNING  | simplifier | Simplify batch 2: LLM call exceeded 20.0s on attempt 1
+2026-06-22 22:01:40 | INFO     | simplifier | Simplify batch 2: accepted=10 rejected=0 on attempt 2
+2026-06-22 22:01:44 | INFO     | simplifier | Simplify batch 1: accepted=10 rejected=0 on attempt 2
+2026-06-22 22:01:44 | INFO     | simplifier | Simplified 36 clause(s) across 4 batch(es) in 29.1s (deadline=40.0s) | fell_back_to_reason=0
+2026-06-22 22:01:44 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=3.9 | high=1 | medium=19 | low=7 | safe=9 | unanalyzed=0 | coverage=36 clauses from 10 sections
+2026-06-22 22:01:44 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-22 22:08:57 | INFO     | pdf_reader | Direct extraction: 5389 chars from 3 pages
+2026-06-22 22:08:57 | INFO     | pipeline | Pipeline started
+2026-06-22 22:08:57 | INFO     | pipeline | Validation passed | chars=5389
+2026-06-22 22:08:57 | INFO     | orchestrator | Detecting document type + locale | chars=5389
+2026-06-22 22:08:57 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 22:08:58 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:09:00 | INFO     | orchestrator | Doc type: RENT_AGREEMENT | Locale: Maharashtra, India | took 3.0s
+2026-06-22 22:09:00 | INFO     | text_chunker | Chunked document: 5389 chars → 5 chunks (avg 1077 chars/chunk)
+2026-06-22 22:09:00 | INFO     | pipeline | Doc type: RENT_AGREEMENT | Locale: Maharashtra, India | Chunks: 5
+2026-06-22 22:09:00 | INFO     | clause_extractor | Extracting clauses | chunks=5 | doc_type=RENT_AGREEMENT
+2026-06-22 22:09:00 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-22 22:09:00 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:09:01 | INFO     | clause_extractor | Extraction batch 2: 2 chunk(s)
+2026-06-22 22:09:01 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:09:22 | WARNING  | clause_extractor | Extraction batch 2: LLM call exceeded 20.0s on attempt 1
+2026-06-22 22:09:24 | INFO     | clause_extractor | Extraction: 2 batch(es) resolved in 24.7s (deadline=45.0s, skipped=0)
+2026-06-22 22:09:24 | INFO     | clause_extractor | Extracted 27 verified clauses | skipped_batches=0/2
+2026-06-22 22:09:24 | INFO     | pipeline | Clauses extracted: 27 | skipped_batches=0
+2026-06-22 22:09:24 | INFO     | risk_analyzer | Assessing 27 clauses | doc_type=RENT_AGREEMENT
+2026-06-22 22:09:24 | INFO     | risk_analyzer | Assessing batch 1 (8 clauses)
+2026-06-22 22:09:24 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 22:09:27 | INFO     | risk_analyzer | Assessing batch 2 (8 clauses)
+2026-06-22 22:09:27 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:09:28 | INFO     | risk_analyzer | Assessing batch 3 (8 clauses)
+2026-06-22 22:09:28 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:09:29 | INFO     | risk_analyzer | Assessing batch 4 (3 clauses)
+2026-06-22 22:09:29 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:09:47 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 18.0s on attempt 1 — retrying
+2026-06-22 22:09:49 | WARNING  | risk_analyzer | Batch 4: LLM call exceeded 18.0s on attempt 1 — retrying
+2026-06-22 22:09:54 | ERROR    | risk_analyzer | Batch 3: did not finish within the 30.0s deadline — flagging for manual review
+2026-06-22 22:09:54 | ERROR    | risk_analyzer | Batch 4: did not finish within the 30.0s deadline — flagging for manual review
+2026-06-22 22:09:54 | INFO     | risk_analyzer | All 4 batches resolved in 30.0s (deadline=30.0s, skipped_batches=2)
+2026-06-22 22:09:54 | INFO     | risk_analyzer | Assessment complete: 27 clauses | HIGH=0 | MEDIUM=10 | LOW=3 | SAFE=3 | NEEDS_MANUAL_REVIEW=11
+2026-06-22 22:09:54 | INFO     | pipeline | Risks assessed: 27
+2026-06-22 22:09:54 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-22 22:09:54 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:09:56 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-22 22:09:56 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 22:09:57 | INFO     | simplifier | Simplify batch 3: 7 clause(s)
+2026-06-22 22:09:57 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 22:10:00 | INFO     | simplifier | Simplify batch 2: accepted=10 rejected=0 on attempt 1
+2026-06-22 22:10:15 | WARNING  | simplifier | Simplify batch 1: LLM call exceeded 20.0s on attempt 1
+2026-06-22 22:10:19 | WARNING  | simplifier | Simplify batch 3: LLM call exceeded 20.0s on attempt 1
+2026-06-22 22:10:21 | INFO     | simplifier | Simplify batch 3: accepted=7 rejected=0 on attempt 2
+2026-06-22 22:10:21 | INFO     | simplifier | Simplify batch 1: accepted=10 rejected=0 on attempt 2
+2026-06-22 22:10:21 | INFO     | simplifier | Simplified 27 clause(s) across 3 batch(es) in 27.1s (deadline=40.0s) | fell_back_to_reason=0
+2026-06-22 22:10:21 | WARNING  | reporter | 11 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-22 22:10:21 | INFO     | reporter | Report generated | doc=RENT_AGREEMENT | score=4.9 | high=0 | medium=10 | low=3 | safe=3 | unanalyzed=11 | coverage=27 clauses from 5 sections
+2026-06-22 22:10:21 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-22 22:17:20 | INFO     | pdf_reader | OCR available
+2026-06-22 22:17:55 | INFO     | pdf_reader | Direct extraction: 5389 chars from 3 pages
+2026-06-22 22:17:55 | INFO     | pipeline | Pipeline started
+2026-06-22 22:17:55 | INFO     | pipeline | Validation passed | chars=5389
+2026-06-22 22:17:55 | INFO     | orchestrator | Detecting document type + locale | chars=5389
+2026-06-22 22:17:55 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 22:17:57 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:17:58 | INFO     | orchestrator | Doc type: RENT_AGREEMENT | Locale: Maharashtra, India | took 2.9s
+2026-06-22 22:17:58 | INFO     | text_chunker | Chunked document: 5389 chars → 5 chunks (avg 1077 chars/chunk)
+2026-06-22 22:17:58 | INFO     | pipeline | Doc type: RENT_AGREEMENT | Locale: Maharashtra, India | Chunks: 5
+2026-06-22 22:17:58 | INFO     | clause_extractor | Extracting clauses | chunks=5 | doc_type=RENT_AGREEMENT
+2026-06-22 22:17:58 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-22 22:17:58 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:18:00 | INFO     | clause_extractor | Extraction batch 2: 2 chunk(s)
+2026-06-22 22:18:00 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 22:18:02 | INFO     | clause_extractor | Extraction: 2 batch(es) resolved in 3.7s (deadline=45.0s, skipped=0)
+2026-06-22 22:18:02 | INFO     | clause_extractor | Extracted 27 verified clauses | skipped_batches=0/2
+2026-06-22 22:18:02 | INFO     | pipeline | Clauses extracted: 27 | skipped_batches=0
+2026-06-22 22:18:02 | INFO     | risk_analyzer | Assessing 27 clauses | doc_type=RENT_AGREEMENT
+2026-06-22 22:18:02 | INFO     | risk_analyzer | Deduplication: removed 1 duplicate clause(s) (27 → 26 unique)
+2026-06-22 22:18:02 | INFO     | risk_analyzer | Assessing batch 1 (8 clauses)
+2026-06-22 22:18:02 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 22:18:04 | INFO     | risk_analyzer | Assessing batch 2 (8 clauses)
+2026-06-22 22:18:04 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-22 22:18:06 | INFO     | risk_analyzer | Assessing batch 3 (8 clauses)
+2026-06-22 22:18:06 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 22:18:07 | INFO     | risk_analyzer | Assessing batch 4 (2 clauses)
+2026-06-22 22:18:07 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 22:18:27 | WARNING  | risk_analyzer | Batch 2: LLM call exceeded 22.0s on attempt 1
+2026-06-22 22:18:29 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 22.0s on attempt 1
+2026-06-22 22:18:38 | INFO     | risk_analyzer | All 4 batches resolved in 35.7s (deadline=55.0s, skipped_batches=0)
+2026-06-22 22:18:38 | INFO     | risk_analyzer | Assessment complete: 27 clauses | HIGH=5 | MEDIUM=15 | LOW=3 | SAFE=4 | NEEDS_MANUAL_REVIEW=0
+2026-06-22 22:18:38 | INFO     | pipeline | Risks assessed: 27
+2026-06-22 22:18:38 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-22 22:18:38 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 22:18:39 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-22 22:18:39 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-22 22:18:40 | INFO     | simplifier | Simplify batch 3: 7 clause(s)
+2026-06-22 22:18:40 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-22 22:18:42 | INFO     | simplifier | Simplify batch 3: accepted=7 rejected=0 on attempt 1
+2026-06-22 22:18:59 | WARNING  | simplifier | Simplify batch 1: LLM call exceeded 20.0s on attempt 1
+2026-06-22 22:19:00 | WARNING  | simplifier | Simplify batch 2: LLM call exceeded 20.0s on attempt 1
+2026-06-22 22:19:05 | INFO     | simplifier | Simplify batch 1: accepted=10 rejected=0 on attempt 2
+2026-06-22 22:19:18 | ERROR    | simplifier | Simplify batch 2: did not finish within the 40.0s deadline — its clauses will fall back to their `reason` text
+2026-06-22 22:19:18 | INFO     | simplifier | Simplified 27 clause(s) across 3 batch(es) in 40.0s (deadline=40.0s) | fell_back_to_reason=10
+2026-06-22 22:19:18 | INFO     | reporter | Report generated | doc=RENT_AGREEMENT | score=5.2 | high=5 | medium=15 | low=3 | safe=4 | unanalyzed=0 | coverage=27 clauses from 5 sections
+2026-06-22 22:19:18 | INFO     | pipeline | Pipeline complete | step=complete

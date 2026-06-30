@@ -1,0 +1,170 @@
+2026-06-19 18:24:16 | INFO     | pdf_reader | OCR available
+2026-06-19 18:24:18 | INFO     | pipeline | Pipeline started
+2026-06-19 18:24:18 | INFO     | pipeline | Validation passed | chars=360
+2026-06-19 18:24:18 | INFO     | pipeline | Doc type: OFFER_LETTER
+2026-06-19 18:24:18 | INFO     | pipeline | Risks found: 0
+2026-06-19 18:24:18 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-19 18:24:18 | INFO     | pipeline | Pipeline started
+2026-06-19 18:24:18 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-19 18:24:18 | INFO     | pipeline | Pipeline started
+2026-06-19 18:24:18 | INFO     | pipeline | Validation passed | chars=310
+2026-06-19 18:24:18 | INFO     | pipeline | Doc type: OTHER
+2026-06-19 18:24:18 | INFO     | pipeline | Risks found: 0
+2026-06-19 18:24:18 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-19 18:24:18 | INFO     | pipeline | Pipeline started
+2026-06-19 18:24:18 | INFO     | pipeline | Validation passed | chars=310
+2026-06-19 18:24:18 | INFO     | pipeline | Doc type: OFFER_LETTER
+2026-06-19 18:24:18 | INFO     | pipeline | Risks found: 0
+2026-06-19 18:24:18 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-19 18:24:18 | INFO     | pipeline | Pipeline started
+2026-06-19 18:24:18 | INFO     | pipeline | Validation passed | chars=310
+2026-06-19 18:24:18 | INFO     | pipeline | Doc type: OTHER
+2026-06-19 18:24:18 | INFO     | pipeline | Risks found: 0
+2026-06-19 18:24:18 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-19 18:24:18 | INFO     | reporter | Report generated | doc=OFFER_LETTER | score=6.4 | high=1 | medium=1 | low=0 | safe=1
+2026-06-19 18:24:18 | INFO     | reporter | Report generated | doc=OFFER_LETTER | score=6.4 | high=1 | medium=1 | low=0 | safe=1
+2026-06-19 18:24:18 | INFO     | reporter | Report generated | doc=OFFER_LETTER | score=6.4 | high=1 | medium=1 | low=0 | safe=1
+2026-06-19 18:24:18 | INFO     | reporter | Report generated | doc=OFFER_LETTER | score=6.4 | high=1 | medium=1 | low=0 | safe=1
+2026-06-19 18:24:18 | INFO     | reporter | Report generated | doc=NDA | score=0.0 | high=0 | medium=0 | low=0 | safe=0
+2026-06-19 18:26:06 | INFO     | pdf_reader | OCR available
+2026-06-19 18:26:22 | INFO     | pdf_reader | Direct extraction: 15358 chars from 5 pages
+2026-06-19 18:26:22 | INFO     | pipeline | Pipeline started
+2026-06-19 18:26:22 | INFO     | pipeline | Validation passed | chars=15358
+2026-06-19 18:26:22 | INFO     | orchestrator | Detecting document type | chars=15358
+2026-06-19 18:26:24 | WARNING  | orchestrator | Attempt 1 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:26:25 | WARNING  | orchestrator | Attempt 2 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:26:27 | WARNING  | orchestrator | Attempt 3 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:26:27 | ERROR    | orchestrator | All 3 attempts failed. Returning OTHER.
+2026-06-19 18:26:27 | INFO     | pipeline | Doc type: OTHER
+2026-06-19 18:26:27 | INFO     | risk_analyzer | Analyzing risks | doc_type=OTHER | chars=15358
+2026-06-19 18:26:28 | WARNING  | risk_analyzer | Unexpected error on attempt 1: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:26:29 | WARNING  | risk_analyzer | Unexpected error on attempt 2: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:26:31 | WARNING  | risk_analyzer | Unexpected error on attempt 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:26:31 | ERROR    | risk_analyzer | All 3 attempts failed. Returning fallback.
+2026-06-19 18:26:31 | INFO     | pipeline | Risks found: 1
+2026-06-19 18:26:32 | WARNING  | simplifier | Unexpected error on attempt 1: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:26:34 | WARNING  | simplifier | Unexpected error on attempt 2: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:26:36 | WARNING  | simplifier | Unexpected error on attempt 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:26:36 | ERROR    | simplifier | All simplification attempts failed — using fallback
+2026-06-19 18:26:36 | INFO     | reporter | Report generated | doc=OTHER | score=0.0 | high=0 | medium=0 | low=0 | safe=0
+2026-06-19 18:26:36 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-19 18:29:39 | INFO     | pdf_reader | OCR available
+2026-06-19 18:29:50 | INFO     | pdf_reader | Direct extraction: 15358 chars from 5 pages
+2026-06-19 18:29:50 | INFO     | pipeline | Pipeline started
+2026-06-19 18:29:50 | INFO     | pipeline | Validation passed | chars=15358
+2026-06-19 18:29:50 | INFO     | orchestrator | Detecting document type | chars=15358
+2026-06-19 18:29:52 | WARNING  | orchestrator | Attempt 1 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:29:53 | WARNING  | orchestrator | Attempt 2 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:29:55 | WARNING  | orchestrator | Attempt 3 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:29:55 | ERROR    | orchestrator | All 3 attempts failed. Returning OTHER.
+2026-06-19 18:29:55 | INFO     | pipeline | Doc type: OTHER
+2026-06-19 18:29:55 | INFO     | risk_analyzer | Analyzing risks | doc_type=OTHER | chars=15358
+2026-06-19 18:29:56 | WARNING  | risk_analyzer | Unexpected error on attempt 1: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:29:57 | WARNING  | risk_analyzer | Unexpected error on attempt 2: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:29:59 | WARNING  | risk_analyzer | Unexpected error on attempt 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:29:59 | ERROR    | risk_analyzer | All 3 attempts failed. Returning fallback.
+2026-06-19 18:29:59 | INFO     | pipeline | Risks found: 1
+2026-06-19 18:30:00 | WARNING  | simplifier | Unexpected error on attempt 1: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:30:01 | WARNING  | simplifier | Unexpected error on attempt 2: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:30:03 | WARNING  | simplifier | Unexpected error on attempt 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:30:03 | ERROR    | simplifier | All simplification attempts failed — using fallback
+2026-06-19 18:30:03 | INFO     | reporter | Report generated | doc=OTHER | score=0.0 | high=0 | medium=0 | low=0 | safe=0
+2026-06-19 18:30:03 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-19 18:32:06 | INFO     | pdf_reader | OCR available
+2026-06-19 18:32:14 | INFO     | pdf_reader | Direct extraction: 15358 chars from 5 pages
+2026-06-19 18:32:14 | INFO     | pipeline | Pipeline started
+2026-06-19 18:32:14 | INFO     | pipeline | Validation passed | chars=15358
+2026-06-19 18:32:14 | INFO     | orchestrator | Detecting document type | chars=15358
+2026-06-19 18:32:16 | WARNING  | orchestrator | Attempt 1 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:32:17 | WARNING  | orchestrator | Attempt 2 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:32:19 | WARNING  | orchestrator | Attempt 3 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:32:19 | ERROR    | orchestrator | All 3 attempts failed. Returning OTHER.
+2026-06-19 18:32:19 | INFO     | pipeline | Doc type: OTHER
+2026-06-19 18:32:19 | INFO     | risk_analyzer | Analyzing risks | doc_type=OTHER | chars=15358
+2026-06-19 18:32:20 | WARNING  | risk_analyzer | Unexpected error on attempt 1: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:32:21 | WARNING  | risk_analyzer | Unexpected error on attempt 2: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:32:23 | WARNING  | risk_analyzer | Unexpected error on attempt 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:32:23 | ERROR    | risk_analyzer | All 3 attempts failed. Returning fallback.
+2026-06-19 18:32:23 | INFO     | pipeline | Risks found: 1
+2026-06-19 18:32:24 | WARNING  | simplifier | Unexpected error on attempt 1: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:32:25 | WARNING  | simplifier | Unexpected error on attempt 2: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:32:27 | WARNING  | simplifier | Unexpected error on attempt 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:32:27 | ERROR    | simplifier | All simplification attempts failed — using fallback
+2026-06-19 18:32:27 | INFO     | reporter | Report generated | doc=OTHER | score=0.0 | high=0 | medium=0 | low=0 | safe=0
+2026-06-19 18:32:27 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-19 18:39:12 | INFO     | pdf_reader | OCR available
+2026-06-19 18:39:21 | INFO     | pdf_reader | Direct extraction: 15358 chars from 5 pages
+2026-06-19 18:39:21 | INFO     | pipeline | Pipeline started
+2026-06-19 18:39:21 | INFO     | pipeline | Validation passed | chars=15358
+2026-06-19 18:39:21 | INFO     | orchestrator | Detecting document type | chars=15358
+2026-06-19 18:39:23 | WARNING  | orchestrator | Attempt 1 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:39:24 | WARNING  | orchestrator | Attempt 2 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:39:26 | WARNING  | orchestrator | Attempt 3 failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:39:26 | ERROR    | orchestrator | All 3 attempts failed. Returning OTHER.
+2026-06-19 18:39:26 | INFO     | pipeline | Doc type: OTHER
+2026-06-19 18:39:26 | INFO     | risk_analyzer | Analyzing risks | doc_type=OTHER | chars=15358
+2026-06-19 18:39:27 | WARNING  | risk_analyzer | Unexpected error on attempt 1: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:39:28 | WARNING  | risk_analyzer | Unexpected error on attempt 2: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:39:30 | WARNING  | risk_analyzer | Unexpected error on attempt 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:39:30 | ERROR    | risk_analyzer | All 3 attempts failed. Returning fallback.
+2026-06-19 18:39:30 | INFO     | pipeline | Risks found: 1
+2026-06-19 18:39:31 | WARNING  | simplifier | Unexpected error on attempt 1: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:39:32 | WARNING  | simplifier | Unexpected error on attempt 2: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:39:34 | WARNING  | simplifier | Unexpected error on attempt 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-06-19 18:39:34 | ERROR    | simplifier | All simplification attempts failed — using fallback
+2026-06-19 18:39:34 | INFO     | reporter | Report generated | doc=OTHER | score=0.0 | high=0 | medium=0 | low=0 | safe=0
+2026-06-19 18:39:34 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-19 18:50:29 | INFO     | pdf_reader | OCR available
+2026-06-19 18:50:37 | INFO     | pdf_reader | Direct extraction: 15358 chars from 5 pages
+2026-06-19 18:50:37 | INFO     | pipeline | Pipeline started
+2026-06-19 18:50:37 | INFO     | pipeline | Validation passed | chars=15358
+2026-06-19 18:50:37 | INFO     | orchestrator | Detecting document type | chars=15358
+2026-06-19 18:50:39 | INFO     | orchestrator | Document type detected: EMPLOYMENT_CONTRACT
+2026-06-19 18:50:39 | INFO     | pipeline | Doc type: EMPLOYMENT_CONTRACT
+2026-06-19 18:50:39 | INFO     | risk_analyzer | Analyzing risks | doc_type=EMPLOYMENT_CONTRACT | chars=15358
+2026-06-19 18:50:43 | INFO     | risk_analyzer | Risks found: 10 | attempt=1
+2026-06-19 18:50:43 | INFO     | pipeline | Risks found: 10
+2026-06-19 18:50:46 | INFO     | simplifier | Simplified 10 clauses | attempt=1
+2026-06-19 18:50:46 | INFO     | reporter | Report generated | doc=EMPLOYMENT_CONTRACT | score=5.7 | high=2 | medium=3 | low=2 | safe=3
+2026-06-19 18:50:46 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-19 18:55:19 | INFO     | pdf_reader | Direct extraction: 15358 chars from 5 pages
+2026-06-19 19:35:45 | INFO     | pdf_reader | Direct extraction: 15358 chars from 5 pages
+2026-06-19 19:36:40 | INFO     | pdf_reader | Direct extraction: 5167 chars from 3 pages
+2026-06-19 19:36:40 | INFO     | pipeline | Pipeline started
+2026-06-19 19:36:40 | INFO     | pipeline | Validation passed | chars=5167
+2026-06-19 19:36:40 | INFO     | orchestrator | Detecting document type | chars=5167
+2026-06-19 19:36:40 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-19 19:36:40 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT
+2026-06-19 19:36:40 | INFO     | risk_analyzer | Analyzing risks | doc_type=SERVICE_AGREEMENT | chars=5167
+2026-06-19 19:36:43 | INFO     | risk_analyzer | Risks found: 9 | attempt=1
+2026-06-19 19:36:43 | INFO     | pipeline | Risks found: 9
+2026-06-19 19:36:50 | INFO     | simplifier | Simplified 9 clauses | attempt=1
+2026-06-19 19:36:50 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=3.9 | high=0 | medium=5 | low=1 | safe=3
+2026-06-19 19:36:50 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-19 19:43:35 | INFO     | pdf_reader | Direct extraction: 5167 chars from 3 pages
+2026-06-19 19:44:26 | INFO     | pdf_reader | OCR available
+2026-06-19 19:44:40 | INFO     | pdf_reader | Direct extraction: 5167 chars from 3 pages
+2026-06-19 19:44:40 | INFO     | pipeline | Pipeline started
+2026-06-19 19:44:40 | INFO     | pipeline | Validation passed | chars=5167
+2026-06-19 19:44:40 | INFO     | orchestrator | Detecting document type | chars=5167
+2026-06-19 19:44:43 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-19 19:44:43 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT
+2026-06-19 19:44:43 | INFO     | risk_analyzer | Analyzing risks | doc_type=SERVICE_AGREEMENT | chars=5167
+2026-06-19 19:44:47 | INFO     | risk_analyzer | Risks found: 9 | attempt=1
+2026-06-19 19:44:47 | INFO     | pipeline | Risks found: 9
+2026-06-19 19:44:52 | INFO     | simplifier | Simplified 9 clauses | attempt=1
+2026-06-19 19:44:52 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=3.9 | high=0 | medium=5 | low=1 | safe=3
+2026-06-19 19:44:52 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-19 23:42:17 | INFO     | pdf_reader | OCR available
+2026-06-19 23:42:33 | INFO     | pdf_reader | Direct extraction: 6410 chars from 3 pages
+2026-06-19 23:42:33 | INFO     | pipeline | Pipeline started
+2026-06-19 23:42:33 | INFO     | pipeline | Validation passed | chars=6410
+2026-06-19 23:42:33 | INFO     | orchestrator | Detecting document type | chars=6410
+2026-06-19 23:42:36 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-19 23:42:36 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT
+2026-06-19 23:42:36 | INFO     | risk_analyzer | Analyzing risks | doc_type=SERVICE_AGREEMENT | chars=6410
+2026-06-19 23:42:41 | INFO     | risk_analyzer | Risks found: 10 | attempt=1
+2026-06-19 23:42:41 | INFO     | pipeline | Risks found: 10
+2026-06-19 23:42:45 | INFO     | simplifier | Simplified 10 clauses | attempt=1
+2026-06-19 23:42:45 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=3.8 | high=0 | medium=4 | low=1 | safe=5
+2026-06-19 23:42:45 | INFO     | pipeline | Pipeline complete | step=complete

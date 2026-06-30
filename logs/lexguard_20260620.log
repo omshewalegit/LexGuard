@@ -1,0 +1,555 @@
+2026-06-20 01:59:59 | INFO     | pdf_reader | OCR available
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline started
+2026-06-20 02:00:00 | INFO     | pipeline | Validation passed | chars=360
+2026-06-20 02:00:00 | INFO     | pipeline | Doc type: OFFER_LETTER | Chunks: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Clauses extracted: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Risks assessed: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline started
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline started
+2026-06-20 02:00:00 | INFO     | pipeline | Validation passed | chars=310
+2026-06-20 02:00:00 | INFO     | pipeline | Doc type: OTHER | Chunks: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Clauses extracted: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Risks assessed: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline started
+2026-06-20 02:00:00 | INFO     | pipeline | Validation passed | chars=310
+2026-06-20 02:00:00 | INFO     | pipeline | Doc type: OFFER_LETTER | Chunks: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Clauses extracted: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Risks assessed: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline started
+2026-06-20 02:00:00 | INFO     | pipeline | Validation passed | chars=310
+2026-06-20 02:00:00 | INFO     | pipeline | Doc type: OTHER | Chunks: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Clauses extracted: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Risks assessed: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline started
+2026-06-20 02:00:00 | INFO     | pipeline | Validation passed | chars=310
+2026-06-20 02:00:00 | INFO     | pipeline | Doc type: OTHER | Chunks: 1
+2026-06-20 02:00:00 | INFO     | pipeline | Clauses extracted: 0
+2026-06-20 02:00:00 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-20 02:00:00 | INFO     | reporter | Report generated | doc=OFFER_LETTER | score=6.4 | high=1 | medium=1 | low=0 | safe=1 | coverage=3 clauses from 0 sections
+2026-06-20 02:00:00 | INFO     | reporter | Report generated | doc=OFFER_LETTER | score=6.4 | high=1 | medium=1 | low=0 | safe=1 | coverage=3 clauses from 0 sections
+2026-06-20 02:00:00 | INFO     | reporter | Report generated | doc=OFFER_LETTER | score=6.4 | high=1 | medium=1 | low=0 | safe=1 | coverage=3 clauses from 0 sections
+2026-06-20 02:00:00 | INFO     | reporter | Report generated | doc=OFFER_LETTER | score=6.4 | high=1 | medium=1 | low=0 | safe=1 | coverage=3 clauses from 0 sections
+2026-06-20 02:00:00 | INFO     | reporter | Report generated | doc=NDA | score=0.0 | high=0 | medium=0 | low=0 | safe=0 | coverage=0 clauses from 0 sections
+2026-06-20 02:00:00 | INFO     | reporter | Report generated | doc=OFFER_LETTER | score=6.4 | high=1 | medium=1 | low=0 | safe=1 | coverage=3 clauses from 5 sections
+2026-06-20 02:01:42 | INFO     | pdf_reader | OCR available
+2026-06-20 02:02:03 | INFO     | pdf_reader | Direct extraction: 6410 chars from 3 pages
+2026-06-20 02:02:03 | INFO     | pipeline | Pipeline started
+2026-06-20 02:02:03 | INFO     | pipeline | Validation passed | chars=6410
+2026-06-20 02:02:03 | INFO     | orchestrator | Detecting document type | chars=6410
+2026-06-20 02:02:05 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-20 02:02:05 | INFO     | text_chunker | Chunked document: 6410 chars → 6 chunks (avg 1068 chars/chunk)
+2026-06-20 02:02:05 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Chunks: 6
+2026-06-20 02:02:05 | INFO     | clause_extractor | Extracting clauses | chunks=6 | doc_type=SERVICE_AGREEMENT
+2026-06-20 02:02:10 | INFO     | clause_extractor | Extracted 30 verified clauses (filtered 0 phantom/duplicate) | attempt=1
+2026-06-20 02:02:10 | INFO     | pipeline | Clauses extracted: 30
+2026-06-20 02:02:10 | INFO     | risk_analyzer | Assessing 30 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-20 02:02:47 | INFO     | risk_analyzer | Assessment complete: 30 clauses | HIGH=0 | MEDIUM=9 | LOW=5 | SAFE=16 | attempt=1
+2026-06-20 02:02:47 | INFO     | pipeline | Risks assessed: 30
+2026-06-20 02:03:19 | INFO     | simplifier | Simplified 30 clauses | attempt=1
+2026-06-20 02:03:19 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=3.7 | high=0 | medium=9 | low=5 | safe=16 | coverage=30 clauses from 6 sections
+2026-06-20 02:03:19 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 02:05:29 | INFO     | pdf_reader | Direct extraction: 15358 chars from 5 pages
+2026-06-20 02:05:29 | INFO     | pipeline | Pipeline started
+2026-06-20 02:05:29 | INFO     | pipeline | Validation passed | chars=15358
+2026-06-20 02:05:29 | INFO     | orchestrator | Detecting document type | chars=15358
+2026-06-20 02:05:29 | INFO     | orchestrator | Document type detected: EMPLOYMENT_CONTRACT
+2026-06-20 02:05:29 | INFO     | text_chunker | Chunked document: 15358 chars → 14 chunks (avg 1097 chars/chunk)
+2026-06-20 02:05:29 | INFO     | pipeline | Doc type: EMPLOYMENT_CONTRACT | Chunks: 14
+2026-06-20 02:05:29 | INFO     | clause_extractor | Extracting clauses | chunks=14 | doc_type=EMPLOYMENT_CONTRACT
+2026-06-20 02:05:34 | INFO     | clause_extractor | Extracted 26 verified clauses (filtered 0 phantom/duplicate) | attempt=1
+2026-06-20 02:05:34 | INFO     | pipeline | Clauses extracted: 26
+2026-06-20 02:05:34 | INFO     | risk_analyzer | Assessing 26 clauses | doc_type=EMPLOYMENT_CONTRACT
+2026-06-20 02:06:06 | INFO     | risk_analyzer | Assessment complete: 26 clauses | HIGH=4 | MEDIUM=12 | LOW=0 | SAFE=10 | attempt=1
+2026-06-20 02:06:06 | INFO     | pipeline | Risks assessed: 26
+2026-06-20 02:06:33 | INFO     | simplifier | Simplified 26 clauses | attempt=1
+2026-06-20 02:06:33 | INFO     | reporter | Report generated | doc=EMPLOYMENT_CONTRACT | score=5.5 | high=4 | medium=12 | low=0 | safe=10 | coverage=26 clauses from 14 sections
+2026-06-20 02:06:33 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 03:04:30 | INFO     | pdf_reader | Direct extraction: 5396 chars from 3 pages
+2026-06-20 03:04:30 | INFO     | pipeline | Pipeline started
+2026-06-20 03:04:30 | INFO     | pipeline | Validation passed | chars=5396
+2026-06-20 03:04:30 | INFO     | orchestrator | Detecting document type | chars=5396
+2026-06-20 03:04:31 | INFO     | orchestrator | Document type detected: RENT_AGREEMENT
+2026-06-20 03:04:31 | INFO     | text_chunker | Chunked document: 5396 chars → 5 chunks (avg 1079 chars/chunk)
+2026-06-20 03:04:31 | INFO     | pipeline | Doc type: RENT_AGREEMENT | Chunks: 5
+2026-06-20 03:04:31 | INFO     | clause_extractor | Extracting clauses | chunks=5 | doc_type=RENT_AGREEMENT
+2026-06-20 03:04:33 | INFO     | clause_extractor | Extracted 18 verified clauses (filtered 0 phantom/duplicate) | attempt=1
+2026-06-20 03:04:33 | INFO     | pipeline | Clauses extracted: 18
+2026-06-20 03:04:33 | INFO     | risk_analyzer | Assessing 18 clauses | doc_type=RENT_AGREEMENT
+2026-06-20 03:05:02 | INFO     | risk_analyzer | Assessment complete: 18 clauses | HIGH=2 | MEDIUM=7 | LOW=4 | SAFE=5 | attempt=1
+2026-06-20 03:05:02 | INFO     | pipeline | Risks assessed: 18
+2026-06-20 03:05:41 | INFO     | simplifier | Simplified 18 clauses | attempt=1
+2026-06-20 03:05:41 | INFO     | reporter | Report generated | doc=RENT_AGREEMENT | score=4.8 | high=2 | medium=7 | low=4 | safe=5 | coverage=18 clauses from 5 sections
+2026-06-20 03:05:41 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 03:28:39 | INFO     | pdf_reader | Direct extraction: 15358 chars from 5 pages
+2026-06-20 03:29:58 | INFO     | pdf_reader | Direct extraction: 5460 chars from 3 pages
+2026-06-20 03:29:58 | INFO     | pipeline | Pipeline started
+2026-06-20 03:29:58 | INFO     | pipeline | Validation passed | chars=5460
+2026-06-20 03:29:58 | INFO     | orchestrator | Detecting document type | chars=5460
+2026-06-20 03:29:58 | INFO     | orchestrator | Document type detected: NDA
+2026-06-20 03:29:58 | INFO     | text_chunker | Chunked document: 5460 chars → 4 chunks (avg 1365 chars/chunk)
+2026-06-20 03:29:58 | INFO     | pipeline | Doc type: NDA | Chunks: 4
+2026-06-20 03:29:58 | INFO     | clause_extractor | Extracting clauses | chunks=4 | doc_type=NDA
+2026-06-20 03:30:00 | INFO     | clause_extractor | Extracted 23 verified clauses (filtered 0 phantom/duplicate) | attempt=1
+2026-06-20 03:30:00 | INFO     | pipeline | Clauses extracted: 23
+2026-06-20 03:30:00 | INFO     | risk_analyzer | Assessing 23 clauses | doc_type=NDA
+2026-06-20 03:30:10 | INFO     | risk_analyzer | Assessment complete: 23 clauses | HIGH=0 | MEDIUM=6 | LOW=9 | SAFE=8 | attempt=1
+2026-06-20 03:30:10 | INFO     | pipeline | Risks assessed: 23
+2026-06-20 03:30:10 | WARNING  | simplifier | Unexpected error on attempt 1: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kscnhxx9fgpr4ap0yz34g6bq` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99259, Requested 7200. Please try again in 1h33m0.575999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 03:30:11 | WARNING  | simplifier | Unexpected error on attempt 2: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kscnhxx9fgpr4ap0yz34g6bq` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99258, Requested 7200. Please try again in 1h32m59.712s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 03:30:13 | WARNING  | simplifier | Unexpected error on attempt 3: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kscnhxx9fgpr4ap0yz34g6bq` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99256, Requested 7200. Please try again in 1h32m57.984s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 03:30:13 | ERROR    | simplifier | All simplification attempts failed — using fallback
+2026-06-20 03:30:13 | INFO     | reporter | Report generated | doc=NDA | score=3.1 | high=0 | medium=6 | low=9 | safe=8 | coverage=23 clauses from 4 sections
+2026-06-20 03:30:13 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 14:36:22 | INFO     | pdf_reader | OCR available
+2026-06-20 14:38:47 | INFO     | pdf_reader | OCR available
+2026-06-20 14:39:02 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 14:39:02 | INFO     | pipeline | Pipeline started
+2026-06-20 14:39:02 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 14:39:02 | INFO     | orchestrator | Detecting document type | chars=16440
+2026-06-20 14:39:07 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-20 14:39:08 | INFO     | orchestrator | Jurisdiction detected: California, USA
+2026-06-20 14:39:08 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 14:39:08 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-20 14:39:08 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-20 14:39:15 | INFO     | clause_extractor | Extracted 25 verified clauses (filtered 0 phantom/duplicate) | attempt=1
+2026-06-20 14:39:15 | INFO     | pipeline | Clauses extracted: 25
+2026-06-20 14:39:15 | INFO     | risk_analyzer | Assessing 25 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-20 14:39:16 | WARNING  | risk_analyzer | Assessment error on attempt 1: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.3-70b-versatile` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Requested 12030, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 14:39:17 | WARNING  | risk_analyzer | Assessment error on attempt 2: Error code: 413 - {'error': {'message': 'Request too large for model `llama-3.3-70b-versatile` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Requested 12030, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 0: expected 'entire agreement', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 1: expected 'severability', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 2: expected 'modification by subsequent agreement', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 3: expected 'document retention', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 4: expected 'facsimile signature', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 5: expected 'effective date of agreement', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 6: expected 'payment terms', got 'payment / compensation' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 7: expected 'extra costs', got 'payment / compensation' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 8: expected 'discharge of law firm', got 'termination' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 9: expected 'withdrawal of law firm', got 'termination' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 10: expected 'release of client's papers and property', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 11: expected 'disclaimer of guaranty', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 12: expected 'errors and omissions coverage', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 13: expected 'delinquent accounts', got 'payment / compensation' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 14: expected 'acceptance of charges', got 'payment / compensation' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 15: expected 'statements and payments', got 'payment / compensation' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 16: expected 'lien for services rendered', got 'payment / compensation' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 17: expected 'conditions of agreement', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 18: expected 'responsibilities of law firm and client', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 19: expected 'retention of firm rather than particular attorney', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 20: expected 'delegation of services', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 21: expected 'legal services to be provided', got 'scope of work' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 22: expected 'rate schedule', got 'payment / compensation' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 23: expected 'attorney's estimate of total costs and other charges', got 'payment / compensation' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 24: expected 'conflict of interest disclosure', got 'other' — rejecting
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Rejected 25/25 misaligned assessment entries
+2026-06-20 14:40:06 | WARNING  | risk_analyzer | Assessment unreliable on attempt 3 (validated=0, rejected=25) — retrying
+2026-06-20 14:40:06 | ERROR    | risk_analyzer | All assessment attempts failed. Returning fallback.
+2026-06-20 14:40:06 | INFO     | pipeline | Risks assessed: 1
+2026-06-20 14:40:08 | INFO     | simplifier | Simplified 1 clauses | accepted=1 rejected=0 | attempt=1
+2026-06-20 14:40:08 | WARNING  | reporter | 1 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-20 14:40:08 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=0.0 | high=0 | medium=0 | low=0 | safe=0 | unanalyzed=1 | coverage=1 clauses from 10 sections
+2026-06-20 14:40:08 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 14:50:01 | INFO     | pdf_reader | OCR available
+2026-06-20 14:50:10 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 14:50:10 | INFO     | pipeline | Pipeline started
+2026-06-20 14:50:10 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 14:50:10 | INFO     | orchestrator | Detecting document type | chars=16440
+2026-06-20 14:50:11 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-20 14:50:13 | INFO     | orchestrator | Jurisdiction detected: California, USA
+2026-06-20 14:50:13 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 14:50:13 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-20 14:50:13 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-20 14:50:20 | INFO     | clause_extractor | Extracted 26 verified clauses (filtered 0 phantom/duplicate) | attempt=1
+2026-06-20 14:50:20 | INFO     | pipeline | Clauses extracted: 26
+2026-06-20 14:50:20 | INFO     | risk_analyzer | Assessing 26 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-20 14:50:20 | INFO     | risk_analyzer | Assessing batch 1/4 (8 clauses)
+2026-06-20 14:51:03 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 0: expected 'entire agreement', got 'other' — rejecting
+2026-06-20 14:51:03 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 1: expected 'severability', got 'other' — rejecting
+2026-06-20 14:51:03 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 2: expected 'modification', got 'amendment' — rejecting
+2026-06-20 14:51:03 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 3: expected 'document retention', got 'other' — rejecting
+2026-06-20 14:51:03 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 4: expected 'facsimile signature', got 'other' — rejecting
+2026-06-20 14:51:03 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 5: expected 'effective date', got 'other' — rejecting
+2026-06-20 14:51:03 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 6: expected 'payment terms', got 'payment / compensation' — rejecting
+2026-06-20 14:51:03 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 7: expected 'extra costs', got 'payment / compensation' — rejecting
+2026-06-20 14:51:03 | WARNING  | risk_analyzer | Rejected 8/8 misaligned assessment entries
+2026-06-20 14:51:03 | WARNING  | risk_analyzer | Batch assessment unreliable on attempt 1 (validated=0, rejected=8) — retrying
+2026-06-20 14:51:40 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 0: expected 'entire agreement', got 'other' — rejecting
+2026-06-20 14:51:40 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 1: expected 'severability', got 'other' — rejecting
+2026-06-20 14:51:40 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 2: expected 'modification', got 'amendment' — rejecting
+2026-06-20 14:51:40 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 3: expected 'document retention', got 'other' — rejecting
+2026-06-20 14:51:40 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 4: expected 'facsimile signature', got 'other' — rejecting
+2026-06-20 14:51:40 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 5: expected 'effective date', got 'other' — rejecting
+2026-06-20 14:51:40 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 6: expected 'payment terms', got 'payment / compensation' — rejecting
+2026-06-20 14:51:40 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 7: expected 'extra costs', got 'payment / compensation' — rejecting
+2026-06-20 14:51:40 | WARNING  | risk_analyzer | Rejected 8/8 misaligned assessment entries
+2026-06-20 14:51:40 | WARNING  | risk_analyzer | Batch assessment unreliable on attempt 2 (validated=0, rejected=8) — retrying
+2026-06-20 14:52:23 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 0: expected 'entire agreement', got 'other' — rejecting
+2026-06-20 14:52:23 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 1: expected 'severability', got 'other' — rejecting
+2026-06-20 14:52:23 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 2: expected 'modification', got 'amendment' — rejecting
+2026-06-20 14:52:23 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 3: expected 'document retention', got 'other' — rejecting
+2026-06-20 14:52:23 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 4: expected 'facsimile signature', got 'other' — rejecting
+2026-06-20 14:52:23 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 5: expected 'effective date', got 'other' — rejecting
+2026-06-20 14:52:23 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 6: expected 'payment terms', got 'payment / compensation' — rejecting
+2026-06-20 14:52:23 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 7: expected 'extra costs', got 'payment / compensation' — rejecting
+2026-06-20 14:52:23 | WARNING  | risk_analyzer | Rejected 8/8 misaligned assessment entries
+2026-06-20 14:52:23 | WARNING  | risk_analyzer | Batch assessment unreliable on attempt 3 (validated=0, rejected=8) — retrying
+2026-06-20 14:52:23 | ERROR    | risk_analyzer | All assessment attempts failed for this batch.
+2026-06-20 14:52:23 | INFO     | risk_analyzer | Assessing batch 2/4 (8 clauses)
+2026-06-20 14:52:59 | INFO     | risk_analyzer | Assessing batch 3/4 (8 clauses)
+2026-06-20 14:53:32 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 0: expected 'delegation of services', got 'other' — rejecting
+2026-06-20 14:53:32 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 1: expected 'legal services to be provided', got 'scope of work' — rejecting
+2026-06-20 14:53:32 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 2: expected 'fees/deposit', got 'payment / compensation' — rejecting
+2026-06-20 14:53:32 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 3: expected 'statements and payments', got 'payment / compensation' — rejecting
+2026-06-20 14:53:32 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 4: expected 'lien for services rendered', got 'payment / compensation' — rejecting
+2026-06-20 14:53:32 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 5: expected 'hourly rates for legal personnel', got 'payment / compensation' — rejecting
+2026-06-20 14:53:32 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 6: expected 'costs, expenses and miscellaneous charges', got 'payment / compensation' — rejecting
+2026-06-20 14:53:32 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 7: expected 'subject to change', got 'other' — rejecting
+2026-06-20 14:53:32 | WARNING  | risk_analyzer | Rejected 8/8 misaligned assessment entries
+2026-06-20 14:53:32 | WARNING  | risk_analyzer | Batch assessment unreliable on attempt 1 (validated=0, rejected=8) — retrying
+2026-06-20 14:54:09 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 0: expected 'delegation of services', got 'other' — rejecting
+2026-06-20 14:54:09 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 1: expected 'legal services to be provided', got 'scope of work' — rejecting
+2026-06-20 14:54:09 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 2: expected 'fees/deposit', got 'payment / compensation' — rejecting
+2026-06-20 14:54:09 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 3: expected 'statements and payments', got 'payment / compensation' — rejecting
+2026-06-20 14:54:09 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 4: expected 'lien for services rendered', got 'payment / compensation' — rejecting
+2026-06-20 14:54:09 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 5: expected 'hourly rates for legal personnel', got 'payment / compensation' — rejecting
+2026-06-20 14:54:09 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 6: expected 'costs, expenses and miscellaneous charges', got 'payment / compensation' — rejecting
+2026-06-20 14:54:09 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 7: expected 'subject to change', got 'other' — rejecting
+2026-06-20 14:54:09 | WARNING  | risk_analyzer | Rejected 8/8 misaligned assessment entries
+2026-06-20 14:54:09 | WARNING  | risk_analyzer | Batch assessment unreliable on attempt 2 (validated=0, rejected=8) — retrying
+2026-06-20 14:54:43 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 0: expected 'delegation of services', got 'other' — rejecting
+2026-06-20 14:54:43 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 1: expected 'legal services to be provided', got 'scope of work' — rejecting
+2026-06-20 14:54:43 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 2: expected 'fees/deposit', got 'payment / compensation' — rejecting
+2026-06-20 14:54:43 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 3: expected 'statements and payments', got 'payment / compensation' — rejecting
+2026-06-20 14:54:43 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 4: expected 'lien for services rendered', got 'payment / compensation' — rejecting
+2026-06-20 14:54:43 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 5: expected 'hourly rates for legal personnel', got 'payment / compensation' — rejecting
+2026-06-20 14:54:43 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 6: expected 'costs, expenses and miscellaneous charges', got 'payment / compensation' — rejecting
+2026-06-20 14:54:43 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 7: expected 'subject to change', got 'other' — rejecting
+2026-06-20 14:54:43 | WARNING  | risk_analyzer | Rejected 8/8 misaligned assessment entries
+2026-06-20 14:54:43 | WARNING  | risk_analyzer | Batch assessment unreliable on attempt 3 (validated=0, rejected=8) — retrying
+2026-06-20 14:54:43 | ERROR    | risk_analyzer | All assessment attempts failed for this batch.
+2026-06-20 14:54:43 | INFO     | risk_analyzer | Assessing batch 4/4 (2 clauses)
+2026-06-20 14:55:10 | INFO     | risk_analyzer | Assessment complete: 10 clauses | HIGH=0 | MEDIUM=5 | LOW=3 | SAFE=2
+2026-06-20 14:55:10 | INFO     | pipeline | Risks assessed: 10
+2026-06-20 14:55:22 | INFO     | simplifier | Simplified 10 clauses | accepted=10 rejected=0 | attempt=1
+2026-06-20 14:55:22 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=3.7 | high=0 | medium=5 | low=3 | safe=2 | unanalyzed=0 | coverage=10 clauses from 10 sections
+2026-06-20 14:55:22 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 14:59:56 | INFO     | pdf_reader | OCR available
+2026-06-20 15:00:12 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 15:00:12 | INFO     | pipeline | Pipeline started
+2026-06-20 15:00:12 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 15:00:12 | INFO     | orchestrator | Detecting document type | chars=16440
+2026-06-20 15:00:14 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-20 15:00:15 | INFO     | orchestrator | Jurisdiction detected: California, USA
+2026-06-20 15:00:15 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 15:00:15 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-20 15:00:15 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-20 15:00:16 | WARNING  | clause_extractor | Extraction error on attempt 1: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98771, Requested 6499. Please try again in 1h15m53.28s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:00:17 | WARNING  | clause_extractor | Extraction error on attempt 2: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98770, Requested 9332. Please try again in 1h56m40.128s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:00:20 | WARNING  | clause_extractor | Extraction error on attempt 3: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98767, Requested 9332. Please try again in 1h56m37.536s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:00:20 | ERROR    | clause_extractor | All extraction attempts failed
+2026-06-20 15:00:20 | INFO     | pipeline | Clauses extracted: 0
+2026-06-20 15:00:20 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-20 15:06:17 | INFO     | pdf_reader | OCR available
+2026-06-20 15:07:04 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 15:07:04 | INFO     | pipeline | Pipeline started
+2026-06-20 15:07:04 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 15:07:04 | INFO     | orchestrator | Detecting document type | chars=16440
+2026-06-20 15:07:06 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-20 15:07:08 | WARNING  | orchestrator | Locale detection attempt 1 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99636, Requested 1190. Please try again in 11m53.664s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:07:09 | WARNING  | orchestrator | Locale detection attempt 2 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99635, Requested 1190. Please try again in 11m52.8s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:07:11 | WARNING  | orchestrator | Locale detection attempt 3 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99632, Requested 1190. Please try again in 11m50.208s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:07:11 | ERROR    | orchestrator | All 3 locale-detection attempts failed — staying locale-neutral
+2026-06-20 15:07:11 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 15:07:11 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: None | Chunks: 10
+2026-06-20 15:07:11 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-20 15:07:12 | WARNING  | clause_extractor | Extraction error on attempt 1: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99631, Requested 5337. Please try again in 1h11m32.352s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:07:13 | WARNING  | clause_extractor | Extraction error on attempt 2: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99630, Requested 5337. Please try again in 1h11m31.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:07:15 | WARNING  | clause_extractor | Extraction error on attempt 3: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99627, Requested 5337. Please try again in 1h11m28.895999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:07:15 | ERROR    | clause_extractor | All extraction attempts failed
+2026-06-20 15:07:15 | INFO     | pipeline | Clauses extracted: 0
+2026-06-20 15:07:15 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-20 15:14:54 | INFO     | pdf_reader | OCR available
+2026-06-20 15:15:04 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 15:15:04 | INFO     | pipeline | Pipeline started
+2026-06-20 15:15:04 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 15:15:04 | INFO     | orchestrator | Detecting document type | chars=16440
+2026-06-20 15:15:06 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-20 15:15:07 | INFO     | orchestrator | Jurisdiction detected: California, USA
+2026-06-20 15:15:07 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 15:15:07 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-20 15:15:07 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-20 15:15:14 | INFO     | clause_extractor | Extracted 25 verified clauses (filtered 0 phantom/duplicate) | attempt=1
+2026-06-20 15:15:14 | INFO     | pipeline | Clauses extracted: 25
+2026-06-20 15:15:14 | INFO     | risk_analyzer | Assessing 25 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-20 15:15:14 | INFO     | risk_analyzer | Assessing batch 1/4 (8 clauses)
+2026-06-20 15:16:00 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 2: expected 'Modification', got 'Amendment' — rejecting
+2026-06-20 15:16:00 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 7: expected 'Extra Costs', got 'Payment / Compensation' — rejecting
+2026-06-20 15:16:00 | WARNING  | risk_analyzer | Rejected 2/8 misaligned assessment entries
+2026-06-20 15:16:00 | WARNING  | risk_analyzer | Batch assessment unreliable on attempt 1 (validated=6, rejected=2) — retrying
+2026-06-20 15:16:23 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 2: expected 'Modification', got 'Amendment' — rejecting
+2026-06-20 15:16:23 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 7: expected 'Extra Costs', got 'Payment / Compensation' — rejecting
+2026-06-20 15:16:23 | WARNING  | risk_analyzer | Rejected 2/8 misaligned assessment entries
+2026-06-20 15:16:23 | WARNING  | risk_analyzer | Batch assessment unreliable on attempt 2 (validated=6, rejected=2) — retrying
+2026-06-20 15:17:02 | WARNING  | risk_analyzer | Assessment error on attempt 3: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 4169, Requested 8349. Please try again in 2.59s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:17:02 | ERROR    | risk_analyzer | All assessment attempts failed for this batch (8 clauses) — flagging for manual review instead of dropping.
+2026-06-20 15:17:02 | INFO     | risk_analyzer | Assessing batch 2/4 (8 clauses)
+2026-06-20 15:17:09 | INFO     | risk_analyzer | Assessing batch 3/4 (8 clauses)
+2026-06-20 15:17:39 | WARNING  | risk_analyzer | Assessment error on attempt 1: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 4020, Requested 8464. Please try again in 2.42s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:17:43 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 5: expected 'Legal Services to be Provided', got 'Scope of Work' — rejecting
+2026-06-20 15:17:43 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 6: expected 'Rate Schedule', got 'Payment / Compensation' — rejecting
+2026-06-20 15:17:43 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 7: expected 'Attorney's Estimate of Total Costs', got 'Payment / Compensation' — rejecting
+2026-06-20 15:17:43 | WARNING  | risk_analyzer | Rejected 3/8 misaligned assessment entries
+2026-06-20 15:17:43 | WARNING  | risk_analyzer | Batch assessment unreliable on attempt 2 (validated=5, rejected=3) — retrying
+2026-06-20 15:18:21 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 5: expected 'Legal Services to be Provided', got 'Scope of Work' — rejecting
+2026-06-20 15:18:21 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 6: expected 'Rate Schedule', got 'Payment / Compensation' — rejecting
+2026-06-20 15:18:21 | WARNING  | risk_analyzer | Risk assessment index/clause_type mismatch at index 7: expected 'Attorney's Estimate of Total Costs', got 'Payment / Compensation' — rejecting
+2026-06-20 15:18:21 | WARNING  | risk_analyzer | Rejected 3/8 misaligned assessment entries
+2026-06-20 15:18:21 | WARNING  | risk_analyzer | Batch assessment unreliable on attempt 3 (validated=5, rejected=3) — retrying
+2026-06-20 15:18:21 | ERROR    | risk_analyzer | All assessment attempts failed for this batch (8 clauses) — flagging for manual review instead of dropping.
+2026-06-20 15:18:21 | INFO     | risk_analyzer | Assessing batch 4/4 (1 clauses)
+2026-06-20 15:18:50 | INFO     | risk_analyzer | Assessment complete: 25 clauses | HIGH=0 | MEDIUM=5 | LOW=2 | SAFE=2 | NEEDS_MANUAL_REVIEW=16
+2026-06-20 15:18:50 | INFO     | pipeline | Risks assessed: 25
+2026-06-20 15:19:20 | INFO     | simplifier | Simplified 25 clauses | accepted=25 rejected=0 | attempt=1
+2026-06-20 15:19:20 | WARNING  | reporter | 16 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-20 15:19:20 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=1.6 | high=0 | medium=5 | low=2 | safe=2 | unanalyzed=16 | coverage=25 clauses from 10 sections
+2026-06-20 15:19:20 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 15:28:19 | INFO     | pdf_reader | OCR available
+2026-06-20 15:28:32 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 15:28:32 | INFO     | pipeline | Pipeline started
+2026-06-20 15:28:32 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 15:28:32 | INFO     | orchestrator | Detecting document type | chars=16440
+2026-06-20 15:28:34 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-20 15:28:36 | INFO     | orchestrator | Jurisdiction detected: California, USA
+2026-06-20 15:28:36 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 15:28:36 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-20 15:28:36 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-20 15:28:41 | INFO     | clause_extractor | Extracted 21 verified clauses (filtered 0 phantom/duplicate) | attempt=1
+2026-06-20 15:28:41 | INFO     | pipeline | Clauses extracted: 21
+2026-06-20 15:28:41 | INFO     | risk_analyzer | Assessing 21 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-20 15:28:41 | INFO     | risk_analyzer | Assessing batch 1 (8 clauses)
+2026-06-20 15:28:42 | INFO     | risk_analyzer | Assessing batch 2 (8 clauses)
+2026-06-20 15:28:42 | INFO     | risk_analyzer | Assessing batch 3 (5 clauses)
+2026-06-20 15:29:41 | WARNING  | risk_analyzer | Batch 1: rate limit hit on attempt 1 — waiting 10.2s (Groq-specified) before retry
+2026-06-20 15:30:25 | WARNING  | risk_analyzer | Batch 1: rate limit hit on attempt 2 — waiting 1.5s (Groq-specified) before retry
+2026-06-20 15:30:30 | INFO     | risk_analyzer | All 3 batches completed in 108.9s (concurrent)
+2026-06-20 15:30:30 | INFO     | risk_analyzer | Assessment complete: 21 clauses | HIGH=0 | MEDIUM=8 | LOW=7 | SAFE=6 | NEEDS_MANUAL_REVIEW=0
+2026-06-20 15:30:30 | INFO     | pipeline | Risks assessed: 21
+2026-06-20 15:30:53 | INFO     | simplifier | Simplified 21 clauses | accepted=21 rejected=0 | attempt=1
+2026-06-20 15:30:53 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=3.3 | high=0 | medium=8 | low=7 | safe=6 | unanalyzed=0 | coverage=21 clauses from 10 sections
+2026-06-20 15:30:53 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 15:39:48 | INFO     | pdf_reader | OCR available
+2026-06-20 15:40:06 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 15:40:06 | INFO     | pipeline | Pipeline started
+2026-06-20 15:40:06 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 15:40:06 | INFO     | orchestrator | Detecting document type | chars=16440
+2026-06-20 15:40:08 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-20 15:40:09 | INFO     | orchestrator | Jurisdiction detected: California, USA
+2026-06-20 15:40:09 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 15:40:09 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-20 15:40:09 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-20 15:40:10 | WARNING  | clause_extractor | Extraction error on attempt 1: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99970, Requested 9332. Please try again in 2h13m56.928s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:40:11 | WARNING  | clause_extractor | Extraction error on attempt 2: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99969, Requested 5336. Please try again in 1h16m23.52s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:40:13 | WARNING  | clause_extractor | Extraction error on attempt 3: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99967, Requested 9332. Please try again in 2h13m54.336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:40:13 | ERROR    | clause_extractor | All extraction attempts failed
+2026-06-20 15:40:13 | INFO     | pipeline | Clauses extracted: 0
+2026-06-20 15:40:13 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-20 15:41:05 | INFO     | pdf_reader | OCR available
+2026-06-20 15:43:29 | INFO     | pdf_reader | OCR available
+2026-06-20 15:43:54 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 15:43:54 | INFO     | pipeline | Pipeline started
+2026-06-20 15:43:54 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 15:43:54 | INFO     | orchestrator | Detecting document type | chars=16440
+2026-06-20 15:43:55 | WARNING  | orchestrator | Attempt 1 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99778, Requested 1290. Please try again in 15m22.752s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:43:56 | WARNING  | orchestrator | Attempt 2 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99777, Requested 1290. Please try again in 15m21.888s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:43:58 | WARNING  | orchestrator | Attempt 3 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99774, Requested 1290. Please try again in 15m19.296s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:43:58 | ERROR    | orchestrator | All 3 attempts failed. Returning OTHER.
+2026-06-20 15:43:59 | WARNING  | orchestrator | Locale detection attempt 1 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99773, Requested 1165. Please try again in 13m30.431999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:44:00 | WARNING  | orchestrator | Locale detection attempt 2 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99772, Requested 1165. Please try again in 13m29.568s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:44:02 | WARNING  | orchestrator | Locale detection attempt 3 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99770, Requested 1165. Please try again in 13m27.84s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:44:02 | ERROR    | orchestrator | All 3 locale-detection attempts failed — staying locale-neutral
+2026-06-20 15:44:02 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 15:44:02 | INFO     | pipeline | Doc type: OTHER | Locale: None | Chunks: 10
+2026-06-20 15:44:02 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=OTHER
+2026-06-20 15:44:03 | WARNING  | clause_extractor | Extraction error on attempt 1: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99768, Requested 5335. Please try again in 1h13m28.992s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:44:04 | WARNING  | clause_extractor | Extraction error on attempt 2: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99767, Requested 5335. Please try again in 1h13m28.128s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:44:07 | WARNING  | clause_extractor | Extraction error on attempt 3: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99765, Requested 5334. Please try again in 1h13m25.536s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:44:07 | ERROR    | clause_extractor | All extraction attempts failed
+2026-06-20 15:44:07 | INFO     | pipeline | Clauses extracted: 0
+2026-06-20 15:44:07 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-20 15:46:01 | INFO     | pdf_reader | OCR available
+2026-06-20 15:46:13 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 15:46:13 | INFO     | pipeline | Pipeline started
+2026-06-20 15:46:13 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 15:46:13 | INFO     | orchestrator | Detecting document type | chars=16440
+2026-06-20 15:46:15 | WARNING  | orchestrator | Attempt 1 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99616, Requested 1335. Please try again in 13m41.664s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:46:16 | WARNING  | orchestrator | Attempt 2 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99615, Requested 1335. Please try again in 13m40.8s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:46:18 | WARNING  | orchestrator | Attempt 3 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99613, Requested 1335. Please try again in 13m39.072s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:46:18 | ERROR    | orchestrator | All 3 attempts failed. Returning OTHER.
+2026-06-20 15:46:19 | WARNING  | orchestrator | Locale detection attempt 1 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99612, Requested 1190. Please try again in 11m32.928s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:46:20 | WARNING  | orchestrator | Locale detection attempt 2 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99610, Requested 1165. Please try again in 11m9.6s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:46:22 | WARNING  | orchestrator | Locale detection attempt 3 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99608, Requested 1190. Please try again in 11m29.472s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:46:22 | ERROR    | orchestrator | All 3 locale-detection attempts failed — staying locale-neutral
+2026-06-20 15:46:22 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 15:46:22 | INFO     | pipeline | Doc type: OTHER | Locale: None | Chunks: 10
+2026-06-20 15:46:22 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=OTHER
+2026-06-20 15:46:23 | WARNING  | clause_extractor | Extraction error on attempt 1: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99606, Requested 5335. Please try again in 1h11m9.024s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:46:25 | WARNING  | clause_extractor | Extraction error on attempt 2: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99605, Requested 5335. Please try again in 1h11m8.16s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:46:27 | WARNING  | clause_extractor | Extraction error on attempt 3: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kvj6epsmf46sgpy1pj8dd37h` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99603, Requested 5335. Please try again in 1h11m6.432s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-20 15:46:27 | ERROR    | clause_extractor | All extraction attempts failed
+2026-06-20 15:46:27 | INFO     | pipeline | Clauses extracted: 0
+2026-06-20 15:46:27 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-20 15:47:38 | INFO     | pdf_reader | OCR available
+2026-06-20 15:47:50 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 15:47:50 | INFO     | pipeline | Pipeline started
+2026-06-20 15:47:50 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 15:47:50 | INFO     | orchestrator | Detecting document type | chars=16440
+2026-06-20 15:47:51 | INFO     | orchestrator | Document type detected: SERVICE_AGREEMENT
+2026-06-20 15:47:53 | INFO     | orchestrator | Jurisdiction detected: California, USA
+2026-06-20 15:47:53 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 15:47:53 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-20 15:47:53 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-20 15:47:58 | INFO     | clause_extractor | Extracted 19 verified clauses (filtered 0 phantom/duplicate) | attempt=1
+2026-06-20 15:47:58 | INFO     | pipeline | Clauses extracted: 19
+2026-06-20 15:47:58 | INFO     | risk_analyzer | Assessing 19 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-20 15:47:58 | INFO     | risk_analyzer | Assessing batch 1 (8 clauses)
+2026-06-20 15:47:59 | INFO     | risk_analyzer | Assessing batch 2 (8 clauses)
+2026-06-20 15:47:59 | INFO     | risk_analyzer | Assessing batch 3 (3 clauses)
+2026-06-20 15:48:33 | WARNING  | risk_analyzer | Batch 3: rate limit hit on attempt 1 — waiting 27.5s (Groq-specified) before retry
+2026-06-20 15:49:04 | WARNING  | risk_analyzer | Batch 1: rate limit hit on attempt 1 — waiting 4.7s (Groq-specified) before retry
+2026-06-20 15:49:42 | INFO     | risk_analyzer | All 3 batches completed in 104.5s (concurrent)
+2026-06-20 15:49:42 | INFO     | risk_analyzer | Assessment complete: 19 clauses | HIGH=1 | MEDIUM=5 | LOW=5 | SAFE=8 | NEEDS_MANUAL_REVIEW=0
+2026-06-20 15:49:42 | INFO     | pipeline | Risks assessed: 19
+2026-06-20 15:50:05 | INFO     | simplifier | Simplified 19 clauses | accepted=19 rejected=0 | attempt=1
+2026-06-20 15:50:05 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=4.2 | high=1 | medium=5 | low=5 | safe=8 | unanalyzed=0 | coverage=19 clauses from 10 sections
+2026-06-20 15:50:05 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 23:14:36 | INFO     | pdf_reader | OCR available
+2026-06-20 23:14:50 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 23:14:50 | INFO     | pipeline | Pipeline started
+2026-06-20 23:14:50 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 23:14:50 | INFO     | orchestrator | Detecting document type + locale | chars=16440
+2026-06-20 23:14:55 | WARNING  | orchestrator | Doc-type detection attempt 1 failed: 
+2026-06-20 23:14:56 | ERROR    | orchestrator | Doc-type detection did not finish within the 6.0s deadline — defaulting to OTHER
+2026-06-20 23:14:56 | ERROR    | orchestrator | Locale detection did not finish within the 6.0s deadline — staying locale-neutral
+2026-06-20 23:15:03 | INFO     | orchestrator | Doc type: OTHER | Locale: None | took 13.7s
+2026-06-20 23:15:03 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 23:15:03 | INFO     | pipeline | Doc type: OTHER | Locale: None | Chunks: 10
+2026-06-20 23:15:03 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=OTHER
+2026-06-20 23:15:03 | INFO     | clause_extractor | Extraction batch 1: 4 chunk(s)
+2026-06-20 23:15:05 | INFO     | clause_extractor | Extraction batch 2: 4 chunk(s)
+2026-06-20 23:15:06 | INFO     | clause_extractor | Extraction batch 3: 2 chunk(s)
+2026-06-20 23:15:15 | WARNING  | clause_extractor | Extraction batch 3: LLM call exceeded 9.0s on attempt 1
+2026-06-20 23:15:15 | ERROR    | clause_extractor | Extraction batch 3: did not finish within the 12.0s deadline — its section(s) were not analyzed
+2026-06-20 23:15:15 | INFO     | clause_extractor | Extraction: 3 batch(es) resolved in 12.0s (deadline=12.0s, skipped=1)
+2026-06-20 23:15:15 | INFO     | clause_extractor | Extracted 29 verified clauses | skipped_batches=1/3
+2026-06-20 23:15:15 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-20 23:41:16 | INFO     | pdf_reader | OCR available
+2026-06-20 23:41:24 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 23:41:24 | INFO     | pipeline | Pipeline started
+2026-06-20 23:41:24 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 23:41:24 | INFO     | orchestrator | Detecting document type + locale | chars=16440
+2026-06-20 23:41:26 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 2.8s
+2026-06-20 23:41:26 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 23:41:26 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-20 23:41:26 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-20 23:41:26 | INFO     | clause_extractor | Extraction batch 1: 4 chunk(s)
+2026-06-20 23:41:28 | INFO     | clause_extractor | Extraction batch 2: 4 chunk(s)
+2026-06-20 23:41:29 | INFO     | clause_extractor | Extraction batch 3: 2 chunk(s)
+2026-06-20 23:41:38 | WARNING  | clause_extractor | Extraction batch 3: LLM call exceeded 9.0s on attempt 1
+2026-06-20 23:41:38 | ERROR    | clause_extractor | Extraction batch 3: did not finish within the 12.0s deadline — its section(s) were not analyzed
+2026-06-20 23:41:38 | INFO     | clause_extractor | Extraction: 3 batch(es) resolved in 12.0s (deadline=12.0s, skipped=1)
+2026-06-20 23:41:38 | INFO     | clause_extractor | Extracted 29 verified clauses | skipped_batches=1/3
+2026-06-20 23:41:38 | INFO     | pipeline | Clauses extracted: 29 | skipped_batches=1
+2026-06-20 23:41:38 | INFO     | risk_analyzer | Assessing 29 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-20 23:41:38 | INFO     | risk_analyzer | Assessing batch 1 (8 clauses)
+2026-06-20 23:41:41 | INFO     | risk_analyzer | Assessing batch 2 (8 clauses)
+2026-06-20 23:41:42 | INFO     | risk_analyzer | Assessing batch 3 (8 clauses)
+2026-06-20 23:41:44 | INFO     | risk_analyzer | Assessing batch 4 (5 clauses)
+2026-06-20 23:41:51 | WARNING  | risk_analyzer | Batch 1: LLM call exceeded 12.0s on attempt 1 — retrying
+2026-06-20 23:41:53 | WARNING  | risk_analyzer | Batch 2: LLM call exceeded 12.0s on attempt 1 — retrying
+2026-06-20 23:41:54 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 12.0s on attempt 1 — retrying
+2026-06-20 23:41:56 | WARNING  | risk_analyzer | Batch 4: LLM call exceeded 12.0s on attempt 1 — retrying
+2026-06-20 23:42:05 | WARNING  | risk_analyzer | Batch 1: LLM call exceeded 12.0s on attempt 2 — retrying
+2026-06-20 23:42:08 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 12.0s on attempt 2 — retrying
+2026-06-20 23:42:09 | WARNING  | risk_analyzer | Batch 4: LLM call exceeded 12.0s on attempt 2 — retrying
+2026-06-20 23:42:13 | ERROR    | risk_analyzer | Batch 1: did not finish within the 35.0s overall deadline — flagging its 8 clause(s) for manual review instead of blocking the report
+2026-06-20 23:42:13 | ERROR    | risk_analyzer | Batch 3: did not finish within the 35.0s overall deadline — flagging its 8 clause(s) for manual review instead of blocking the report
+2026-06-20 23:42:13 | ERROR    | risk_analyzer | Batch 4: did not finish within the 35.0s overall deadline — flagging its 5 clause(s) for manual review instead of blocking the report
+2026-06-20 23:42:13 | INFO     | risk_analyzer | All 4 batches resolved in 35.0s (deadline=35.0s)
+2026-06-20 23:42:13 | INFO     | risk_analyzer | Assessment complete: 29 clauses | HIGH=1 | MEDIUM=4 | LOW=2 | SAFE=1 | NEEDS_MANUAL_REVIEW=21
+2026-06-20 23:42:13 | INFO     | pipeline | Risks assessed: 29
+2026-06-20 23:42:13 | INFO     | simplifier | Simplify batch 1: 12 clause(s)
+2026-06-20 23:42:15 | INFO     | simplifier | Simplify batch 2: 12 clause(s)
+2026-06-20 23:42:16 | INFO     | simplifier | Simplify batch 3: 5 clause(s)
+2026-06-20 23:42:18 | WARNING  | simplifier | Simplify batch 3: no JSON array on attempt 1
+2026-06-20 23:42:21 | WARNING  | simplifier | Simplify batch 1: LLM call exceeded 7.0s on attempt 1
+2026-06-20 23:42:21 | ERROR    | simplifier | Simplify batch 1: did not finish within the 8.0s deadline — its clauses will fall back to their `reason` text
+2026-06-20 23:42:21 | ERROR    | simplifier | Simplify batch 2: did not finish within the 8.0s deadline — its clauses will fall back to their `reason` text
+2026-06-20 23:42:21 | ERROR    | simplifier | Simplify batch 3: did not finish within the 8.0s deadline — its clauses will fall back to their `reason` text
+2026-06-20 23:42:21 | INFO     | simplifier | Simplified 29 clause(s) across 3 batch(es) in 8.0s (deadline=8.0s) | fell_back_to_reason=29
+2026-06-20 23:42:21 | WARNING  | reporter | 21 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-20 23:42:21 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=1.8 | high=1 | medium=4 | low=2 | safe=1 | unanalyzed=21 | coverage=29 clauses from 10 sections
+2026-06-20 23:42:21 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-20 23:47:22 | INFO     | pdf_reader | OCR available
+2026-06-20 23:47:34 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-20 23:47:34 | INFO     | pipeline | Pipeline started
+2026-06-20 23:47:34 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-20 23:47:34 | INFO     | orchestrator | Detecting document type + locale | chars=16440
+2026-06-20 23:47:37 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 2.9s
+2026-06-20 23:47:37 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-20 23:47:37 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-20 23:47:37 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-20 23:47:37 | INFO     | clause_extractor | Extraction batch 1: 4 chunk(s)
+2026-06-20 23:47:38 | INFO     | clause_extractor | Extraction batch 2: 4 chunk(s)
+2026-06-20 23:47:39 | INFO     | clause_extractor | Extraction batch 3: 2 chunk(s)
+2026-06-20 23:47:48 | WARNING  | clause_extractor | Extraction batch 3: LLM call exceeded 9.0s on attempt 1
+2026-06-20 23:47:58 | WARNING  | clause_extractor | Extraction batch 3: LLM call exceeded 9.0s on attempt 2
+2026-06-20 23:47:58 | ERROR    | clause_extractor | Extraction batch 3: all attempts failed for 2 chunk(s) — these section(s) may be under-analyzed
+2026-06-20 23:47:58 | INFO     | clause_extractor | Extraction: 3 batch(es) resolved in 21.2s (deadline=25.0s, skipped=0)
+2026-06-20 23:47:58 | INFO     | clause_extractor | Extracted 29 verified clauses | skipped_batches=0/3
+2026-06-20 23:47:58 | INFO     | pipeline | Clauses extracted: 29 | skipped_batches=0
+2026-06-20 23:47:58 | INFO     | risk_analyzer | Assessing 29 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-20 23:47:58 | INFO     | risk_analyzer | Assessing batch 1 (6 clauses)
+2026-06-20 23:48:01 | INFO     | risk_analyzer | Assessing batch 2 (6 clauses)
+2026-06-20 23:48:02 | INFO     | risk_analyzer | Assessing batch 3 (6 clauses)
+2026-06-20 23:48:04 | INFO     | risk_analyzer | Assessing batch 4 (6 clauses)
+2026-06-20 23:48:05 | INFO     | risk_analyzer | Assessing batch 5 (5 clauses)
+2026-06-20 23:48:11 | WARNING  | risk_analyzer | Batch 1: LLM call exceeded 12.0s on attempt 1 — retrying
+2026-06-20 23:48:13 | WARNING  | risk_analyzer | Batch 2: LLM call exceeded 12.0s on attempt 1 — retrying
+2026-06-20 23:48:14 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 12.0s on attempt 1 — retrying
+2026-06-20 23:48:16 | WARNING  | risk_analyzer | Batch 4: LLM call exceeded 12.0s on attempt 1 — retrying
+2026-06-20 23:48:17 | WARNING  | risk_analyzer | Batch 5: LLM call exceeded 12.0s on attempt 1 — retrying
+2026-06-20 23:48:24 | WARNING  | risk_analyzer | Batch 1: LLM call exceeded 12.0s on attempt 2 — retrying
+2026-06-20 23:48:26 | WARNING  | risk_analyzer | Batch 2: LLM call exceeded 12.0s on attempt 2 — retrying
+2026-06-20 23:48:27 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 12.0s on attempt 2 — retrying
+2026-06-20 23:48:29 | WARNING  | risk_analyzer | Batch 4: LLM call exceeded 12.0s on attempt 2 — retrying
+2026-06-20 23:48:30 | WARNING  | risk_analyzer | Batch 5: LLM call exceeded 12.0s on attempt 2 — retrying
+2026-06-20 23:48:37 | WARNING  | risk_analyzer | Batch 1: LLM call exceeded 12.0s on attempt 3 — retrying
+2026-06-20 23:48:37 | ERROR    | risk_analyzer | Batch 1: all assessment attempts failed (6 clauses) — flagging for manual review instead of dropping.
+2026-06-20 23:48:39 | WARNING  | risk_analyzer | Batch 2: LLM call exceeded 12.0s on attempt 3 — retrying
+2026-06-20 23:48:39 | ERROR    | risk_analyzer | Batch 2: all assessment attempts failed (6 clauses) — flagging for manual review instead of dropping.
+2026-06-20 23:48:40 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 12.0s on attempt 3 — retrying
+2026-06-20 23:48:40 | ERROR    | risk_analyzer | Batch 3: all assessment attempts failed (6 clauses) — flagging for manual review instead of dropping.
+2026-06-20 23:48:42 | WARNING  | risk_analyzer | Batch 4: LLM call exceeded 12.0s on attempt 3 — retrying
+2026-06-20 23:48:42 | ERROR    | risk_analyzer | Batch 4: all assessment attempts failed (6 clauses) — flagging for manual review instead of dropping.
+2026-06-20 23:48:43 | WARNING  | risk_analyzer | Batch 5: LLM call exceeded 12.0s on attempt 3 — retrying
+2026-06-20 23:48:43 | ERROR    | risk_analyzer | Batch 5: all assessment attempts failed (5 clauses) — flagging for manual review instead of dropping.
+2026-06-20 23:48:43 | INFO     | risk_analyzer | All 5 batches resolved in 45.4s (deadline=60.0s)
+2026-06-20 23:48:43 | INFO     | risk_analyzer | Assessment complete: 29 clauses | HIGH=0 | MEDIUM=0 | LOW=0 | SAFE=0 | NEEDS_MANUAL_REVIEW=29
+2026-06-20 23:48:43 | INFO     | pipeline | Risks assessed: 29
+2026-06-20 23:48:43 | INFO     | simplifier | Simplify batch 1: 12 clause(s)
+2026-06-20 23:48:45 | INFO     | simplifier | Simplify batch 2: 12 clause(s)
+2026-06-20 23:48:46 | INFO     | simplifier | Simplify batch 3: 5 clause(s)
+2026-06-20 23:48:48 | INFO     | simplifier | Simplify batch 1: accepted=12 rejected=0 on attempt 1
+2026-06-20 23:48:48 | WARNING  | simplifier | Simplify batch 3: JSON parse error on attempt 1: Expecting value: line 5 column 27 (char 100)
+2026-06-20 23:48:49 | INFO     | simplifier | Simplify batch 2: accepted=12 rejected=1 on attempt 1
+2026-06-20 23:48:56 | WARNING  | simplifier | Simplify batch 3: LLM call exceeded 7.0s on attempt 2
+2026-06-20 23:48:56 | ERROR    | simplifier | Simplify batch 3: all attempts failed for 5 clause(s) — falling back to their `reason` text
+2026-06-20 23:48:56 | INFO     | simplifier | Simplified 29 clause(s) across 3 batch(es) in 12.4s (deadline=20.0s) | fell_back_to_reason=5
+2026-06-20 23:48:56 | WARNING  | reporter | 29 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-20 23:48:56 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=0.0 | high=0 | medium=0 | low=0 | safe=0 | unanalyzed=29 | coverage=29 clauses from 10 sections
+2026-06-20 23:48:56 | INFO     | pipeline | Pipeline complete | step=complete

@@ -1,0 +1,629 @@
+2026-06-21 00:01:55 | INFO     | pdf_reader | OCR available
+2026-06-21 00:02:12 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-21 00:02:12 | INFO     | pipeline | Pipeline started
+2026-06-21 00:02:12 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-21 00:02:12 | INFO     | orchestrator | Detecting document type + locale | chars=16440
+2026-06-21 00:02:12 | ERROR    | orchestrator | Doc-type detection raised after completion: name 'get_llm' is not defined
+2026-06-21 00:02:12 | ERROR    | orchestrator | Locale detection raised after completion: name 'get_llm' is not defined
+2026-06-21 00:02:12 | INFO     | orchestrator | Doc type: OTHER | Locale: None | took 0.0s
+2026-06-21 00:02:12 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-21 00:02:12 | INFO     | pipeline | Doc type: OTHER | Locale: None | Chunks: 10
+2026-06-21 00:02:12 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=OTHER
+2026-06-21 00:02:12 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-21 00:02:13 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-21 00:02:13 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-21 00:02:14 | INFO     | clause_extractor | Extraction batch 4: 1 chunk(s)
+2026-06-21 00:02:14 | ERROR    | clause_extractor | Extraction batch 1: raised after completion: name 'get_llm' is not defined
+2026-06-21 00:02:14 | ERROR    | clause_extractor | Extraction batch 2: raised after completion: name 'get_llm' is not defined
+2026-06-21 00:02:14 | ERROR    | clause_extractor | Extraction batch 3: raised after completion: name 'get_llm' is not defined
+2026-06-21 00:02:14 | ERROR    | clause_extractor | Extraction batch 4: raised after completion: name 'get_llm' is not defined
+2026-06-21 00:02:14 | INFO     | clause_extractor | Extraction: 4 batch(es) resolved in 1.5s (deadline=20.0s, skipped=4)
+2026-06-21 00:02:14 | INFO     | clause_extractor | Extracted 0 verified clauses | skipped_batches=4/4
+2026-06-21 00:02:14 | INFO     | pipeline | Clauses extracted: 0 | skipped_batches=4
+2026-06-21 00:02:14 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-21 00:04:39 | INFO     | pdf_reader | OCR available
+2026-06-21 00:04:49 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-21 00:04:49 | INFO     | pipeline | Pipeline started
+2026-06-21 00:04:49 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-21 00:04:49 | INFO     | orchestrator | Detecting document type + locale | chars=16440
+2026-06-21 00:04:52 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 2.8s
+2026-06-21 00:04:52 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-21 00:04:52 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-21 00:04:52 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-21 00:04:52 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-21 00:04:53 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-21 00:04:54 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-21 00:04:54 | INFO     | clause_extractor | Extraction batch 4: 1 chunk(s)
+2026-06-21 00:05:03 | WARNING  | clause_extractor | Extraction batch 1: LLM call exceeded 10.0s on attempt 1
+2026-06-21 00:05:03 | WARNING  | clause_extractor | Extraction batch 2: LLM call exceeded 10.0s on attempt 1
+2026-06-21 00:05:04 | WARNING  | clause_extractor | Extraction batch 4: LLM call exceeded 10.0s on attempt 1
+2026-06-21 00:05:12 | ERROR    | clause_extractor | Extraction batch 1: did not finish within the 20.0s deadline — its section(s) were not analyzed
+2026-06-21 00:05:12 | ERROR    | clause_extractor | Extraction batch 2: did not finish within the 20.0s deadline — its section(s) were not analyzed
+2026-06-21 00:05:12 | ERROR    | clause_extractor | Extraction batch 4: did not finish within the 20.0s deadline — its section(s) were not analyzed
+2026-06-21 00:05:12 | INFO     | clause_extractor | Extraction: 4 batch(es) resolved in 20.0s (deadline=20.0s, skipped=3)
+2026-06-21 00:05:12 | INFO     | clause_extractor | Extracted 23 verified clauses | skipped_batches=3/4
+2026-06-21 00:05:12 | INFO     | pipeline | Clauses extracted: 23 | skipped_batches=3
+2026-06-21 00:05:12 | INFO     | risk_analyzer | Assessing 23 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-21 00:05:12 | INFO     | risk_analyzer | Assessing batch 1 (5 clauses)
+2026-06-21 00:05:14 | INFO     | risk_analyzer | Assessing batch 2 (5 clauses)
+2026-06-21 00:05:16 | INFO     | risk_analyzer | Assessing batch 3 (5 clauses)
+2026-06-21 00:05:17 | INFO     | risk_analyzer | Assessing batch 4 (5 clauses)
+2026-06-21 00:05:19 | INFO     | risk_analyzer | Assessing batch 5 (3 clauses)
+2026-06-21 00:05:39 | WARNING  | risk_analyzer | Batch 2: LLM call exceeded 25.0s on attempt 1 — retrying
+2026-06-21 00:05:41 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 25.0s on attempt 1 — retrying
+2026-06-21 00:05:42 | WARNING  | risk_analyzer | Batch 4: LLM call exceeded 25.0s on attempt 1 — retrying
+2026-06-21 00:06:05 | WARNING  | risk_analyzer | Batch 2: LLM call exceeded 25.0s on attempt 2 — retrying
+2026-06-21 00:06:07 | ERROR    | risk_analyzer | Batch 2: did not finish within the 55.0s overall deadline — flagging its 5 clause(s) for manual review instead of blocking the report
+2026-06-21 00:06:07 | ERROR    | risk_analyzer | Batch 3: did not finish within the 55.0s overall deadline — flagging its 5 clause(s) for manual review instead of blocking the report
+2026-06-21 00:06:07 | ERROR    | risk_analyzer | Batch 4: did not finish within the 55.0s overall deadline — flagging its 5 clause(s) for manual review instead of blocking the report
+2026-06-21 00:06:07 | INFO     | risk_analyzer | All 5 batches resolved in 55.0s (deadline=55.0s)
+2026-06-21 00:06:07 | INFO     | risk_analyzer | Assessment complete: 23 clauses | HIGH=0 | MEDIUM=4 | LOW=2 | SAFE=2 | NEEDS_MANUAL_REVIEW=15
+2026-06-21 00:06:07 | INFO     | pipeline | Risks assessed: 23
+2026-06-21 00:06:07 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-21 00:06:09 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-21 00:06:09 | INFO     | simplifier | Simplify batch 3: 3 clause(s)
+2026-06-21 00:06:09 | INFO     | simplifier | Simplify batch 1: accepted=10 rejected=0 on attempt 1
+2026-06-21 00:06:10 | INFO     | simplifier | Simplify batch 2: accepted=10 rejected=0 on attempt 1
+2026-06-21 00:06:19 | WARNING  | simplifier | Simplify batch 3: LLM call exceeded 10.0s on attempt 1
+2026-06-21 00:06:25 | INFO     | simplifier | Simplify batch 3: accepted=3 rejected=0 on attempt 2
+2026-06-21 00:06:25 | INFO     | simplifier | Simplified 23 clause(s) across 3 batch(es) in 18.9s (deadline=20.0s) | fell_back_to_reason=0
+2026-06-21 00:06:25 | WARNING  | reporter | 15 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-21 00:06:25 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=1.5 | high=0 | medium=4 | low=2 | safe=2 | unanalyzed=15 | coverage=23 clauses from 10 sections
+2026-06-21 00:06:25 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-21 00:12:54 | INFO     | pdf_reader | OCR available
+2026-06-21 00:13:04 | INFO     | pdf_reader | Direct extraction: 16440 chars from 8 pages
+2026-06-21 00:13:04 | INFO     | pipeline | Pipeline started
+2026-06-21 00:13:04 | INFO     | pipeline | Validation passed | chars=16440
+2026-06-21 00:13:04 | INFO     | orchestrator | Detecting document type + locale | chars=16440
+2026-06-21 00:13:08 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 3.4s
+2026-06-21 00:13:08 | INFO     | text_chunker | Chunked document: 16440 chars → 10 chunks (avg 1644 chars/chunk)
+2026-06-21 00:13:08 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-21 00:13:08 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-21 00:13:08 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-21 00:13:09 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-21 00:13:10 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-21 00:13:10 | INFO     | clause_extractor | Extraction batch 4: 1 chunk(s)
+2026-06-21 00:13:29 | WARNING  | clause_extractor | Extraction batch 1: LLM call exceeded 20.0s on attempt 1
+2026-06-21 00:13:30 | WARNING  | clause_extractor | Extraction batch 3: LLM call exceeded 20.0s on attempt 1
+2026-06-21 00:13:46 | WARNING  | clause_extractor | Extraction batch 1: JSON parse error on attempt 2: Expecting ',' delimiter: line 5 column 43 (char 130)
+2026-06-21 00:13:46 | ERROR    | clause_extractor | Extraction batch 1: all attempts failed for 3 chunk(s) — these section(s) may be under-analyzed
+2026-06-21 00:13:50 | WARNING  | clause_extractor | Extraction batch 3: LLM call exceeded 20.0s on attempt 2
+2026-06-21 00:13:50 | ERROR    | clause_extractor | Extraction batch 3: all attempts failed for 3 chunk(s) — these section(s) may be under-analyzed
+2026-06-21 00:13:50 | INFO     | clause_extractor | Extraction: 4 batch(es) resolved in 42.8s (deadline=45.0s, skipped=0)
+2026-06-21 00:13:50 | INFO     | clause_extractor | Extracted 21 verified clauses | skipped_batches=0/4
+2026-06-21 00:13:50 | INFO     | pipeline | Clauses extracted: 21 | skipped_batches=0
+2026-06-21 00:13:50 | INFO     | risk_analyzer | Assessing 21 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-21 00:13:50 | INFO     | risk_analyzer | Assessing batch 1 (4 clauses)
+2026-06-21 00:13:54 | INFO     | risk_analyzer | Assessing batch 2 (4 clauses)
+2026-06-21 00:13:56 | INFO     | risk_analyzer | Assessing batch 3 (4 clauses)
+2026-06-21 00:13:58 | INFO     | risk_analyzer | Assessing batch 4 (4 clauses)
+2026-06-21 00:14:00 | INFO     | risk_analyzer | Assessing batch 5 (4 clauses)
+2026-06-21 00:14:02 | INFO     | risk_analyzer | Assessing batch 6 (1 clauses)
+2026-06-21 00:14:26 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 30.0s on attempt 1 — retrying
+2026-06-21 00:14:28 | WARNING  | risk_analyzer | Batch 4: LLM call exceeded 30.0s on attempt 1 — retrying
+2026-06-21 00:14:30 | WARNING  | risk_analyzer | Batch 5: LLM call exceeded 30.0s on attempt 1 — retrying
+2026-06-21 00:14:32 | WARNING  | risk_analyzer | Batch 6: LLM call exceeded 30.0s on attempt 1 — retrying
+2026-06-21 00:14:57 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 30.0s on attempt 2 — retrying
+2026-06-21 00:14:59 | WARNING  | risk_analyzer | Batch 4: LLM call exceeded 30.0s on attempt 2 — retrying
+2026-06-21 00:15:01 | WARNING  | risk_analyzer | Batch 5: LLM call exceeded 30.0s on attempt 2 — retrying
+2026-06-21 00:15:28 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 30.0s on attempt 3 — retrying
+2026-06-21 00:15:28 | ERROR    | risk_analyzer | Batch 3: all assessment attempts failed (4 clauses) — flagging for manual review instead of dropping.
+2026-06-21 00:15:32 | WARNING  | risk_analyzer | Batch 5: LLM call exceeded 30.0s on attempt 3 — retrying
+2026-06-21 00:15:32 | ERROR    | risk_analyzer | Batch 5: all assessment attempts failed (4 clauses) — flagging for manual review instead of dropping.
+2026-06-21 00:15:32 | INFO     | risk_analyzer | All 6 batches resolved in 101.1s (deadline=120.0s)
+2026-06-21 00:15:32 | INFO     | risk_analyzer | Assessment complete: 21 clauses | HIGH=0 | MEDIUM=6 | LOW=4 | SAFE=3 | NEEDS_MANUAL_REVIEW=8
+2026-06-21 00:15:32 | INFO     | pipeline | Risks assessed: 21
+2026-06-21 00:15:32 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-21 00:15:34 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-21 00:15:34 | INFO     | simplifier | Simplify batch 3: 1 clause(s)
+2026-06-21 00:15:34 | INFO     | simplifier | Simplify batch 1: accepted=10 rejected=0 on attempt 1
+2026-06-21 00:15:42 | INFO     | simplifier | Simplify batch 3: accepted=1 rejected=0 on attempt 1
+2026-06-21 00:15:44 | WARNING  | simplifier | Simplify batch 2: LLM call exceeded 10.0s on attempt 1
+2026-06-21 00:15:52 | ERROR    | simplifier | Simplify batch 2: did not finish within the 20.0s deadline — its clauses will fall back to their `reason` text
+2026-06-21 00:15:52 | INFO     | simplifier | Simplified 21 clause(s) across 3 batch(es) in 20.0s (deadline=20.0s) | fell_back_to_reason=10
+2026-06-21 00:15:52 | WARNING  | reporter | 8 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-21 00:15:52 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=2.3 | high=0 | medium=6 | low=4 | safe=3 | unanalyzed=8 | coverage=21 clauses from 10 sections
+2026-06-21 00:15:52 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-21 22:48:52 | INFO     | pdf_reader | OCR available
+2026-06-21 22:49:04 | INFO     | pdf_reader | Direct extraction: 13736 chars from 8 pages
+2026-06-21 22:49:04 | INFO     | pipeline | Pipeline started
+2026-06-21 22:49:04 | INFO     | pipeline | Validation passed | chars=13736
+2026-06-21 22:49:04 | INFO     | orchestrator | Detecting document type + locale | chars=13736
+2026-06-21 22:49:08 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 3.1s
+2026-06-21 22:49:08 | INFO     | text_chunker | Chunked document: 13736 chars → 9 chunks (avg 1526 chars/chunk)
+2026-06-21 22:49:08 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 9
+2026-06-21 22:49:08 | INFO     | clause_extractor | Extracting clauses | chunks=9 | doc_type=SERVICE_AGREEMENT
+2026-06-21 22:49:08 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-21 22:49:09 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-21 22:49:10 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-21 22:49:12 | WARNING  | clause_extractor | Extraction batch 3: no verified clauses on attempt 1
+2026-06-21 22:49:29 | WARNING  | clause_extractor | Extraction batch 1: LLM call exceeded 20.0s on attempt 1
+2026-06-21 22:49:29 | WARNING  | clause_extractor | Extraction batch 2: LLM call exceeded 20.0s on attempt 1
+2026-06-21 22:49:32 | WARNING  | clause_extractor | Extraction batch 3: LLM call exceeded 20.0s on attempt 2
+2026-06-21 22:49:32 | ERROR    | clause_extractor | Extraction batch 3: all attempts failed for 3 chunk(s) — these section(s) may be under-analyzed
+2026-06-21 22:49:36 | WARNING  | clause_extractor | Extraction batch 2: no verified clauses on attempt 2
+2026-06-21 22:49:36 | ERROR    | clause_extractor | Extraction batch 2: all attempts failed for 3 chunk(s) — these section(s) may be under-analyzed
+2026-06-21 22:49:49 | WARNING  | clause_extractor | Extraction batch 1: LLM call exceeded 20.0s on attempt 2
+2026-06-21 22:49:49 | ERROR    | clause_extractor | Extraction batch 1: all attempts failed for 3 chunk(s) — these section(s) may be under-analyzed
+2026-06-21 22:49:49 | INFO     | clause_extractor | Extraction: 3 batch(es) resolved in 41.9s (deadline=45.0s, skipped=0)
+2026-06-21 22:49:49 | INFO     | clause_extractor | Extracted 0 verified clauses | skipped_batches=0/3
+2026-06-21 22:49:49 | INFO     | pipeline | Clauses extracted: 0 | skipped_batches=0
+2026-06-21 22:49:49 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-21 22:51:45 | INFO     | pdf_reader | OCR available
+2026-06-21 22:52:11 | INFO     | pdf_reader | Direct extraction: 16241 chars from 8 pages
+2026-06-21 22:52:11 | INFO     | pipeline | Pipeline started
+2026-06-21 22:52:11 | INFO     | pipeline | Validation passed | chars=16241
+2026-06-21 22:52:11 | INFO     | orchestrator | Detecting document type + locale | chars=16241
+2026-06-21 22:52:14 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 2.8s
+2026-06-21 22:52:14 | INFO     | text_chunker | Chunked document: 16241 chars → 10 chunks (avg 1624 chars/chunk)
+2026-06-21 22:52:14 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-21 22:52:14 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-21 22:52:14 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-21 22:52:15 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-21 22:52:16 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-21 22:52:16 | INFO     | clause_extractor | Extraction batch 4: 1 chunk(s)
+2026-06-21 22:52:36 | WARNING  | clause_extractor | Extraction batch 3: LLM call exceeded 20.0s on attempt 1
+2026-06-21 22:52:36 | WARNING  | clause_extractor | Extraction batch 4: LLM call exceeded 20.0s on attempt 1
+2026-06-21 22:52:57 | WARNING  | clause_extractor | Extraction batch 4: LLM call exceeded 20.0s on attempt 2
+2026-06-21 22:52:57 | ERROR    | clause_extractor | Extraction batch 4: all attempts failed for 1 chunk(s) — these section(s) may be under-analyzed
+2026-06-21 22:52:57 | INFO     | clause_extractor | Extraction: 4 batch(es) resolved in 43.3s (deadline=45.0s, skipped=0)
+2026-06-21 22:52:57 | INFO     | clause_extractor | Extracted 45 verified clauses | skipped_batches=0/4
+2026-06-21 22:52:57 | INFO     | pipeline | Clauses extracted: 45 | skipped_batches=0
+2026-06-21 22:52:57 | INFO     | risk_analyzer | Assessing 45 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-21 22:52:57 | INFO     | risk_analyzer | Assessing batch 1 (6 clauses)
+2026-06-21 22:52:58 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 22:52:59 | INFO     | risk_analyzer | Assessing batch 2 (6 clauses)
+2026-06-21 22:52:59 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 22:53:00 | INFO     | risk_analyzer | Assessing batch 3 (6 clauses)
+2026-06-21 22:53:00 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 22:53:00 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 22:53:01 | INFO     | risk_analyzer | Assessing batch 4 (6 clauses)
+2026-06-21 22:53:01 | WARNING  | risk_analyzer | Batch 4: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 22:53:01 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 22:53:02 | INFO     | risk_analyzer | Assessing batch 5 (6 clauses)
+2026-06-21 22:53:02 | WARNING  | risk_analyzer | Batch 5: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 22:53:02 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 22:53:02 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 22:53:02 | ERROR    | risk_analyzer | Batch 1: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 22:53:03 | INFO     | risk_analyzer | Assessing batch 6 (6 clauses)
+2026-06-21 22:53:03 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 22:53:03 | WARNING  | risk_analyzer | Batch 4: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 22:53:03 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 22:53:03 | ERROR    | risk_analyzer | Batch 2: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 22:53:04 | INFO     | risk_analyzer | Assessing batch 7 (6 clauses)
+2026-06-21 22:53:04 | WARNING  | risk_analyzer | Batch 7: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 22:53:04 | WARNING  | risk_analyzer | Batch 5: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 22:53:04 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 22:53:04 | ERROR    | risk_analyzer | Batch 3: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 22:53:05 | INFO     | risk_analyzer | Assessing batch 8 (3 clauses)
+2026-06-21 22:53:05 | WARNING  | risk_analyzer | Batch 8: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 22:53:05 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 22:53:05 | WARNING  | risk_analyzer | Batch 4: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 22:53:05 | ERROR    | risk_analyzer | Batch 4: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 22:53:06 | WARNING  | risk_analyzer | Batch 7: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 22:53:06 | WARNING  | risk_analyzer | Batch 5: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 22:53:06 | ERROR    | risk_analyzer | Batch 5: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 22:53:07 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 22:53:07 | ERROR    | risk_analyzer | Batch 6: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 22:53:07 | WARNING  | risk_analyzer | Batch 8: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 22:53:08 | WARNING  | risk_analyzer | Batch 7: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 22:53:08 | ERROR    | risk_analyzer | Batch 7: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 22:53:09 | WARNING  | risk_analyzer | Batch 8: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 22:53:09 | ERROR    | risk_analyzer | Batch 8: all attempts failed (3 clauses) — flagging for manual review
+2026-06-21 22:53:09 | INFO     | risk_analyzer | All 8 batches resolved in 12.2s (deadline=60.0s)
+2026-06-21 22:53:09 | INFO     | risk_analyzer | Assessment complete: 45 clauses | HIGH=0 | MEDIUM=0 | LOW=0 | SAFE=0 | NEEDS_MANUAL_REVIEW=45
+2026-06-21 22:53:09 | INFO     | pipeline | Risks assessed: 45
+2026-06-21 22:53:09 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-21 22:53:11 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-21 22:53:11 | INFO     | simplifier | Simplify batch 3: 10 clause(s)
+2026-06-21 22:53:12 | INFO     | simplifier | Simplify batch 4: 10 clause(s)
+2026-06-21 22:53:12 | INFO     | simplifier | Simplify batch 5: 5 clause(s)
+2026-06-21 22:53:13 | INFO     | simplifier | Simplify batch 5: accepted=5 rejected=0 on attempt 1
+2026-06-21 22:53:20 | WARNING  | simplifier | Simplify batch 1: LLM call exceeded 10.0s on attempt 1
+2026-06-21 22:53:21 | WARNING  | simplifier | Simplify batch 2: LLM call exceeded 10.0s on attempt 1
+2026-06-21 22:53:21 | WARNING  | simplifier | Simplify batch 3: LLM call exceeded 10.0s on attempt 1
+2026-06-21 22:53:22 | WARNING  | simplifier | Simplify batch 4: LLM call exceeded 10.0s on attempt 1
+2026-06-21 22:53:28 | INFO     | simplifier | Simplify batch 3: accepted=10 rejected=0 on attempt 2
+2026-06-21 22:53:29 | ERROR    | simplifier | Simplify batch 1: did not finish within the 20.0s deadline — its clauses will fall back to their `reason` text
+2026-06-21 22:53:29 | ERROR    | simplifier | Simplify batch 2: did not finish within the 20.0s deadline — its clauses will fall back to their `reason` text
+2026-06-21 22:53:29 | ERROR    | simplifier | Simplify batch 4: did not finish within the 20.0s deadline — its clauses will fall back to their `reason` text
+2026-06-21 22:53:29 | INFO     | simplifier | Simplified 45 clause(s) across 5 batch(es) in 20.0s (deadline=20.0s) | fell_back_to_reason=30
+2026-06-21 22:53:29 | WARNING  | reporter | 45 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-21 22:53:29 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=6.0 | high=0 | medium=0 | low=0 | safe=0 | unanalyzed=45 | coverage=45 clauses from 10 sections
+2026-06-21 22:53:29 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-21 22:59:50 | INFO     | pdf_reader | OCR available
+2026-06-21 23:00:00 | INFO     | pdf_reader | Direct extraction: 16241 chars from 8 pages
+2026-06-21 23:00:00 | INFO     | pipeline | Pipeline started
+2026-06-21 23:00:00 | INFO     | pipeline | Validation passed | chars=16241
+2026-06-21 23:00:00 | INFO     | orchestrator | Detecting document type + locale | chars=16241
+2026-06-21 23:00:03 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 2.9s
+2026-06-21 23:00:03 | INFO     | text_chunker | Chunked document: 16241 chars → 10 chunks (avg 1624 chars/chunk)
+2026-06-21 23:00:03 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-21 23:00:03 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-21 23:00:03 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-21 23:00:05 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-21 23:00:06 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-21 23:00:07 | INFO     | clause_extractor | Extraction batch 4: 1 chunk(s)
+2026-06-21 23:00:27 | WARNING  | clause_extractor | Extraction batch 3: LLM call exceeded 20.0s on attempt 1
+2026-06-21 23:00:47 | WARNING  | clause_extractor | Extraction batch 3: LLM call exceeded 20.0s on attempt 2
+2026-06-21 23:00:47 | ERROR    | clause_extractor | Extraction batch 3: all attempts failed for 3 chunk(s) — these section(s) may be under-analyzed
+2026-06-21 23:00:47 | INFO     | clause_extractor | Extraction: 4 batch(es) resolved in 44.2s (deadline=45.0s, skipped=0)
+2026-06-21 23:00:47 | INFO     | clause_extractor | Extracted 32 verified clauses | skipped_batches=0/4
+2026-06-21 23:00:47 | INFO     | pipeline | Clauses extracted: 32 | skipped_batches=0
+2026-06-21 23:00:47 | INFO     | risk_analyzer | Assessing 32 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-21 23:00:47 | INFO     | risk_analyzer | Assessing batch 1 (6 clauses)
+2026-06-21 23:00:49 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:00:50 | INFO     | risk_analyzer | Assessing batch 2 (6 clauses)
+2026-06-21 23:00:51 | INFO     | risk_analyzer | Assessing batch 3 (6 clauses)
+2026-06-21 23:00:52 | INFO     | risk_analyzer | Assessing batch 4 (6 clauses)
+2026-06-21 23:00:53 | INFO     | risk_analyzer | Assessing batch 5 (6 clauses)
+2026-06-21 23:00:54 | INFO     | risk_analyzer | Assessing batch 6 (2 clauses)
+2026-06-21 23:00:55 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:00:55 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:00:55 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:00:55 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:00:55 | WARNING  | risk_analyzer | Batch 5: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:00:57 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:00:57 | ERROR    | risk_analyzer | Batch 1: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:00:57 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:00:57 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:00:57 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:00:57 | WARNING  | risk_analyzer | Batch 5: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:00:59 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:00:59 | ERROR    | risk_analyzer | Batch 6: all attempts failed (2 clauses) — flagging for manual review
+2026-06-21 23:00:59 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:00:59 | ERROR    | risk_analyzer | Batch 3: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:00:59 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:00:59 | ERROR    | risk_analyzer | Batch 2: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:00:59 | WARNING  | risk_analyzer | Batch 5: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:00:59 | ERROR    | risk_analyzer | Batch 5: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:01:03 | INFO     | risk_analyzer | All 6 batches resolved in 15.0s (deadline=60.0s)
+2026-06-21 23:01:03 | INFO     | risk_analyzer | Assessment complete: 32 clauses | HIGH=1 | MEDIUM=4 | LOW=1 | SAFE=0 | NEEDS_MANUAL_REVIEW=26
+2026-06-21 23:01:03 | INFO     | pipeline | Risks assessed: 32
+2026-06-21 23:01:03 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-21 23:01:04 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-21 23:01:05 | INFO     | simplifier | Simplify batch 3: 10 clause(s)
+2026-06-21 23:01:07 | INFO     | simplifier | Simplify batch 4: 2 clause(s)
+2026-06-21 23:01:08 | INFO     | simplifier | Simplify batch 1: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:01:10 | INFO     | simplifier | Simplify batch 2: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:01:17 | WARNING  | simplifier | Simplify batch 3: LLM call exceeded 10.0s on attempt 1
+2026-06-21 23:01:18 | INFO     | simplifier | Simplify batch 4: accepted=2 rejected=0 on attempt 1
+2026-06-21 23:01:23 | ERROR    | simplifier | Simplify batch 3: did not finish within the 20.0s deadline — its clauses will fall back to their `reason` text
+2026-06-21 23:01:23 | INFO     | simplifier | Simplified 32 clause(s) across 4 batch(es) in 20.0s (deadline=20.0s) | fell_back_to_reason=10
+2026-06-21 23:01:23 | WARNING  | reporter | 26 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-21 23:01:23 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=5.8 | high=1 | medium=4 | low=1 | safe=0 | unanalyzed=26 | coverage=32 clauses from 10 sections
+2026-06-21 23:01:23 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-21 23:12:46 | INFO     | pdf_reader | OCR available
+2026-06-21 23:13:00 | INFO     | pdf_reader | Direct extraction: 16241 chars from 8 pages
+2026-06-21 23:13:00 | INFO     | pipeline | Pipeline started
+2026-06-21 23:13:00 | INFO     | pipeline | Validation passed | chars=16241
+2026-06-21 23:13:00 | INFO     | orchestrator | Detecting document type + locale | chars=16241
+2026-06-21 23:13:00 | ERROR    | orchestrator | Doc-type detection raised after completion: name 'logger' is not defined
+2026-06-21 23:13:00 | ERROR    | orchestrator | Locale detection raised after completion: name 'logger' is not defined
+2026-06-21 23:13:00 | INFO     | orchestrator | Doc type: OTHER | Locale: None | took 0.0s
+2026-06-21 23:13:00 | INFO     | text_chunker | Chunked document: 16241 chars → 10 chunks (avg 1624 chars/chunk)
+2026-06-21 23:13:00 | INFO     | pipeline | Doc type: OTHER | Locale: None | Chunks: 10
+2026-06-21 23:13:00 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=OTHER
+2026-06-21 23:13:00 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-21 23:13:01 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-21 23:13:01 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-21 23:13:02 | INFO     | clause_extractor | Extraction batch 4: 1 chunk(s)
+2026-06-21 23:13:02 | ERROR    | clause_extractor | Extraction batch 1: raised after completion: name 'logger' is not defined
+2026-06-21 23:13:02 | ERROR    | clause_extractor | Extraction batch 2: raised after completion: name 'logger' is not defined
+2026-06-21 23:13:02 | ERROR    | clause_extractor | Extraction batch 3: raised after completion: name 'logger' is not defined
+2026-06-21 23:13:02 | ERROR    | clause_extractor | Extraction batch 4: raised after completion: name 'logger' is not defined
+2026-06-21 23:13:02 | INFO     | clause_extractor | Extraction: 4 batch(es) resolved in 1.5s (deadline=45.0s, skipped=4)
+2026-06-21 23:13:02 | INFO     | clause_extractor | Extracted 0 verified clauses | skipped_batches=4/4
+2026-06-21 23:13:02 | INFO     | pipeline | Clauses extracted: 0 | skipped_batches=4
+2026-06-21 23:13:02 | INFO     | pipeline | Pipeline complete | step=failed
+2026-06-21 23:14:17 | INFO     | pdf_reader | OCR available
+2026-06-21 23:14:27 | INFO     | pdf_reader | Direct extraction: 16241 chars from 8 pages
+2026-06-21 23:14:27 | INFO     | pipeline | Pipeline started
+2026-06-21 23:14:27 | INFO     | pipeline | Validation passed | chars=16241
+2026-06-21 23:14:27 | INFO     | orchestrator | Detecting document type + locale | chars=16241
+2026-06-21 23:14:27 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:14:29 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:14:30 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 3.0s
+2026-06-21 23:14:30 | INFO     | text_chunker | Chunked document: 16241 chars → 10 chunks (avg 1624 chars/chunk)
+2026-06-21 23:14:30 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-21 23:14:30 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-21 23:14:30 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-21 23:14:30 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:14:32 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-21 23:14:32 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:14:33 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-21 23:14:33 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:14:34 | INFO     | clause_extractor | Extraction batch 4: 1 chunk(s)
+2026-06-21 23:14:34 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:14:53 | WARNING  | clause_extractor | Extraction batch 2: LLM call exceeded 20.0s on attempt 1
+2026-06-21 23:14:55 | WARNING  | clause_extractor | Extraction batch 4: LLM call exceeded 20.0s on attempt 1
+2026-06-21 23:15:14 | WARNING  | clause_extractor | Extraction batch 2: LLM call exceeded 20.0s on attempt 2
+2026-06-21 23:15:14 | ERROR    | clause_extractor | Extraction batch 2: all attempts failed for 3 chunk(s) — these section(s) may be under-analyzed
+2026-06-21 23:15:14 | INFO     | clause_extractor | Extraction: 4 batch(es) resolved in 43.3s (deadline=45.0s, skipped=0)
+2026-06-21 23:15:14 | INFO     | clause_extractor | Deduplication: 37 → 36 (removed 1 duplicates)
+2026-06-21 23:15:14 | INFO     | clause_extractor | Extracted 36 verified clauses | skipped_batches=0/4
+2026-06-21 23:15:14 | INFO     | pipeline | Clauses extracted: 36 | skipped_batches=0
+2026-06-21 23:15:14 | INFO     | risk_analyzer | Assessing 36 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-21 23:15:14 | INFO     | risk_analyzer | Assessing batch 1 (6 clauses)
+2026-06-21 23:15:14 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:15:15 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:15:17 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:15:22 | INFO     | risk_analyzer | Assessing batch 2 (6 clauses)
+2026-06-21 23:15:22 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:15:23 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:15:25 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:15:27 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:15:27 | ERROR    | risk_analyzer | Batch 2: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:15:29 | INFO     | risk_analyzer | Assessing batch 3 (6 clauses)
+2026-06-21 23:15:29 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:15:31 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:15:33 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:15:35 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:15:35 | ERROR    | risk_analyzer | Batch 3: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:15:37 | INFO     | risk_analyzer | Assessing batch 4 (6 clauses)
+2026-06-21 23:15:37 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:15:38 | WARNING  | risk_analyzer | Batch 4: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:15:40 | WARNING  | risk_analyzer | Batch 4: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:15:42 | WARNING  | risk_analyzer | Batch 4: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:15:42 | ERROR    | risk_analyzer | Batch 4: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:15:44 | INFO     | risk_analyzer | Assessing batch 5 (6 clauses)
+2026-06-21 23:15:44 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:15:45 | WARNING  | risk_analyzer | Batch 5: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:15:47 | WARNING  | risk_analyzer | Batch 5: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:15:49 | WARNING  | risk_analyzer | Batch 5: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:15:49 | ERROR    | risk_analyzer | Batch 5: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:15:51 | INFO     | risk_analyzer | Assessing batch 6 (6 clauses)
+2026-06-21 23:15:51 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:16:07 | WARNING  | risk_analyzer | Batch 6: LLM call exceeded 15.0s on attempt 1 — retrying
+2026-06-21 23:16:21 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:16:24 | INFO     | risk_analyzer | All 6 batches resolved in 70.5s (deadline=60.0s)
+2026-06-21 23:16:24 | INFO     | risk_analyzer | Assessment complete: 36 clauses | HIGH=0 | MEDIUM=7 | LOW=2 | SAFE=3 | NEEDS_MANUAL_REVIEW=24
+2026-06-21 23:16:24 | INFO     | pipeline | Risks assessed: 36
+2026-06-21 23:16:24 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-21 23:16:24 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:16:26 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-21 23:16:26 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:16:27 | INFO     | simplifier | Simplify batch 3: 10 clause(s)
+2026-06-21 23:16:27 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:16:28 | INFO     | simplifier | Simplify batch 4: 6 clause(s)
+2026-06-21 23:16:28 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:16:30 | INFO     | simplifier | Simplify batch 4: accepted=6 rejected=0 on attempt 1
+2026-06-21 23:16:30 | INFO     | simplifier | Simplify batch 3: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:16:30 | INFO     | simplifier | Simplify batch 2: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:16:35 | WARNING  | simplifier | Simplify batch 1: LLM call exceeded 10.0s on attempt 1
+2026-06-21 23:16:44 | ERROR    | simplifier | Simplify batch 1: did not finish within the 20.0s deadline — its clauses will fall back to their `reason` text
+2026-06-21 23:16:44 | INFO     | simplifier | Simplified 36 clause(s) across 4 batch(es) in 20.0s (deadline=20.0s) | fell_back_to_reason=10
+2026-06-21 23:16:44 | WARNING  | reporter | 24 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-21 23:16:44 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=5.4 | high=0 | medium=7 | low=2 | safe=3 | unanalyzed=24 | coverage=36 clauses from 10 sections
+2026-06-21 23:16:44 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-21 23:21:48 | INFO     | pdf_reader | OCR available
+2026-06-21 23:21:58 | INFO     | pdf_reader | Direct extraction: 16241 chars from 8 pages
+2026-06-21 23:21:58 | INFO     | pipeline | Pipeline started
+2026-06-21 23:21:58 | INFO     | pipeline | Validation passed | chars=16241
+2026-06-21 23:21:58 | INFO     | orchestrator | Detecting document type + locale | chars=16241
+2026-06-21 23:21:58 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:21:59 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:22:01 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 3.0s
+2026-06-21 23:22:01 | INFO     | text_chunker | Chunked document: 16241 chars → 10 chunks (avg 1624 chars/chunk)
+2026-06-21 23:22:01 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-21 23:22:01 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-21 23:22:01 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-21 23:22:01 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:22:02 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-21 23:22:02 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:22:03 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-21 23:22:03 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:22:04 | INFO     | clause_extractor | Extraction batch 4: 1 chunk(s)
+2026-06-21 23:22:04 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:22:25 | WARNING  | clause_extractor | Extraction batch 4: LLM call exceeded 20.0s on attempt 1
+2026-06-21 23:22:40 | INFO     | clause_extractor | Extraction: 4 batch(es) resolved in 39.6s (deadline=45.0s, skipped=0)
+2026-06-21 23:22:40 | INFO     | clause_extractor | Extracted 46 verified clauses | skipped_batches=0/4
+2026-06-21 23:22:40 | INFO     | pipeline | Clauses extracted: 46 | skipped_batches=0
+2026-06-21 23:22:40 | INFO     | risk_analyzer | Assessing 46 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-21 23:22:40 | INFO     | risk_analyzer | Assessing batch 1 (6 clauses)
+2026-06-21 23:22:40 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:22:42 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:22:44 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:22:46 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:22:46 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 4 — waiting 2.0s before retry
+2026-06-21 23:22:46 | WARNING  | risk_analyzer | Batch 1: rate limit on attempt 5 — waiting 2.0s before retry
+2026-06-21 23:22:46 | ERROR    | risk_analyzer | Batch 1: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:22:48 | INFO     | risk_analyzer | Assessing batch 2 (6 clauses)
+2026-06-21 23:22:48 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:22:49 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:22:51 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:22:53 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:22:53 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 4 — waiting 2.0s before retry
+2026-06-21 23:22:53 | WARNING  | risk_analyzer | Batch 2: rate limit on attempt 5 — waiting 2.0s before retry
+2026-06-21 23:22:53 | ERROR    | risk_analyzer | Batch 2: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:22:55 | INFO     | risk_analyzer | Assessing batch 3 (6 clauses)
+2026-06-21 23:22:55 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:22:56 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:22:58 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:23:00 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:23:01 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 4 — waiting 2.0s before retry
+2026-06-21 23:23:01 | WARNING  | risk_analyzer | Batch 3: rate limit on attempt 5 — waiting 2.0s before retry
+2026-06-21 23:23:01 | ERROR    | risk_analyzer | Batch 3: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:23:03 | INFO     | risk_analyzer | Assessing batch 4 (6 clauses)
+2026-06-21 23:23:03 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:23:04 | WARNING  | risk_analyzer | Batch 4: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:23:06 | WARNING  | risk_analyzer | Batch 4: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:23:08 | WARNING  | risk_analyzer | Batch 4: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:23:08 | WARNING  | risk_analyzer | Batch 4: rate limit on attempt 4 — waiting 2.0s before retry
+2026-06-21 23:23:08 | WARNING  | risk_analyzer | Batch 4: rate limit on attempt 5 — waiting 2.0s before retry
+2026-06-21 23:23:08 | ERROR    | risk_analyzer | Batch 4: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:23:10 | INFO     | risk_analyzer | Assessing batch 5 (6 clauses)
+2026-06-21 23:23:10 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:23:12 | WARNING  | risk_analyzer | Batch 5: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:23:17 | INFO     | risk_analyzer | Assessing batch 6 (6 clauses)
+2026-06-21 23:23:17 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:23:18 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:23:20 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:23:22 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:23:22 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 4 — waiting 2.0s before retry
+2026-06-21 23:23:22 | WARNING  | risk_analyzer | Batch 6: rate limit on attempt 5 — waiting 2.0s before retry
+2026-06-21 23:23:22 | ERROR    | risk_analyzer | Batch 6: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:23:24 | INFO     | risk_analyzer | Assessing batch 7 (6 clauses)
+2026-06-21 23:23:24 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:23:25 | WARNING  | risk_analyzer | Batch 7: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:23:27 | WARNING  | risk_analyzer | Batch 7: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:23:29 | WARNING  | risk_analyzer | Batch 7: rate limit on attempt 3 — waiting 2.0s before retry
+2026-06-21 23:23:29 | WARNING  | risk_analyzer | Batch 7: rate limit on attempt 4 — waiting 2.0s before retry
+2026-06-21 23:23:30 | WARNING  | risk_analyzer | Batch 7: rate limit on attempt 5 — waiting 2.0s before retry
+2026-06-21 23:23:30 | ERROR    | risk_analyzer | Batch 7: all attempts failed (6 clauses) — flagging for manual review
+2026-06-21 23:23:32 | INFO     | risk_analyzer | Assessing batch 8 (4 clauses)
+2026-06-21 23:23:32 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:23:33 | WARNING  | risk_analyzer | Batch 8: rate limit on attempt 1 — waiting 2.0s before retry
+2026-06-21 23:23:35 | WARNING  | risk_analyzer | Batch 8: rate limit on attempt 2 — waiting 2.0s before retry
+2026-06-21 23:23:52 | WARNING  | risk_analyzer | Batch 8: LLM call exceeded 15.0s on attempt 3 — retrying
+2026-06-21 23:23:52 | WARNING  | risk_analyzer | Batch 8: rate limit on attempt 4 — waiting 2.0s before retry
+2026-06-21 23:23:52 | WARNING  | risk_analyzer | Batch 8: rate limit on attempt 5 — waiting 2.0s before retry
+2026-06-21 23:23:52 | ERROR    | risk_analyzer | Batch 8: all attempts failed (4 clauses) — flagging for manual review
+2026-06-21 23:23:52 | INFO     | risk_analyzer | All 8 batches resolved in 71.9s (deadline=60.0s)
+2026-06-21 23:23:52 | INFO     | risk_analyzer | Assessment complete: 46 clauses | HIGH=0 | MEDIUM=3 | LOW=1 | SAFE=2 | NEEDS_MANUAL_REVIEW=40
+2026-06-21 23:23:52 | INFO     | pipeline | Risks assessed: 46
+2026-06-21 23:23:52 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-21 23:23:52 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:23:54 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-21 23:23:54 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:23:55 | INFO     | simplifier | Simplify batch 3: 10 clause(s)
+2026-06-21 23:23:55 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:23:56 | INFO     | simplifier | Simplify batch 4: 10 clause(s)
+2026-06-21 23:23:56 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:23:57 | INFO     | simplifier | Simplify batch 5: 6 clause(s)
+2026-06-21 23:23:57 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:23:58 | INFO     | simplifier | Simplify batch 1: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:23:59 | INFO     | simplifier | Simplify batch 5: accepted=6 rejected=0 on attempt 1
+2026-06-21 23:23:59 | INFO     | simplifier | Simplify batch 4: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:23:59 | INFO     | simplifier | Simplify batch 2: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:24:06 | INFO     | simplifier | Simplify batch 3: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:24:06 | INFO     | simplifier | Simplified 46 clause(s) across 5 batch(es) in 13.5s (deadline=40.0s) | fell_back_to_reason=0
+2026-06-21 23:24:06 | WARNING  | reporter | 40 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-21 23:24:06 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=5.8 | high=0 | medium=3 | low=1 | safe=2 | unanalyzed=40 | coverage=46 clauses from 10 sections
+2026-06-21 23:24:06 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-21 23:42:40 | INFO     | pdf_reader | OCR available
+2026-06-21 23:42:49 | INFO     | pdf_reader | Direct extraction: 16241 chars from 8 pages
+2026-06-21 23:42:49 | INFO     | pipeline | Pipeline started
+2026-06-21 23:42:49 | INFO     | pipeline | Validation passed | chars=16241
+2026-06-21 23:42:49 | INFO     | orchestrator | Detecting document type + locale | chars=16241
+2026-06-21 23:42:49 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:42:51 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:42:52 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 2.8s
+2026-06-21 23:42:52 | INFO     | text_chunker | Chunked document: 16241 chars → 10 chunks (avg 1624 chars/chunk)
+2026-06-21 23:42:52 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-21 23:42:52 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-21 23:42:52 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-21 23:42:52 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:42:53 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-21 23:42:53 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:42:54 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-21 23:42:54 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:42:55 | INFO     | clause_extractor | Extraction batch 4: 1 chunk(s)
+2026-06-21 23:42:55 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:43:15 | WARNING  | clause_extractor | Extraction batch 3: LLM call exceeded 20.0s on attempt 1
+2026-06-21 23:43:22 | INFO     | clause_extractor | Extraction: 4 batch(es) resolved in 30.4s (deadline=45.0s, skipped=0)
+2026-06-21 23:43:22 | INFO     | clause_extractor | Extracted 56 verified clauses | skipped_batches=0/4
+2026-06-21 23:43:22 | INFO     | pipeline | Clauses extracted: 56 | skipped_batches=0
+2026-06-21 23:43:22 | INFO     | risk_analyzer | Assessing 56 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-21 23:43:22 | INFO     | risk_analyzer | Assessing batch 1 (12 clauses)
+2026-06-21 23:43:22 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:43:26 | INFO     | risk_analyzer | Assessing batch 2 (12 clauses)
+2026-06-21 23:43:26 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:43:42 | WARNING  | risk_analyzer | Batch 2: LLM call exceeded 15.0s on attempt 1 — retrying
+2026-06-21 23:43:57 | ERROR    | risk_analyzer | Batch 2: hit overall deadline mid-flight — flagging for manual review
+2026-06-21 23:43:57 | ERROR    | risk_analyzer | Batch 3: overall deadline (35.0s) already exceeded — flagging remaining batch(es) for manual review
+2026-06-21 23:43:57 | ERROR    | risk_analyzer | Batch 4: overall deadline (35.0s) already exceeded — flagging remaining batch(es) for manual review
+2026-06-21 23:43:57 | ERROR    | risk_analyzer | Batch 5: overall deadline (35.0s) already exceeded — flagging remaining batch(es) for manual review
+2026-06-21 23:43:57 | INFO     | risk_analyzer | All 5 batches resolved in 35.0s (deadline=35.0s)
+2026-06-21 23:43:57 | INFO     | risk_analyzer | Assessment complete: 56 clauses | HIGH=0 | MEDIUM=8 | LOW=1 | SAFE=3 | NEEDS_MANUAL_REVIEW=44
+2026-06-21 23:43:57 | INFO     | pipeline | Risks assessed: 56
+2026-06-21 23:43:57 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-21 23:43:57 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:43:59 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-21 23:43:59 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:44:00 | INFO     | simplifier | Simplify batch 3: 10 clause(s)
+2026-06-21 23:44:00 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:44:01 | INFO     | simplifier | Simplify batch 4: 10 clause(s)
+2026-06-21 23:44:01 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:44:02 | INFO     | simplifier | Simplify batch 5: 10 clause(s)
+2026-06-21 23:44:02 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:44:03 | INFO     | simplifier | Simplify batch 6: 6 clause(s)
+2026-06-21 23:44:03 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:44:04 | INFO     | simplifier | Simplify batch 1: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:44:05 | INFO     | simplifier | Simplify batch 6: accepted=6 rejected=0 on attempt 1
+2026-06-21 23:44:05 | INFO     | simplifier | Simplify batch 2: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:44:05 | INFO     | simplifier | Simplify batch 4: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:44:16 | INFO     | simplifier | Simplify batch 5: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:44:21 | WARNING  | simplifier | Simplify batch 3: LLM call exceeded 20.0s on attempt 1
+2026-06-21 23:44:37 | ERROR    | simplifier | Simplify batch 3: did not finish within the 40.0s deadline — its clauses will fall back to their `reason` text
+2026-06-21 23:44:37 | INFO     | simplifier | Simplified 56 clause(s) across 6 batch(es) in 40.0s (deadline=40.0s) | fell_back_to_reason=10
+2026-06-21 23:44:37 | WARNING  | reporter | 44 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-21 23:44:37 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=5.7 | high=0 | medium=8 | low=1 | safe=3 | unanalyzed=44 | coverage=56 clauses from 10 sections
+2026-06-21 23:44:37 | INFO     | pipeline | Pipeline complete | step=complete
+2026-06-21 23:50:54 | INFO     | pdf_reader | OCR available
+2026-06-21 23:51:09 | INFO     | pdf_reader | Direct extraction: 16241 chars from 8 pages
+2026-06-21 23:51:09 | INFO     | pipeline | Pipeline started
+2026-06-21 23:51:09 | INFO     | pipeline | Validation passed | chars=16241
+2026-06-21 23:51:09 | INFO     | orchestrator | Detecting document type + locale | chars=16241
+2026-06-21 23:51:09 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:51:10 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:51:11 | INFO     | orchestrator | Doc type: SERVICE_AGREEMENT | Locale: California, USA | took 2.7s
+2026-06-21 23:51:11 | INFO     | text_chunker | Chunked document: 16241 chars → 10 chunks (avg 1624 chars/chunk)
+2026-06-21 23:51:11 | INFO     | pipeline | Doc type: SERVICE_AGREEMENT | Locale: California, USA | Chunks: 10
+2026-06-21 23:51:11 | INFO     | clause_extractor | Extracting clauses | chunks=10 | doc_type=SERVICE_AGREEMENT
+2026-06-21 23:51:11 | INFO     | clause_extractor | Extraction batch 1: 3 chunk(s)
+2026-06-21 23:51:11 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:51:13 | INFO     | clause_extractor | Extraction batch 2: 3 chunk(s)
+2026-06-21 23:51:13 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:51:14 | INFO     | clause_extractor | Extraction batch 3: 3 chunk(s)
+2026-06-21 23:51:14 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:51:15 | INFO     | clause_extractor | Extraction batch 4: 1 chunk(s)
+2026-06-21 23:51:15 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:51:29 | WARNING  | clause_extractor | Extraction batch 1: error on attempt 1: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 3122, Requested 4321. Please try again in 14.43s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-21 23:51:36 | WARNING  | clause_extractor | Extraction batch 4: LLM call exceeded 20.0s on attempt 1
+2026-06-21 23:51:56 | ERROR    | clause_extractor | Extraction batch 4: did not finish within the 45.0s deadline — its section(s) were not analyzed
+2026-06-21 23:51:56 | INFO     | clause_extractor | Extraction: 4 batch(es) resolved in 45.0s (deadline=45.0s, skipped=1)
+2026-06-21 23:51:56 | INFO     | clause_extractor | Extracted 46 verified clauses | skipped_batches=1/4
+2026-06-21 23:51:56 | INFO     | pipeline | Clauses extracted: 46 | skipped_batches=1
+2026-06-21 23:51:56 | INFO     | risk_analyzer | Assessing 46 clauses | doc_type=SERVICE_AGREEMENT
+2026-06-21 23:51:56 | INFO     | risk_analyzer | Assessing batch 1 (8 clauses)
+2026-06-21 23:51:56 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:51:58 | INFO     | risk_analyzer | Assessing batch 2 (8 clauses)
+2026-06-21 23:51:58 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:51:59 | INFO     | risk_analyzer | Assessing batch 3 (8 clauses)
+2026-06-21 23:51:59 | INFO     | llm | Using GROQ_API_KEY_1 (fast/8b)
+2026-06-21 23:52:00 | INFO     | risk_analyzer | Assessing batch 4 (8 clauses)
+2026-06-21 23:52:00 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:52:01 | INFO     | risk_analyzer | Assessing batch 5 (8 clauses)
+2026-06-21 23:52:01 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:52:02 | INFO     | risk_analyzer | Assessing batch 6 (6 clauses)
+2026-06-21 23:52:02 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:52:18 | WARNING  | risk_analyzer | Batch 3: LLM call exceeded 18.0s on attempt 1 — retrying
+2026-06-21 23:52:19 | WARNING  | risk_analyzer | Batch 4: LLM call exceeded 18.0s on attempt 1 — retrying
+2026-06-21 23:52:26 | ERROR    | risk_analyzer | Batch 3: did not finish within the 30.0s deadline — flagging for manual review
+2026-06-21 23:52:26 | ERROR    | risk_analyzer | Batch 4: did not finish within the 30.0s deadline — flagging for manual review
+2026-06-21 23:52:26 | INFO     | risk_analyzer | All 6 batches resolved in 30.0s (deadline=30.0s, skipped_batches=2)
+2026-06-21 23:52:26 | INFO     | risk_analyzer | Assessment complete: 46 clauses | HIGH=1 | MEDIUM=14 | LOW=8 | SAFE=7 | NEEDS_MANUAL_REVIEW=16
+2026-06-21 23:52:26 | INFO     | pipeline | Risks assessed: 46
+2026-06-21 23:52:26 | INFO     | simplifier | Simplify batch 1: 10 clause(s)
+2026-06-21 23:52:26 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:52:28 | INFO     | simplifier | Simplify batch 2: 10 clause(s)
+2026-06-21 23:52:28 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:52:30 | INFO     | simplifier | Simplify batch 3: 10 clause(s)
+2026-06-21 23:52:30 | INFO     | llm | Using GROQ_API_KEY_3 (fast/8b)
+2026-06-21 23:52:31 | INFO     | simplifier | Simplify batch 4: 10 clause(s)
+2026-06-21 23:52:31 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:52:33 | INFO     | simplifier | Simplify batch 5: 6 clause(s)
+2026-06-21 23:52:33 | INFO     | llm | Using GROQ_API_KEY_2 (fast/8b)
+2026-06-21 23:52:36 | INFO     | simplifier | Simplify batch 2: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:52:36 | INFO     | simplifier | Simplify batch 3: accepted=10 rejected=0 on attempt 1
+2026-06-21 23:52:48 | WARNING  | simplifier | Simplify batch 1: LLM call exceeded 20.0s on attempt 1
+2026-06-21 23:52:53 | WARNING  | simplifier | Simplify batch 4: LLM call exceeded 20.0s on attempt 1
+2026-06-21 23:52:54 | WARNING  | simplifier | Simplify batch 5: error on attempt 1: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kvj4kbxeffatqczhshy41yvs` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 3607, Requested 3173. Please try again in 7.8s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-21 23:52:56 | INFO     | simplifier | Simplify batch 5: accepted=6 rejected=0 on attempt 2
+2026-06-21 23:53:06 | ERROR    | simplifier | Simplify batch 1: did not finish within the 40.0s deadline — its clauses will fall back to their `reason` text
+2026-06-21 23:53:06 | ERROR    | simplifier | Simplify batch 4: did not finish within the 40.0s deadline — its clauses will fall back to their `reason` text
+2026-06-21 23:53:06 | INFO     | simplifier | Simplified 46 clause(s) across 5 batch(es) in 40.0s (deadline=40.0s) | fell_back_to_reason=20
+2026-06-21 23:53:06 | WARNING  | reporter | 16 clause(s) returned UNKNOWN — flagged in report, not dropped
+2026-06-21 23:53:06 | INFO     | reporter | Report generated | doc=SERVICE_AGREEMENT | score=4.8 | high=1 | medium=14 | low=8 | safe=7 | unanalyzed=16 | coverage=46 clauses from 10 sections
+2026-06-21 23:53:06 | INFO     | pipeline | Pipeline complete | step=complete
