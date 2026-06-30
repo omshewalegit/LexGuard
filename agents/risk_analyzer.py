@@ -8,9 +8,22 @@ and suggests replacement language.
 Architecture:
   - Clauses are deduplicated BEFORE batching (identical original_text collapsed)
   - Batches run CONCURRENTLY with staggered start, bounded by OVERALL_DEADLINE
-  - Failed batches get a single-clause rescue pass
+  - Failed batches get a BATCHED rescue pass (not single-clause — see fix below)
   - Duplicates are re-expanded after assessment
   - Uses the 70B SMART model — this is the most critical reasoning step
+
+FIX HISTORY (2026-07-01):
+  - CRITICAL BUG FIXED: rescue pass fired one asyncio task PER unknown clause
+    with no concurrency cap (asyncio.gather on up to 24 tasks at once), all
+    hammering only 3 API keys simultaneously. This caused mass rate-limiting
+    and timeouts, pushing total pipeline time past 4 minutes.
+    FIX 1: Added a global asyncio.Semaphore bounding concurrent LLM calls to
+    MAX_CONCURRENT_LLM_CALLS (= number of API keys). Applies to BOTH the main
+    batch pass and the rescue pass, since they share _assess_batch_async().
+    FIX 2: Rescue pass no longer creates one task per clause. Unknown clauses
+    are re-batched into groups of RESCUE_BATCH_SIZE and run through the same
+    batched assessment path as the main pass — cutting 24 single-clause calls
+    down to ~4 batched calls.
 """
 
 import asyncio
@@ -350,6 +363,38 @@ RETRY_BACKOFF_SECONDS           = 2.0
 RATE_LIMIT_WAIT_CAP_SECONDS     = 12.0
 OVERALL_DEADLINE_SECONDS        = 90.0
 
+# ── Concurrency knobs (FIX) ──────────────────────────────────────
+# Bounds how many LLM calls can be in-flight at once, across BOTH the main
+# batch pass and the rescue pass (they share the same semaphore since they
+# both ultimately call _assess_batch_async). Set to the number of available
+# API keys — no point allowing more concurrent calls than keys, since extra
+# calls just queue up rate-limit errors on a key that's already busy.
+try:
+    from utils.llm import GROQ_KEYS as _GROQ_KEYS
+    MAX_CONCURRENT_LLM_CALLS = max(1, len(_GROQ_KEYS))
+except Exception:
+    MAX_CONCURRENT_LLM_CALLS = 3  # safe fallback if import shape changes
+
+_llm_semaphore: "asyncio.Semaphore | None" = None
+
+
+def _get_semaphore() -> asyncio.Semaphore:
+    """
+    Lazily create the semaphore bound to the currently-running event loop.
+    (asyncio.Semaphore() must be created while a loop is running/known —
+    creating it at module import time can bind it to the wrong loop when
+    asyncio.run() is called multiple times, e.g. once per document.)
+    """
+    global _llm_semaphore
+    if _llm_semaphore is None:
+        _llm_semaphore = asyncio.Semaphore(MAX_CONCURRENT_LLM_CALLS)
+    return _llm_semaphore
+
+
+# Rescue pass batching (FIX) — unknown clauses are re-grouped into batches
+# instead of firing one task per clause.
+RESCUE_BATCH_SIZE = 6
+
 
 def _parse_retry_after_seconds(error_message: str) -> float:
     match = re.search(
@@ -576,6 +621,11 @@ def assess_risks(
         for i in range(0, len(unique_clauses), BATCH_SIZE)
     ]
 
+    # Reset semaphore for this run (in case assess_risks is called multiple
+    # times across different asyncio.run() event loops in the same process).
+    global _llm_semaphore
+    _llm_semaphore = None
+
     start_time = time.monotonic()
     assessed_unique, skipped_batches = asyncio.run(
         _assess_all_batches_with_deadline(batches, doc_type, locale_hint)
@@ -649,25 +699,55 @@ async def _rescue_unknown_clauses(
     doc_type: str,
     locale_hint: str,
 ) -> dict[int, dict]:
-    async def _rescue_one(idx: int) -> tuple[int, dict]:
-        clause = source_clauses[idx]
+    """
+    FIX: previously created ONE asyncio task per unknown clause and gathered
+    them all with no concurrency limit — e.g. 24 single-clause LLM calls
+    fired simultaneously against only 3 API keys, causing mass rate-limiting.
+
+    Now: unknown clauses are re-grouped into batches of RESCUE_BATCH_SIZE and
+    run through the SAME batched path as the main pass (_assess_batch_async),
+    which is itself bounded by the global semaphore. This turns e.g. 24
+    single-clause calls into ~4 batched calls, with at most
+    MAX_CONCURRENT_LLM_CALLS in flight at once.
+    """
+    chunks = [
+        unknown_indices[i:i + RESCUE_BATCH_SIZE]
+        for i in range(0, len(unknown_indices), RESCUE_BATCH_SIZE)
+    ]
+
+    async def _rescue_chunk(chunk_num: int, idx_chunk: list[int]) -> dict[int, dict]:
+        chunk_clauses = [source_clauses[idx] for idx in idx_chunk]
         try:
             results = await _assess_batch_async(
-                [clause], doc_type, locale_hint, batch_num=f"rescue-{idx}"
+                chunk_clauses, doc_type, locale_hint, batch_num=f"rescue-{chunk_num}"
             )
-            if results and results[0].get("risk_level") != "UNKNOWN":
+        except Exception as e:
+            logger.warning(f"Rescue chunk {chunk_num} raised: {e}")
+            return {}
+
+        recovered: dict[int, dict] = {}
+        # _assess_batch_async preserves order/length on success; on total
+        # failure it returns _unanalyzed_entry() per input clause (still
+        # UNKNOWN), so only copy over genuinely-recovered entries.
+        for pos, idx in enumerate(idx_chunk):
+            if pos < len(results) and results[pos].get("risk_level") != "UNKNOWN":
+                recovered[idx] = results[pos]
                 logger.info(
                     f"Rescue pass: recovered clause {idx} "
-                    f"({clause.get('clause_type', '?')})"
+                    f"({source_clauses[idx].get('clause_type', '?')})"
                 )
-                return idx, results[0]
-        except Exception as e:
-            logger.warning(f"Rescue pass: clause {idx} still failed: {e}")
-        return idx, assessed[idx]
+        return recovered
 
-    tasks = [_rescue_one(i) for i in unknown_indices]
-    results = await asyncio.gather(*tasks, return_exceptions=True)
-    return {idx: result for idx, result in results if isinstance(result, tuple)}
+    tasks = [_rescue_chunk(i + 1, chunk) for i, chunk in enumerate(chunks)]
+    chunk_results = await asyncio.gather(*tasks, return_exceptions=True)
+
+    merged: dict[int, dict] = {}
+    for r in chunk_results:
+        if isinstance(r, dict):
+            merged.update(r)
+        elif isinstance(r, Exception):
+            logger.warning(f"Rescue chunk raised exception: {r}")
+    return merged
 
 
 async def _assess_all_batches_with_deadline(
@@ -725,12 +805,18 @@ async def _assess_batch_async(
     logger.info(f"Assessing batch {batch_num} ({len(batch_clauses)} clauses)")
     prompt = _build_assessment_prompt(batch_clauses, doc_type, locale_hint)
     llm = get_llm(max_tokens=4000, temperature=0.1)
+    semaphore = _get_semaphore()
 
     for attempt in range(MAX_ATTEMPTS_PER_BATCH):
         try:
-            response = await asyncio.wait_for(
-                llm.ainvoke(prompt), timeout=PER_ATTEMPT_LLM_TIMEOUT_SECONDS
-            )
+            # FIX: actual network call is now gated by the global semaphore,
+            # so at most MAX_CONCURRENT_LLM_CALLS requests are ever in-flight
+            # at once — regardless of how many batches/rescue-chunks were
+            # scheduled concurrently.
+            async with semaphore:
+                response = await asyncio.wait_for(
+                    llm.ainvoke(prompt), timeout=PER_ATTEMPT_LLM_TIMEOUT_SECONDS
+                )
             content = response.content.strip()
 
             json_match = re.search(r'\[.*\]', content, re.DOTALL)
@@ -823,7 +909,7 @@ def _validate_assessed_clauses(
         returned_type  = _sanitize_clause_type(r.get("clause_type", "")).strip()
         expected_type  = (source_clause.get("clause_type") or "").strip()
 
-        # FIX: Reject wrong labels instead of silently accepting
+        # Reject wrong labels instead of silently accepting
         if not _clause_type_matches(expected_type, returned_type):
             logger.warning(
                 f"Rejected relabeled clause at index {idx}: "
