@@ -20,11 +20,7 @@
 [![Pytest](https://img.shields.io/badge/Pytest-Tested-22C55E?style=flat-square)](https://pytest.org)
 [![License](https://img.shields.io/badge/License-MIT-6366F1?style=flat-square)](LICENSE)
 
-<br/>
 
-![LexGuard Banner](assets/banner.png)
-
-</div>
 
 ---
 
