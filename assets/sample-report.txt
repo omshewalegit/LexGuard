@@ -1,1 +1,278 @@
+LEXGUARD RISK REPORT
+============================================================
+Document  : Employment Contract
+Score     : 5.6 / 10
+Verdict   : Moderate Risk — Review Carefully
+Analyzed  : 05 July 2026, 11:54 AM
+============================================================
+
+How this score was calculated:
+Score of 5.6/10 based on: 8 high-risk clauses (weight ×3), 19 medium-risk clauses (weight ×2), 3 low-risk clauses (weight ×1), 19 safe clauses (not counted), 1 unanalyzed clause (penalized as hidden risk). Each clause is weighted by severity and the model's confidence. Safe clauses do not reduce the score — only risky clauses raise it.
+
+TOP 3 PRIORITIES — NEGOTIATE THESE FIRST
+------------------------------------------------------------
+1. [HIGH] Termination by Employer
+   → Request a minimum notice period (e.g., 30 days) or payment in lieu of notice, and limit termination without notice to defined “cause” only.
+2. [HIGH] Non-Compete Restriction
+   → Request reduction of the duration to 12 months, limit the restriction to direct competitors, and confine it to the geographic area where the employee actually worked.
+3. [HIGH] Termination by Employee
+   → Seek to receive full salary during the notice period and replace the flat Rs. 2 lakh penalty with reimbursement of actual documented training costs, capped at a reasonable amount.
+
+⚠ NOTE: 1 clause(s) could not be analyzed within the time limit and need manual review.
+
+HIGH RISK (8 clauses)
+------------------------------------------------------------
+
+1. Liability Exclusion — 85% confidence
+   Original : If the employee violates the same, then consequently in case if any liability arises then the company shall not be responsible for it in any circumstances.
+   Meaning  : This clause means that if you break the rules, you'll be personally responsible for any problems that arise. If you're found liable, you could face unlimited financial losses. Take action: Limit liability to losses caused by your gross negligence or willful misconduct and cap the amount at a reasonable figure such as your annual salary.
+   Financial: Potentially unlimited personal liability for any loss, damage or claim that arises from the employee’s breach; no monetary cap is provided.
+   Tip      : Limit liability to losses caused by the employee’s gross negligence or willful misconduct and cap the amount at a reasonable figure such as the employee’s annual salary.
+   Replacement: Employee shall be liable only for losses directly caused by his/her gross negligence or willful misconduct, and such liability shall be limited to actual damages not exceeding the amount of salary earned by the Employee during the preceding twelve (12) months. The Company shall remain responsible for any third‑party claims arising from such violations to the extent permitted by law.
+
+2. Modification of Agreement — 80% confidence
+   Original : The Employer can modify the Agreement or Rules and Regulations from time to time and the modification will be applicable from the same day.
+   Meaning  : This clause means that your employer can change the agreement or rules at any time, with immediate effect, without giving you notice or the right to object. This creates significant uncertainty. Take action: Require that any amendment be made in writing, signed by both parties, and that material changes be communicated at least thirty (30) days before they take effect, with employee consent for changes to compensation or termination provisions.
+   Financial: Potential exposure to adverse changes such as salary reduction, altered duties, or benefit cuts; no specific monetary amount is provided.
+   Tip      : Require that any amendment be made in writing, signed by both parties, and that material changes be communicated at least thirty (30) days before they take effect, with employee consent for changes to compensation or termination provisions.
+   Replacement: Any amendment or modification to this Agreement shall be effective only if made in writing, signed by both parties, and communicated to the Employee at least thirty (30) days prior to the effective date. Material changes to compensation, duties, or termination provisions shall require the Employee’s written consent.
+
+3. Non-Compete Restriction — 92% confidence
+   Original : That the employee after the period of employment is over, shall not open similar nature company upto three years directly or indirectly.
+   Meaning  : This clause means the employee promises not to start a similar business for three years after leaving the company. This could prevent the employee from earning a livelihood in their field. To protect yourself, request a reduction in the duration of this restriction to 12 months.
+   Financial: Potential loss of income from any self‑started business for up to three years; no specific monetary figure is stated.
+   Tip      : Request reduction of the duration to 12 months, limit the restriction to direct competitors, and confine it to the geographic area where the employee actually worked.
+   Replacement: Employee shall not, for a period of twelve (12) months following termination, directly engage in or be employed by any business that competes with the Company’s core products within the city of Jaipur. This restriction does not apply to non‑competing entrepreneurial activities.
+
+4. Non-Compete Restriction — 84% confidence
+   Original : period as well as after the employment period is over, if the company finds out that the employee is trying to connect with the client of the company directly or indirectly, then the company shall be entitled to claim damages under section 73, 74 of the contract act as well as entitled to initiate appropriate legal proceeding against the employee.
+   Meaning  : This clause means the company can claim unlimited damages if the employee contacts clients after leaving the company. This creates potentially unbounded financial liability. To protect yourself, insert a definition of 'client,' limit the restriction to a 12-month period, and cap damages at a reasonable amount.
+   Financial: Liability for damages equal to the actual loss suffered by the Company, which could be substantial; no cap is provided.
+   Tip      : Insert a definition of “client,” limit the restriction to a 12‑month period, and cap damages at a reasonable amount (e.g., Rs. 5,00,000).
+   Replacement: For a period of twelve (12) months after termination, Employee shall not directly or indirectly solicit or service any client of the Company with whom Employee had material contact during employment. Any breach shall entitle the Company to recover actual documented loss, capped at Rs. 5,00,000, and reasonable legal costs.
+
+5. Termination by Employee — 92% confidence
+   Original : 8.2 The Employee may lawfully terminate this Employment Agreement by giving to the Employer not less than 30 days notice in writing and the employee shall not be entitled to get the salary of the notice period and on break of bond of two years the employee is liable to pay penalty equal to Rs. 2 lakhs.
+   Meaning  : This clause means that you can end your employment contract by giving the employer 30 days' written notice, but you'll forfeit your salary for that period and may have to pay a penalty of Rs. 2,00,000 if you break a two-year bond. This means you could be financially exposed if you don't give proper notice or break the bond. Take action by negotiating to receive full salary during the notice period and replacing the flat penalty with reimbursement of actual documented training costs, capped at a reasonable amount.
+   Financial: Loss of salary for the 30‑day notice period (amount not specified) plus a mandatory penalty of Rs. 2,00,000 if the bond is broken.
+   Tip      : Seek to receive full salary during the notice period and replace the flat Rs. 2 lakh penalty with reimbursement of actual documented training costs, capped at a reasonable amount.
+   Replacement: Employee may terminate the Agreement by giving thirty (30) days written notice, during which Employee shall be paid full salary. If Employee terminates before completing two (2) years, Employee shall reimburse only the actual documented cost of training provided by the Company, not to exceed Rs. 2,00,000.
+
+6. Termination by Employer — 96% confidence
+   Original : Employer can terminate the employee any time with immediate effect without giving any Notice Period.
+   Meaning  : This clause means that the employer can end your employment contract at any time without giving you notice, leaving you without time to find a new job. This means you could be left without income and may struggle to find a new job quickly. Take action by requesting a minimum notice period (e.g., 30 days) or payment in lieu of notice, and limit termination without notice to defined 'cause' only.
+   Financial: No specific monetary figure is stated; the employee could lose all future salary from the date of termination onward.
+   Tip      : Request a minimum notice period (e.g., 30 days) or payment in lieu of notice, and limit termination without notice to defined “cause” only.
+   Replacement: Employer may terminate the Employee’s employment only for cause as defined in this Agreement, and shall provide at least thirty (30) days written notice or payment in lieu of notice.
+
+7. Recovery of Losses — 84% confidence
+   Original : 8.7 That during the course of employment, if the employee commits any fraud with the company and as a result of which the company suffers huge loss, in case of such an event, the Employer shall be entitled to recover the same from the employee's movable and immovable property by instituting legal / court proceedings.
+   Meaning  : This clause means that the company can recover any losses caused by your fraud from your movable and immovable property without a cap or proof standard, creating potentially unlimited personal liability. This means you could be financially exposed if you commit fraud. Take action by adding a requirement that liability be limited to actual proven loss and cap the amount recoverable to a reasonable figure (e.g., the amount of loss proven or your annual salary).
+   Financial: No specific amount is stated; exposure could extend to the full value of the employee’s assets, both movable and immovable, depending on the loss proven.
+   Tip      : Add a requirement that liability be limited to actual proven loss and cap the amount recoverable to a reasonable figure (e.g., the amount of loss proven or the employee’s annual salary).
+   Replacement: In the event the Employee is found to have committed fraud that results in actual loss to the Company, the Employee shall be liable to reimburse the Company for such loss, provided that the loss is proven and quantified, and the Employee’s liability shall be limited to the amount of actual loss proven and shall not exceed the Employee’s annual salary.
+
+8. Loss Liability — 90% confidence
+   Original : the Employee shall be liable to be dismissed or discharged forthwith notwithstanding the rights and without giving any notice, which the Company may otherwise have against the Employee in case of any loss (grave or remote) caused by the employee during the course of his/her employment and the losses will be borne by him/her by way of damages which shall be calculated by the management of the company.
+   Meaning  : This clause means you could be immediately dismissed and held personally liable for any loss, even a small one, caused by you during your employment. If this happens, you could face unlimited financial losses. To protect yourself, cap liability to actual proven loss and require independent verification of damages.
+   Financial: No specific cap is provided; liability could extend to the full amount of any loss, which may be unlimited.
+   Tip      : Cap liability to actual proven loss, require independent verification of damages, limit to losses caused by gross negligence or willful misconduct, and include a notice period.
+   Replacement: Employee shall be liable only for actual, proven loss directly caused by his/her gross negligence or willful misconduct, as determined by an independent auditor, and such liability shall be capped at the amount of salary earned by the employee during the twelve (12) months preceding the loss.
+
+MEDIUM RISK (19 clauses)
+------------------------------------------------------------
+
+1. Termination Without Cause — 88% confidence
+   Original : The Company may terminate the working relationship without cause with advance notice, except as prescribed by law.
+   Meaning  : This clause means the company can end your employment without cause, but it doesn't specify the notice period. This creates uncertainty about when you'll receive notice and any severance payment. You should request a fixed notice period (e.g., 30 days) and a severance payment equal to one month's salary for each completed year of service.
+   Financial: No specific monetary amount is stated; exposure depends on the notice period that may be given.
+   Tip      : Request a fixed notice period (e.g., 30 days) and, if termination is without cause, a severance payment equal to one month's salary for each completed year of service.
+   Replacement: The Company may terminate the employment without cause by providing the Employee with at least thirty (30) days’ written notice or payment in lieu of notice. In such event, the Employee shall receive a severance payment equal to one month’s basic salary for each completed year of service, subject to a minimum of one month’s salary.
+
+2. Extension of Probation — 87% confidence
+   Original : At the end of the probationary period, if the employee has not been available to work the full probationary period or work performance has not met expectations, the length of the probation may be extended by the Company at its sole discretion.
+   Meaning  : This clause means the company can extend your probation period at its discretion, potentially leading to indefinite extensions and delayed access to regular-employee benefits. You should limit extensions to a single additional period of three (3) months and require written justification for any extension.
+   Financial: No monetary figures are provided; the risk is the postponement of benefit eligibility.
+   Tip      : Limit extensions to a single additional period of three (3) months and require written justification for any extension.
+   Replacement: If, at the end of the initial six‑month probation, the Company determines that the Employee’s performance or attendance does not meet expectations, the Company may extend the probationary period by a single additional period of three (3) months, provided that a written notice stating the reasons for extension is given to the Employee.
+
+3. Place of Work — 88% confidence
+   Original : The Employee will be stationed in the Employer's offices currently located in Malviya Nagar, Jaipur, but the Company shall be entitled to transfer the Employee's services to any of the branches, sister concerns, which are presently operating or that which may be set up in future, in India or outside India.
+   Meaning  : This clause means the employer can move you to any office in India or abroad without notice. This could cause personal and financial disruption, and you might need to relocate without any assistance. To protect yourself, request a minimum notice period and relocation assistance, and limit transfers to locations within India unless you consent in writing.
+   Financial: No specific monetary amounts are stated; the exposure is the possible cost of relocation or loss of housing.
+   Tip      : Request a minimum notice period and relocation assistance, and limit transfers to locations within India unless the employee consents in writing.
+   Replacement: The Company may transfer the Employee to another location within India, provided that (a) the Employee receives at least thirty (30) days written notice, (b) the new location is within a reasonable commuting distance or the Company furnishes reasonable relocation assistance, and (c) any transfer outside India shall be subject to the Employee’s prior written consent.
+
+4. Flexibility in Work Location — 85% confidence
+   Original : The Employee may be required to work at premises other than the Company's premises from time to time.
+   Meaning  : This clause means the employer can ask you to work at any other premises without notice. This could impose unexpected travel or remote-work obligations, and you might incur additional costs. To protect yourself, ask for a reasonable notice period (e.g., seven days) and a cap on travel or accommodation costs for off-site work.
+   Financial: No monetary figures are provided; the risk is limited to possible travel or accommodation costs.
+   Tip      : Ask for a reasonable notice period (e.g., seven days) and a cap on travel or accommodation costs for off‑site work.
+   Replacement: The Employee may be required to work at premises other than the Company's principal premises, provided that such work is within a reasonable distance and the Employee receives at least seven (7) days written notice, and the Company will reimburse any reasonable travel or accommodation expenses incurred.
+
+5. Non-Compete Restriction — 90% confidence
+   Original : The Employee whilst working with the Company shall not, except with the prior written consent of the Board of Directors engage in activities outside the scope of his/her employment and shall fulfill his/her responsibilities or duties under this Employment Agreement.
+   Meaning  : This clause means you can't engage in activities outside your employment without the Board's consent, which can prevent side-jobs or freelance work during your tenure. To protect yourself, request that the restriction apply only to activities that directly compete with the Company and allow non-competing freelance or passive income without prior consent.
+   Financial: Potential loss of any supplementary income the employee might earn from side activities; no specific monetary figure is stated.
+   Tip      : Request that the restriction apply only to activities that directly compete with the Company and allow non‑competing freelance or passive income without prior consent.
+   Replacement: Employee may engage in any lawful employment or business activities outside the normal scope of his/her duties, provided such activities do not compete with the Company’s business or involve use of Company confidential information, and shall obtain prior written consent only for activities that directly compete with the Company.
+
+6. Governing Law — 80% confidence
+   Original : The employee services will be governed by the rules and regulations of the company as in force from time to time and also as per certified model.
+   Meaning  : This clause means that your employment will be governed by the company's internal rules and a 'certified model', but it's unclear which laws will apply in case of a dispute. Take action: Specify that the contract is governed by the laws of Rajasthan, India, and that any dispute will be heard in the courts of Jaipur.
+   Financial: Unclear jurisdiction may increase legal costs if disputes are litigated in an unfavorable forum; no specific monetary figure is stated.
+   Tip      : Specify that the contract is governed by the laws of Rajasthan, India, and that any dispute will be heard in the courts of Jaipur.
+   Replacement: This Agreement shall be governed by and construed in accordance with the laws of Rajasthan, India, and any dispute arising hereunder shall be subject to the exclusive jurisdiction of the courts of Jaipur.
+
+7. Condition Precedent for Salary — 85% confidence
+   Original : The Employee shall not entitle to get salary, if he/she fails to meet the objectives or targets laid down by the company.
+   Meaning  : This clause means you won't get paid if you don't meet the company's objectives or targets. This means you could lose your salary if the company decides you haven't met their expectations. Request that salary be paid irrespective of target achievement, and that only a performance bonus be contingent on measurable objectives.
+   Financial: Potential loss of up to Rs. 7,20,000 per year (Rs. 60,000 per month) if objectives are deemed unmet.
+   Tip      : Request that salary be paid irrespective of target achievement, and that only a performance bonus be contingent on measurable objectives.
+   Replacement: The Employee shall receive the salary of Rs. 60,000 per month (CTC Rs. 7,20,000 per annum) without deduction, irrespective of the achievement of any objectives. The Parties may agree on a separate, clearly defined performance bonus that shall be payable only upon the Employee meeting specific, written targets.
+
+8. Confidentiality / NDA — 96% confidence
+   Original : As long as the Employee is employed, and also thereafter, he/she shall maintain confidential the corporate secrets and all other information of a confidential nature pertaining to the Company and its operations.
+   Meaning  : This clause means you'll keep company secrets confidential during and after your employment. This means you could be held liable for sharing confidential information without permission. Add a definition of 'Confidential Information', carve out information that is public or independently developed, and limit the post-employment obligation to a reasonable period (e.g., 2 years).
+   Financial: No specific monetary figure is stated; exposure would be limited to damages the Company could prove from a breach of confidentiality.
+   Tip      : Add a definition of "Confidential Information", carve out information that is public or independently developed, and limit the post‑employment obligation to a reasonable period (e.g., 2 years).
+   Replacement: Employee shall maintain the confidentiality of all Confidential Information (as defined below) during employment and for a period of two (2) years thereafter. "Confidential Information" means any non‑public information relating to the Company’s business, technology, or customers, except information that is (i) already lawfully in the public domain, (ii) independently developed by Employee without use of Company resources, or (iii) required to be disclosed by law.
+
+9. Confidentiality / NDA — 88% confidence
+   Original : The Employee shall at all times carefully and diligently safeguard and promote the Company's interests.
+   Meaning  : This clause means you'll protect the company's interests at all times. This means you could be disciplined for any perceived lack of loyalty, creating uncertainty about permissible conduct. Replace the vague duty with a specific obligation to protect confidential information and act in good faith, removing the open-ended 'promote' language.
+   Financial: No monetary amount is specified; potential liability would arise only from a breach claim, the size of which is uncertain.
+   Tip      : Replace the vague duty with a specific obligation to protect confidential information and act in good faith, removing the open‑ended "promote" language.
+   Replacement: Employee shall at all times safeguard the Company's Confidential Information and act in good faith to further the Company's legitimate business objectives, without undertaking any activity that conflicts with the Company's policies or interests.
+
+10. IP Assignment — 96% confidence
+   Original : During the course of employment, any such creation, innovation or any such intellectual property in the form of software, hardware etc shall be exclusive property of the company as well the source code of the company shall remain exclusive property of the company.
+   Meaning  : This clause means any intellectual property created during your employment belongs to the company. This means you might not be able to claim ownership of your own inventions or creations. Insert carve-outs for pre-existing IP and for inventions developed entirely on personal time without Company resources.
+   Financial: No monetary figures are provided; the financial exposure would be the loss of ownership rights to any invention the employee creates.
+   Tip      : Insert carve‑outs for pre‑existing IP and for inventions developed entirely on personal time without Company resources.
+   Replacement: Employee assigns to the Company all right, title and interest in any invention, improvement, work of authorship or other intellectual property that is conceived, reduced to practice or otherwise created during the term of employment and that relates to the Company's business, products or services, provided that Employee retains all right, title and interest in (i) any intellectual property owned by Employee prior to employment, and (ii) any invention developed solely on Employee's own time without use of Company resources.
+
+11. Non-Disclosure — 80% confidence
+   Original : That during and after the employment period, the employee will not divulge or appropriate to his/her own use or to the use of others, in competition with the company, any secret or confidential information or knowledge pertaining to the business of the company, or of any of its subsidiaries, obtained by the Employee while employed by the company or any of its subsidiaries.
+   Meaning  : This clause means the employee promises not to share confidential company information with anyone, including competitors. If the employee breaks this promise, they could face serious consequences. To protect yourself, make sure to specify what kind of information is confidential and for how long this restriction applies.
+   Financial: No monetary figures are provided; the risk is the loss of opportunity to solicit or serve clients after termination.
+   Tip      : Specify the scope (only the Company’s existing clients), the duration (e.g., 12 months), and the activities prohibited (solicitation, direct contact, or providing competing services).
+   Replacement: Employee shall not, for a period of twelve (12) months following termination of employment, directly or indirectly solicit, induce, or attempt to solicit or induce any client or customer of the Company with whom Employee had material contact during employment, for the purpose of providing products or services that compete with those of the Company.
+
+12. Revival of Agreement — 78% confidence
+   Original : The agreement shall revive and apply again from time to time post completion of Two-Year period.
+   Meaning  : This clause means the agreement could potentially restart automatically after two years. This could extend the employee's obligations without their consent. To protect yourself, ask for a clear renewal clause that requires mutual written consent.
+   Financial: No specific monetary figure is mentioned; the risk is procedural rather than financial.
+   Tip      : Ask for a clear renewal clause that requires mutual written consent and limits any automatic extension to a single, defined period.
+   Replacement: The Agreement shall terminate automatically after two (2) years unless both parties mutually agree in writing to renew it for a further term not exceeding one (1) year.
+
+13. Moonlighting Restriction — 90% confidence
+   Original : 7.3 During the course of employment, employee shall not do any personal work or for any third party otherwise it will become a ground for termination and compensation clause will apply.
+   Meaning  : This clause means the employee promises not to do personal work for third parties during employment, which could limit their ability to earn side income. To protect yourself, limit the restriction to work that competes with the Company or interferes with duties, and allow non-competing freelance activities.
+   Financial: Potential loss of any supplementary income; no specific monetary amount is stated.
+   Tip      : Limit the restriction to work that competes with the Company or interferes with duties, and allow non‑competing freelance activities.
+   Replacement: During employment, Employee may engage in personal or freelance work provided such activities do not compete with the Company’s business and do not materially interfere with Employee’s duties.
+
+14. IP Assignment — 88% confidence
+   Original : 8.5 All memoranda, notes, records, or other documents made or composed by the Employee, or made available to him/her during the term of this Employment Agreement concerning or in any way relating to the business or affairs of the Company, its subsidiaries, divisions, affiliates, or clients shall be the Company's property and shall be delivered to the Company on the termination of this Employment Agreement or at any other time at the request of the Company.
+   Meaning  : This clause means that you'll have to assign all documents made or received during employment to the company, potentially covering personal or off-hours work. This means you might lose ownership of your work and could be required to hand over documents that aren't related to the company's business. Take action by limiting the assignment to inventions created within the scope of employment and excluding pre-existing or off-hours work that doesn't relate to the company's business.
+   Financial: No specific monetary figure is provided; the exposure is loss of ownership over any created intellectual property that could have commercial value.
+   Tip      : Limit the assignment to inventions created within the scope of employment and exclude pre‑existing or off‑hours work that does not relate to the company’s business.
+   Replacement: All inventions, designs, works of authorship, and related materials that the Employee creates within the scope of his/her employment duties and that relate directly to the Company's business shall be the Company's property. The Employee retains ownership of any pre‑existing intellectual property and any inventions developed on his/her own time that do not relate to the Company's business.
+
+15. Gross Misconduct — 90% confidence
+   Original : Employee being found guilty of any dishonesty, misconduct, willful neglect of duty or other conduct amounting to gross misconduct with fellow colleagues or seniors;
+   Meaning  : This clause means that the company can terminate your employment for a wide range of behaviors, including dishonesty, misconduct, or neglect of duty. This means you could be dismissed without notice for a broad range of behaviors. Take action by requesting a narrower definition of gross misconduct and requiring a written investigation report and opportunity to be heard before termination.
+   Financial: No monetary figure is provided; the risk is loss of employment and associated earnings if the clause is invoked.
+   Tip      : Request a narrower definition of gross misconduct and require a written investigation report and opportunity to be heard before termination.
+   Replacement: Gross misconduct shall be limited to (i) theft, fraud, or embezzlement; (ii) physical violence; (iii) willful breach of fiduciary duty; and shall require a written investigation report and an opportunity for the Employee to be heard before termination.
+
+16. Material Breach — 85% confidence
+   Original : Employee committing a material breach of the terms and conditions of this Employment Agreement;
+   Meaning  : This clause means the employer can terminate your employment if you commit a serious breach of the contract terms. If this happens, you could lose your job abruptly without warning. To protect yourself, request a definition of 'material breach' and a right to cure the breach within a reasonable period.
+   Financial: No specific monetary figure is stated; the signer could lose salary and benefits immediately without notice.
+   Tip      : Request a definition of "material breach", a right to cure the breach within a reasonable period (e.g., 10 business days), and a notice period before termination.
+   Replacement: Employee shall be deemed in material breach only if the breach is material and not cured within ten (10) business days after written notice specifying the breach; termination for material breach shall be effective only after such notice period.
+
+17. Medical Unfitness — 80% confidence
+   Original : Employee being found to be medically unfit or,
+8.9.4 Employee being declared a bankrupt or insolvent or,
+8.9.5 Employee being convicted of any offence involving moral turpitude or defined under the
+Indian Law,
+8.9.6 Misappropriation of the Company's monies or property by the Employee or;
+8.9.7 Misconduct or insubordination on the part of the Employee,
+8....
+   Meaning  : This clause means the employer can terminate your employment if you're found medically unfit or if you're convicted of certain crimes. If this happens, you could lose your job without a chance to respond. To protect yourself, add requirements for written medical certification and a clear definition of misconduct.
+   Financial: No monetary amounts are mentioned; the risk is loss of employment and associated compensation.
+   Tip      : Add requirements for written medical certification from a recognized practitioner and a clear definition of misconduct, plus a right to respond before termination.
+   Replacement: Termination on the ground of medical unfitness shall require a medical certificate from a recognized practitioner; any allegation of misconduct, insubordination or breach of company rules shall be communicated in writing, and the employee shall be given a reasonable opportunity to respond before termination is effected.
+
+18. Training Cost Recovery — 85% confidence
+   Original : If any training is provided to the employee, the company has full rights to recover the expenses incurred to train that employee if he/she resigns before completion of 6 months of the training tenure.
+   Meaning  : This clause means the employer can recover training expenses if you resign within six months of training. If this happens, you could be required to repay a significant amount. To protect yourself, specify that repayment is limited to the actual documented training cost on a pro-rata basis.
+   Financial: No training cost figure is disclosed; the employee could be required to repay the full, unspecified expense.
+   Tip      : Specify that repayment is limited to the actual documented training cost on a pro‑rata basis and cannot exceed the salary earned during the same period.
+   Replacement: If the Employee resigns within six (6) months of completing a training program, the Employee shall repay the Company a pro‑rata portion of the actual documented training cost, not to exceed the amount of salary earned by the Employee during the same period, and repayment shall be made upon presentation of the expense statements.
+
+19. Dispute Resolution — 88% confidence
+   Original : In cases if any dispute arises that is of administrative trivial nature, then the same shall be referred to the board, thus the decision of the board will be final and binding on the parties.
+   Meaning  : This clause means that if you and the company have a small disagreement about something like a minor policy or procedure, the company's board will make the final decision. If this happens, you won't be able to take the dispute to an independent court or tribunal. If you're concerned about this, you should ask the company to limit this clause to only very minor issues and agree to resolve all other disputes through arbitration in Jaipur.
+   Financial: No specific monetary figure is stated; the risk is procedural rather than financial.
+   Tip      : Request that the clause be limited to truly minor internal matters and that any dispute, regardless of nature, be resolved by arbitration in Jaipur under the Arbitration and Conciliation Act, 1996, with the award being final and binding.
+   Replacement: Any dispute, whether administrative or otherwise, shall be referred to arbitration in Jaipur under the Arbitration and Conciliation Act, 1996. The arbitrator’s award shall be final and binding on both parties. For purely internal administrative matters, the employee may first seek resolution through the company’s grievance mechanism, but such internal resolution shall not preclude arbitration.
+
+LOW RISK (3 clauses)
+------------------------------------------------------------
+
+1. Non-Use of IP — 96% confidence
+   Original : That the employee shall not use the source code of the company directly or indirectly.
+   Meaning  : This clause means you can't use the company's source code directly or indirectly. This means you'll be restricted from using proprietary code, but can use publicly available open-source components. Clarify that the restriction applies only to proprietary code and does not prevent the employee from using publicly available open-source components.
+   Financial: No monetary amount is mentioned; the risk is limited to potential disciplinary action for unauthorized use.
+   Tip      : Clarify that the restriction applies only to proprietary code and does not prevent the employee from using publicly available open‑source components.
+
+2. Severance Pay — 96% confidence
+   Original : 8.4 No severance pay, as mentioned above, will be made to the Employee in case the Company has terminated the Employee's employment due to his/her breach of Agreement or if he/she do not meet the performance criteria prescribed by the Company.
+   Meaning  : This clause means that you won't receive severance pay if the company terminates your employment due to a breach of the agreement or failure to meet performance criteria. This is a common limitation and doesn't affect other termination scenarios. No action is needed, as this is a standard clause.
+   Financial: No monetary amount is specified; the risk is limited to loss of any severance entitlement in the stated circumstances.
+   Tip      : Clarify the definition of “performance criteria” and add a provision for severance pay if termination occurs without cause.
+
+3. Amendment/Cancellation — 90% confidence
+   Original : That this employment agreement may be amended or cancelled by mutual agreement of the parties and without consent of any other person and, so long as the employee lives, no person, other than the parties hereto, shall have any rights under or interest in this Agreement.
+   Meaning  : This clause means the employment agreement can only be amended or cancelled by mutual written agreement. This is a fair and typical clause that doesn't impose undue burden on the employee. No action is needed.
+   Financial: No monetary impact.
+   Tip      : Confirm that any amendment must be in writing and signed by both parties.
+   Replacement: Any amendment or cancellation shall be effective only if made in writing and signed by both parties.
+
+SAFE (19 clauses)
+------------------------------------------------------------
+- Employment Agreement
+- Designation
+- Probationary Period
+- Eligibility for Benefits
+- Job Performance and Behavior
+- Duties and Powers
+- Scope of Work
+- Duty of Loyalty
+- No Signing Authority
+- Responsibility
+- Dispute Resolution
+- Arbitration Venue
+- Arbitral Award
+- Payment Terms
+- Confidentiality Obligation
+- Return of Company Property
+- Exculpatory Clause
+- Entire Agreement
+- Governing Law
+
+NEEDS MANUAL REVIEW (1 clauses)
+------------------------------------------------------------
+
+1. Non-Solicitation — unanalyzed confidence
+   Original : That the client or the customer shall be sole client of the company.
+   Meaning  : This clause means the employee promises not to take the company's clients for themselves. However, the exact meaning and consequences of this clause are unclear. To protect yourself, review this clause carefully and consider negotiating for more clarity.
+
+============================================================
+Disclaimer: Informational only. Not legal advice.
+============================================================
 
