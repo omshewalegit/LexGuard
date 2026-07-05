@@ -20,6 +20,10 @@
 [![Pytest](https://img.shields.io/badge/Pytest-Tested-22C55E?style=flat-square)](https://pytest.org)
 [![License](https://img.shields.io/badge/License-MIT-6366F1?style=flat-square)](LICENSE)
 
+<br/>
+
+![LexGuard Banner](assets/banner.png)
+
 </div>
 
 ---
@@ -31,6 +35,31 @@ Every year, millions of people sign offer letters, rent agreements, NDAs, and fr
 **LexGuard changes that**. Upload a PDF and receive a clause-by-clause risk assessment, plain-language explanations, financial impact estimates, confidence-backed risk scores, and negotiation-ready recommendations — all in under 60 seconds.
 
 Know exactly what you're signing before it costs you.
+
+---
+
+## Screenshots
+
+<img width="1195" height="740" alt="image" src="https://github.com/user-attachments/assets/6d0a8d8a-694e-428c-982d-7767cbe9d9e6" />
+
+
+<br/>
+
+<img width="1152" height="522" alt="image" src="https://github.com/user-attachments/assets/b4ffaa93-74b6-48cf-a030-fa153546116a" />
+<img width="1178" height="182" alt="image" src="https://github.com/user-attachments/assets/f2be444a-ab48-4882-b47d-4a99defad142" />
+
+
+<br/>
+
+<img width="1200" height="802" alt="image" src="https://github.com/user-attachments/assets/72958374-83f2-4076-ade4-2e52bf8f0849" />
+<img width="1157" height="735" alt="image" src="https://github.com/user-attachments/assets/33055f00-5e7f-4069-94f0-bce410cd5fd1" />
+<img width="1141" height="521" alt="image" src="https://github.com/user-attachments/assets/6c792d56-8517-4df0-88fe-3432b9ebddad" />
+<img width="1143" height="763" alt="image" src="https://github.com/user-attachments/assets/d8dc5d7c-f662-4e24-a98f-de7bc77b427c" />
+
+### Result — Downloadable Report
+📄 [Download Sample Report (Employment Contract)](assets/sample-report.txt)
+
+
 
 ---
 
@@ -253,6 +282,13 @@ Open `http://localhost:8501`
 
 ```
 LexGuard/
+├── assets/                   # Screenshots used in this README
+│   ├── banner.png
+│   ├── screenshot-upload.png
+│   ├── screenshot-analysis.png
+│   ├── screenshot-dashboard.png
+│   ├── screenshot-clause-detail.png
+│   └── screenshot-report-txt.png
 ├── agents/
 │   ├── orchestrator.py       # Concurrent doc type + jurisdiction detection
 │   ├── parser.py             # PDF parsing wrapper
