@@ -177,7 +177,7 @@ if not GROQ_KEYS:
     )
 
 MODEL_SMART = "openai/gpt-oss-120b"
-MODEL_FAST  = "llama-3.1-8b-instant"
+MODEL_FAST  = "openai/gpt-oss-20b"
 
 # How long a rate-limited key is skipped before being retried
 RATE_LIMIT_COOLDOWN_SECONDS = 30.0
