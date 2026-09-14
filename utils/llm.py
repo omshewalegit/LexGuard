@@ -256,7 +256,7 @@ def _get_base_instance(model: str, api_key: str) -> ChatGroq:
         if cache_key not in _base_instances:
             _base_instances[cache_key] = ChatGroq(
                 api_key=api_key,
-                model_name=model,
+                model=model,
                 temperature=0.1,    # default; overridden via .bind() below
                 max_tokens=2000,    # default; overridden via .bind() below
                 timeout=90,
